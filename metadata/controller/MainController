@@ -1,0 +1,68 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "MainController"
+    },
+    "designerId": "8907145b-c0d9-48e2-989b-81af09545c96",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onListItemTap",
+                "fn": "onListItemTap",
+                "designer|params": [
+                    "target"
+                ],
+                "implHandler": [
+                    "console.info('MainController.onListItemTap');\r",
+                    "\r",
+                    "try{\r",
+                    "  //core.newsfeed.networks.fb.getNewsFeed();\r",
+                    "  //core.newsfeed.networks.vk.getNewsFeed();\r",
+                    "}catch(Exception){}\r",
+                    "\r",
+                    "\r",
+                    "var mainNavigationView = Ext.getCmp(config.views.mainNavigationView);\r",
+                    "var menuItem = record.data;\r",
+                    "\r",
+                    "try{\r",
+                    "    mainNavigationView.push({\r",
+                    "        xtype: menuItem.link,\r",
+                    "        title: menuItem.name\r",
+                    "    });\r",
+                    "}catch(Exception){\r",
+                    "    console.error(\"Error! Unable to push the view: \" + menuItem.name);\r",
+                    "}"
+                ],
+                "name": "itemtap",
+                "designer|targetType": null,
+                "designer|controlQuery": "menuList"
+            },
+            "designerId": "349d7f9f-8c20-47c1-ab68-3b867da7b62c"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "menuList",
+                "ref": "menuList",
+                "selector": "#menuList"
+            },
+            "designerId": "c345e792-2a23-4d59-be98-702f23c23d4b"
+        }
+    ]
+}

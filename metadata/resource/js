@@ -1,0 +1,13 @@
+{
+    "type": "jsresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "url": "resources/js/localization/en.js",
+        "id": "labels"
+    },
+    "designerId": "7b53273d-6764-468c-9f46-9a8b347a6af9"
+}

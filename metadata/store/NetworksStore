@@ -1,0 +1,19 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "data": [
+            "[{id: 'fb', name: 'Facebook', image : 'resources/img/network-fb.png', state : 0},\r",
+            " {id: 'vk', name: 'Vkontakte', image : 'resources/img/network-vk.png', state : 0}]"
+        ],
+        "model": "NetworkModel",
+        "storeId": "NetworksStore",
+        "designer|userClassName": "NetworksStore",
+        "designer|userAlias": "networksStore"
+    },
+    "designerId": "1121f39b-3485-4e4d-a4c7-34086811e080"
+}

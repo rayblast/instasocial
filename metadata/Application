@@ -1,0 +1,87 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "activeFb": null,
+        "activeVk": null,
+        "models": [
+            "NetworkModel",
+            "UserSettingModel"
+        ],
+        "stores": [
+            "NetworksStore",
+            "UserSettingsStore",
+            "UserSettingsLocalStore"
+        ],
+        "views": [
+            "NetworkListContainer",
+            "NetworkList",
+            "NetworkPanel",
+            "MainView"
+        ],
+        "controllers": [
+            "NetworksController",
+            "MainController"
+        ],
+        "name": "InstaSocial"
+    },
+    "designerId": "application",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "activeFb",
+            "type": "string"
+        },
+        {
+            "group": "(Custom Properties)",
+            "name": "activeVk",
+            "type": "string"
+        }
+    ],
+    "cn": [
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "launch",
+                "fn": "launch",
+                "implHandler": [
+                    "console.info('Application.launch');\r",
+                    "var mainView = Ext.create('InstaSocial.view.MainView', {fullscreen: true});\r",
+                    "\r",
+                    "core.settings.loadUserSettings(true);\r",
+                    "\r",
+                    "if(!core.connectivity.loadNetworks()){\r",
+                    "    mainView.list.select(2);\r",
+                    "}"
+                ]
+            },
+            "designerId": "5273e144-476c-4c55-8f3b-f465e4a594dc"
+        },
+        {
+            "type": "Ext.Loader",
+            "reference": {
+                "name": "loader",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "paths": [
+                    "{\"Ext.ux\":\"app/plugins/ux\"}"
+                ],
+                "designer|userClassName": "Loader151",
+                "designer|displayName": "uxLoader",
+                "designer|createAlias": "uxLoader"
+            },
+            "designerId": "bb557dac-e0a7-42d0-bc89-cbd0e2721acc"
+        }
+    ]
+}

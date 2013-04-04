@@ -1,0 +1,104 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "data": null,
+        "docked": "top",
+        "height": "100pt",
+        "id": "networkPanel",
+        "ui": null,
+        "width": "220pt",
+        "designer|userClassName": "NetworkPanel",
+        "designer|userAlias": "networkPanel",
+        "hideOnMaskTap": true,
+        "modal": true,
+        "scrollable": false
+    },
+    "designerId": "7fb1e8e3-87d9-4cfb-a1ec-64e92159390c",
+    "cn": [
+        {
+            "type": "Ext.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "html": null,
+                "id": "lblNetworkName",
+                "itemId": "lblNetworkName",
+                "designer|userClassName": "MyTextField",
+                "label": "    ",
+                "name": "name",
+                "readOnly": true
+            },
+            "designerId": "723cd99a-07d9-433f-82e4-d22a1075d4b7"
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "btLogout",
+                "itemId": "btLogout",
+                "styleHtmlContent": true,
+                "ui": "decline",
+                "designer|userClassName": "MyButton",
+                "designer|displayName": "Logout",
+                "designer|createAlias": "",
+                "text": "Logout"
+            },
+            "designerId": "fb49a354-1d22-4e66-aba3-30c1902a4100"
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "action": null,
+                "id": "btLogin",
+                "itemId": "btLogin",
+                "styleHtmlContent": true,
+                "ui": "confirm",
+                "designer|userClassName": "MyButton",
+                "designer|displayName": "Login",
+                "designer|createAlias": "",
+                "text": "Login"
+            },
+            "designerId": "f1484bf7-9fc7-4b04-a349-786715f31d95",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "action",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "type": "Ext.XTemplate",
+            "reference": {
+                "name": "tpl",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "tpl",
+                "implHandler": [
+                    "<img id=\"network-logo-panel\" class=\"network-logo-panel\" src=\"{image}\"/>"
+                ],
+                "designer|displayName": "tpl"
+            },
+            "designerId": "0fb5cbb7-026e-48ca-9c49-efa7e6fc1d14"
+        }
+    ]
+}

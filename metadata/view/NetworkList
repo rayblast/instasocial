@@ -1,0 +1,54 @@
+{
+    "type": "Ext.dataview.List",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "flex": null,
+        "cls": [
+            "network-list"
+        ],
+        "height": null,
+        "id": "networkList",
+        "showAnimation": "slide",
+        "style": null,
+        "ui": "round",
+        "designer|userClassName": "NetworkList",
+        "designer|userAlias": "networkList",
+        "designer|createAlias": "list",
+        "modal": false,
+        "disableSelection": false,
+        "store": "NetworksStore"
+    },
+    "designerId": "1f540070-7193-4675-bf48-d7bdedbe93f8",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "flex",
+            "type": "string"
+        }
+    ],
+    "cn": [
+        {
+            "type": "Ext.XTemplate",
+            "reference": {
+                "name": "itemTpl",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "disableFormats": true,
+                "designer|userClassName": "itemTpl",
+                "implHandler": [
+                    "<img class=\"network-logo\" src=\"{image}\"/>\r",
+                    "{name}\r",
+                    "<div class=\"networkList state{state}\"></div>"
+                ],
+                "designer|displayName": "itemTpl"
+            },
+            "designerId": "78aa8467-66de-440f-8018-43e333a442ea"
+        }
+    ]
+}

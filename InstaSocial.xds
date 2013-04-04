@@ -1,0 +1,182 @@
+{
+    "name": "InstaSocial",
+    "settings": {
+        "urlPrefix": "http://localhost:8081/InstaSocial",
+        "exportPath": ""
+    },
+    "xdsVersion": "2.2.0",
+    "xdsBuild": 908,
+    "schemaVersion": 1,
+    "upgradeVersion": 210000000499,
+    "framework": "touch21",
+    "topInstanceFileMap": {
+        "4b24ab5c-d84f-4202-8fae-a791ffde467f": {
+            "paths": [
+                "metadata/resource/Library"
+            ],
+            "className": "Library"
+        },
+        "7b53273d-6764-468c-9f46-9a8b347a6af9": {
+            "paths": [
+                "metadata/resource/js"
+            ],
+            "className": "js"
+        },
+        "56cf39fd-035c-400b-bb5c-44ae8d82d980": {
+            "paths": [
+                "metadata/view/NetworkListContainer",
+                "app/view/override/NetworkListContainer.js",
+                "app/view/NetworkListContainer.js"
+            ],
+            "className": "NetworkListContainer"
+        },
+        "b91ae024-1347-4ab2-bc2f-158133a05f49": {
+            "paths": [
+                "metadata/model/NetworkModel",
+                "app/model/override/NetworkModel.js",
+                "app/model/NetworkModel.js"
+            ],
+            "className": "NetworkModel"
+        },
+        "1121f39b-3485-4e4d-a4c7-34086811e080": {
+            "paths": [
+                "metadata/store/NetworksStore",
+                "app/store/override/NetworksStore.js",
+                "app/store/NetworksStore.js"
+            ],
+            "className": "NetworksStore"
+        },
+        "7fb1e8e3-87d9-4cfb-a1ec-64e92159390c": {
+            "paths": [
+                "metadata/view/NetworkPanel",
+                "app/view/override/NetworkPanel.js",
+                "app/view/NetworkPanel.js"
+            ],
+            "className": "NetworkPanel"
+        },
+        "1f06f30f-e66c-4692-b946-e41584021eff": {
+            "paths": [
+                "metadata/controller/NetworksController",
+                "app/controller/override/NetworksController.js",
+                "app/controller/NetworksController.js"
+            ],
+            "className": "NetworksController"
+        },
+        "1e1c477d-fbb3-4ef7-a6dd-67dbd1d60870": {
+            "paths": [
+                "metadata/model/UserSettingModel",
+                "app/model/override/UserSettingModel.js",
+                "app/model/UserSettingModel.js"
+            ],
+            "className": "UserSettingModel"
+        },
+        "2ce1f58e-f863-49a0-91eb-b6f7709301de": {
+            "paths": [
+                "metadata/store/UserSettingsStore",
+                "app/store/override/UserSettingsStore.js",
+                "app/store/UserSettingsStore.js"
+            ],
+            "className": "UserSettingsStore"
+        },
+        "309bff0a-b698-4b17-950d-97777abcb2f8": {
+            "paths": [
+                "metadata/store/UserSettingsLocalStore",
+                "app/store/override/UserSettingsLocalStore.js",
+                "app/store/UserSettingsLocalStore.js"
+            ],
+            "className": "UserSettingsLocalStore"
+        },
+        "ee5c1194-f7db-4011-aa42-863359a24564": {
+            "paths": [
+                "metadata/resource/js1"
+            ],
+            "className": "js1"
+        },
+        "8907145b-c0d9-48e2-989b-81af09545c96": {
+            "paths": [
+                "metadata/controller/MainController",
+                "app/controller/override/MainController.js",
+                "app/controller/MainController.js"
+            ],
+            "className": "MainController"
+        },
+        "1f540070-7193-4675-bf48-d7bdedbe93f8": {
+            "paths": [
+                "metadata/view/NetworkList",
+                "app/view/override/NetworkList.js",
+                "app/view/NetworkList.js"
+            ],
+            "className": "NetworkList"
+        },
+        "54b84051-a916-4dd3-8fc3-a9f5096ab4aa": {
+            "paths": [
+                "metadata/resource/css"
+            ],
+            "className": "css"
+        },
+        "124b200b-8535-4cb8-9cad-926c3e13d6e5": {
+            "paths": [
+                "metadata/resource/js4"
+            ],
+            "className": "js4"
+        },
+        "34aee602-8d3f-48db-9fbd-bfb4e3e73e58": {
+            "paths": [
+                "metadata/resource/js3"
+            ],
+            "className": "js3"
+        },
+        "d35f04b8-8c3a-4617-ad2d-73a69666b12c": {
+            "paths": [
+                "metadata/resource/js5"
+            ],
+            "className": "js5"
+        },
+        "303488b2-4227-4665-9b1c-cae15b610271": {
+            "paths": [
+                "metadata/resource/js6"
+            ],
+            "className": "js6"
+        },
+        "27e16bcc-5bbb-4fb5-981e-e056147236be": {
+            "paths": [
+                "metadata/resource/js2"
+            ],
+            "className": "js2"
+        }
+    },
+    "viewOrderMap": {
+        "view": [
+            "56cf39fd-035c-400b-bb5c-44ae8d82d980",
+            "1f540070-7193-4675-bf48-d7bdedbe93f8",
+            "7fb1e8e3-87d9-4cfb-a1ec-64e92159390c"
+        ],
+        "store": [
+            "1121f39b-3485-4e4d-a4c7-34086811e080",
+            "2ce1f58e-f863-49a0-91eb-b6f7709301de",
+            "309bff0a-b698-4b17-950d-97777abcb2f8"
+        ],
+        "controller": [
+            "1f06f30f-e66c-4692-b946-e41584021eff",
+            "8907145b-c0d9-48e2-989b-81af09545c96"
+        ],
+        "model": [
+            "b91ae024-1347-4ab2-bc2f-158133a05f49",
+            "1e1c477d-fbb3-4ef7-a6dd-67dbd1d60870"
+        ],
+        "resource": [
+            "4b24ab5c-d84f-4202-8fae-a791ffde467f",
+            "7b53273d-6764-468c-9f46-9a8b347a6af9",
+            "ee5c1194-f7db-4011-aa42-863359a24564",
+            "54b84051-a916-4dd3-8fc3-a9f5096ab4aa",
+            "34aee602-8d3f-48db-9fbd-bfb4e3e73e58",
+            "124b200b-8535-4cb8-9cad-926c3e13d6e5",
+            "d35f04b8-8c3a-4617-ad2d-73a69666b12c",
+            "303488b2-4227-4665-9b1c-cae15b610271",
+            "27e16bcc-5bbb-4fb5-981e-e056147236be"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

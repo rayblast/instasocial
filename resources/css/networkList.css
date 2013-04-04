@@ -1,0 +1,43 @@
+.networkList.state4{
+    background-color: #00CC33;
+	width: 10pt;
+	height: 10pt;
+	display: inline-block;
+	margin-left: auto;
+	margin-right: 10pt;
+    margin-top: 3pt;
+	float: right;
+}
+
+.networkList.state0, .networkList.state1, .networkList.state2, .networkList.state3{
+    background-color: #CC3333;
+	width: 10pt;
+	height: 10pt;
+	display: inline-block;	
+	margin-left: auto;
+	margin-right: 10pt;
+    margin-top: 3pt;
+	float: right;
+}
+
+.network-logo{
+    height: 25pt;
+	width: 25pt;
+	float: left;
+	margin-right: 5pt;
+	margin-top: -4pt;
+}
+
+.network-logo-panel{
+    height: 30pt;
+    width: 30pt;
+    position: absolute;
+    left: 25pt;
+    top: 16pt;
+    z-index: 100;
+}
+
+.network-list .x-list-item.x-item-selected .x-dock-horizontal{
+    color: rgb(139, 139, 139);
+    text-shadow: rgba(1,1,1,0.0) 0 -0.08em 0;
+}

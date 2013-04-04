@@ -1,0 +1,48 @@
+{
+    "type": "Ext.Container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "id": "networkListContainer",
+        "itemId": "networkListContainer",
+        "ui": "dark",
+        "designer|userClassName": "NetworkListContainer",
+        "designer|userAlias": "networkListContainer",
+        "layout": "fit"
+    },
+    "designerId": "56cf39fd-035c-400b-bb5c-44ae8d82d980",
+    "cn": [
+        {
+            "type": "Ext.XTemplate",
+            "reference": {
+                "name": "tpl",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "tpl",
+                "implHandler": [
+                    "<div id=\"vk_api_transport\"></div>"
+                ],
+                "designer|displayName": "tpl"
+            },
+            "designerId": "34fbc64b-c014-4e5e-9aed-707dede06ee8"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "allowDeselect": true
+            },
+            "designerId": "323703ff-b280-4168-a993-7f115123d9db",
+            "masterInstanceId": "1f540070-7193-4675-bf48-d7bdedbe93f8"
+        }
+    ]
+}

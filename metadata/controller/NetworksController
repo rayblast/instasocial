@@ -1,0 +1,314 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "network": null,
+        "networkPanel": null,
+        "designer|userClassName": "NetworksController"
+    },
+    "designerId": "1f06f30f-e66c-4692-b946-e41584021eff",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "network",
+            "type": "string"
+        },
+        {
+            "group": "(Custom Properties)",
+            "name": "networkPanel",
+            "type": "string"
+        }
+    ],
+    "cn": [
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "networkList",
+                "ref": "networkList",
+                "selector": "networkList"
+            },
+            "designerId": "73b33322-58d6-4fc4-88b9-e2704c17f410"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "btLogin",
+                "ref": "btLogin",
+                "selector": "#btLogin"
+            },
+            "designerId": "03829c0b-88a7-41d7-a732-9686c3673d99"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "btLogout",
+                "ref": "btLogout",
+                "selector": "#btLogout"
+            },
+            "designerId": "8052b3c9-0062-48aa-953d-974a1ea57512"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onBtLoginTap",
+                "fn": "onBtLoginTap",
+                "implHandler": [
+                    "console.info('NetworksController.onBtLoginTap');\r",
+                    "\r",
+                    "var networksController = InstaSocial.app.getController(config.controllers.networksController);\r",
+                    "var networkPanel = Ext.Viewport.down(config.views.networkPanel);\r",
+                    "var record = networkPanel.getRecord();\r",
+                    "var network = record.data;\r",
+                    "\r",
+                    "core.connectivity.networks[network.id].login(networksController.setState);\r",
+                    ""
+                ],
+                "name": "tap",
+                "designer|targetType": "NetworkPanel",
+                "designer|controlQuery": "btLogin"
+            },
+            "designerId": "cd44b3e6-d7dd-4fc7-a8f0-4459b10bb593"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "networkPanel",
+                "ref": "networkPanel",
+                "selector": "#networkPanel"
+            },
+            "designerId": "271dece8-0e61-4909-a043-d02b2157eedc"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onBtLogoutTap",
+                "fn": "onBtLogoutTap",
+                "implHandler": [
+                    "console.info('NetworksController.onBtLogoutTap');\r",
+                    "\r",
+                    "var networksController = InstaSocial.app.getController(config.controllers.networksController);\r",
+                    "var networkPanel = Ext.Viewport.down(config.views.networkPanel);\r",
+                    "var record = networkPanel.getRecord();\r",
+                    "var network = record.data;\r",
+                    "\r",
+                    "core.connectivity.networks[network.id].logout(networksController.setState);"
+                ],
+                "name": "tap",
+                "designer|targetType": "NetworkPanel",
+                "designer|controlQuery": "btLogout"
+            },
+            "designerId": "3186ea28-0d2b-4143-9e87-094d4d353fc7"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "itemTap",
+                "fn": "itemTap",
+                "designer|params": [
+                    "record",
+                    "target"
+                ],
+                "implHandler": [
+                    "console.info('NetworksController.itemTap');\r",
+                    "\r",
+                    "var network = record.data;\r",
+                    "var networkPanel = Ext.Viewport.down(config.views.networkPanel);\r",
+                    "\r",
+                    "if(!networkPanel){\r",
+                    "    networkPanel = Ext.widget(config.views.networkPanel);\r",
+                    "} \r",
+                    "\r",
+                    "networkPanel.setRecord(record);\r",
+                    "networkPanel.setData({name:network.name, image:network.image});\r",
+                    "\r",
+                    "//Ext.Viewport.setMasked({xtype:'loadmask',message:'Loading...'});\r",
+                    "core.ui.display.loading.start();\r",
+                    "\r",
+                    "//Ext.getCmp('btLogin').hide();\r",
+                    "//Ext.getCmp('btLogout').hide();\r",
+                    "var networksController = InstaSocial.app.getController(config.controllers.networksController);\r",
+                    "networksController.setState(null);\r",
+                    "\r",
+                    "\r",
+                    "var showPanelArgs = {\r",
+                    "    panel: networkPanel,\r",
+                    "    target: target\r",
+                    "};\r",
+                    "\r",
+                    "\r",
+                    "core.connectivity.networks[network.id].checkState(networksController.showPanel, showPanelArgs);\r",
+                    "\r",
+                    "//networkPanel.showBy(target);\r",
+                    "return;\r",
+                    "\r",
+                    "\r",
+                    "if(network.id == 'fb'){\r",
+                    "\r",
+                    "    if(!global.activeNetworks.fb && !global.loadedNetworks.fb){\r",
+                    "        InstaSocial.app.loadFb(target);\r",
+                    "        //networkPanel.showBy(target);\r",
+                    "    }else{\r",
+                    "        FB.getLoginStatus(function(response) {\r",
+                    "            helpers.networks.fb.authCallback(response,target);\r",
+                    "            //networkPanel.showBy(target);\r",
+                    "            Ext.Viewport.setMasked(false);\r",
+                    "        });\r",
+                    "    }\r",
+                    "\r",
+                    "}else if(network.id == 'vk'){\r",
+                    "    if(!global.activeNetworks.vk && !global.loadedNetworks.vk){\r",
+                    "        InstaSocial.app.loadVk(target);\r",
+                    "        //networkPanel.showBy(target);\r",
+                    "    }else{       \r",
+                    "        VK.Auth.getLoginStatus(function(response) {\r",
+                    "            helpers.networks.vk.authCallback(response, target);\r",
+                    "            //networkPanel.showBy(target);\r",
+                    "            Ext.Viewport.setMasked(false);\r",
+                    "        });\r",
+                    "    }\r",
+                    "}"
+                ]
+            },
+            "designerId": "d70035e2-ae32-48a5-a0d0-cb2e1b0294ac"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "setState",
+                "fn": "setState",
+                "designer|params": [
+                    "args"
+                ],
+                "implHandler": [
+                    "console.info('NetworksController.setState');\r",
+                    "\r",
+                    "var state;\r",
+                    "if(args !== null){\r",
+                    "    state = args.state;\r",
+                    "}else{\r",
+                    "    state = null;\r",
+                    "}\r",
+                    "\r",
+                    "if(state == config.core.connectivity.state.loggedin){\r",
+                    "    Ext.getCmp('btLogin').hide();\r",
+                    "    Ext.getCmp('btLogout').show();\r",
+                    "}else{\r",
+                    "    Ext.getCmp('btLogin').show();\r",
+                    "    Ext.getCmp('btLogout').hide();\r",
+                    "}"
+                ]
+            },
+            "designerId": "b877b4c5-3643-4f86-9877-5215f357f283"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "showPanel",
+                "fn": "showPanel",
+                "designer|params": [
+                    "args"
+                ],
+                "implHandler": [
+                    "console.info('NetworksController.showPanel');\r",
+                    "\r",
+                    "var networksController = InstaSocial.app.getController(config.controllers.networksController);\r",
+                    "networksController.setState(args);\r",
+                    "args.panel.showBy(args.target);\r",
+                    "core.ui.display.loading.stop();"
+                ]
+            },
+            "designerId": "f503adc2-4e7d-4821-a101-bba601ef7f5c"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onNetworkListItemTap",
+                "fn": "onNetworkListItemTap",
+                "implHandler": [
+                    "console.info('MainController.onNetworkListItemTap');\r",
+                    "\r",
+                    "var network = record.data;\r",
+                    "var networkPanel = Ext.Viewport.down(config.views.networkPanel);\r",
+                    "\r",
+                    "if(!networkPanel){\r",
+                    "    networkPanel = Ext.widget(config.views.networkPanel);\r",
+                    "} \r",
+                    "\r",
+                    "networkPanel.setRecord(record);\r",
+                    "networkPanel.setData({name:network.name, image:network.image});\r",
+                    "\r",
+                    "core.ui.display.loading.start();\r",
+                    "\r",
+                    "var networksController = InstaSocial.app.getController(config.controllers.networksController);\r",
+                    "networksController.setState(null);\r",
+                    "\r",
+                    "\r",
+                    "var showPanelArgs = {\r",
+                    "    panel: networkPanel,\r",
+                    "    target: target\r",
+                    "};\r",
+                    "\r",
+                    "core.connectivity.networks[network.id].checkState(networksController.showPanel, showPanelArgs);"
+                ],
+                "name": "itemtap",
+                "designer|targetType": "NetworkList",
+                "designer|controlQuery": "networkList"
+            },
+            "designerId": "15870795-1e3b-49dd-bffb-2a8a5360867e"
+        }
+    ]
+}

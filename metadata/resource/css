@@ -1,0 +1,13 @@
+{
+    "type": "cssresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "url": "resources/css/networkList.css",
+        "id": "networkList"
+    },
+    "designerId": "54b84051-a916-4dd3-8fc3-a9f5096ab4aa"
+}

@@ -1,0 +1,20 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "data": [
+            "[{id : 'networkfbstate', value : 0},\r",
+            " {id : 'networkvkstate', value : 0}]"
+        ],
+        "model": "UserSettingModel",
+        "storeId": "UserSettingsStore",
+        "designer|userClassName": "UserSettingsStore",
+        "designer|userAlias": "userSettingsStore"
+    },
+    "designerId": "2ce1f58e-f863-49a0-91eb-b6f7709301de"
+}
