@@ -12,4 +12,4 @@ var labels = {
 
     msgConnTimeout: 'Connection timeout!',
     msgLoading: 'Loading...'
-}
+};

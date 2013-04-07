@@ -87,67 +87,6 @@ Ext.define('InstaSocial.controller.NetworksController', {
         core.connectivity.networks[network.id].checkState(networksController.showPanel, showPanelArgs);
     },
 
-    itemTap: function(record, target) {
-        console.info('NetworksController.itemTap');
-
-        var network = record.data;
-        var networkPanel = Ext.Viewport.down(config.views.networkPanel);
-
-        if(!networkPanel){
-            networkPanel = Ext.widget(config.views.networkPanel);
-        } 
-
-        networkPanel.setRecord(record);
-        networkPanel.setData({name:network.name, image:network.image});
-
-        //Ext.Viewport.setMasked({xtype:'loadmask',message:'Loading...'});
-        core.ui.display.loading.start();
-
-        //Ext.getCmp('btLogin').hide();
-        //Ext.getCmp('btLogout').hide();
-        var networksController = InstaSocial.app.getController(config.controllers.networksController);
-        networksController.setState(null);
-
-
-        var showPanelArgs = {
-            panel: networkPanel,
-            target: target
-        };
-
-
-        core.connectivity.networks[network.id].checkState(networksController.showPanel, showPanelArgs);
-
-        //networkPanel.showBy(target);
-        return;
-
-
-        if(network.id == 'fb'){
-
-            if(!global.activeNetworks.fb && !global.loadedNetworks.fb){
-                InstaSocial.app.loadFb(target);
-                //networkPanel.showBy(target);
-            }else{
-                FB.getLoginStatus(function(response) {
-                    helpers.networks.fb.authCallback(response,target);
-                    //networkPanel.showBy(target);
-                    Ext.Viewport.setMasked(false);
-                });
-            }
-
-        }else if(network.id == 'vk'){
-            if(!global.activeNetworks.vk && !global.loadedNetworks.vk){
-                InstaSocial.app.loadVk(target);
-                //networkPanel.showBy(target);
-            }else{       
-                VK.Auth.getLoginStatus(function(response) {
-                    helpers.networks.vk.authCallback(response, target);
-                    //networkPanel.showBy(target);
-                    Ext.Viewport.setMasked(false);
-                });
-            }
-        }
-    },
-
     setState: function(args) {
         console.info('NetworksController.setState');
 

@@ -116,33 +116,33 @@
         },
         "124b200b-8535-4cb8-9cad-926c3e13d6e5": {
             "paths": [
-                "metadata/resource/js4"
+                "metadata/resource/js2"
             ],
-            "className": "js4"
+            "className": "js2"
         },
-        "34aee602-8d3f-48db-9fbd-bfb4e3e73e58": {
+        "d35f04b8-8c3a-4617-ad2d-73a69666b12c": {
             "paths": [
                 "metadata/resource/js3"
             ],
             "className": "js3"
         },
-        "d35f04b8-8c3a-4617-ad2d-73a69666b12c": {
+        "303488b2-4227-4665-9b1c-cae15b610271": {
+            "paths": [
+                "metadata/resource/js4"
+            ],
+            "className": "js4"
+        },
+        "27e16bcc-5bbb-4fb5-981e-e056147236be": {
             "paths": [
                 "metadata/resource/js5"
             ],
             "className": "js5"
         },
-        "303488b2-4227-4665-9b1c-cae15b610271": {
+        "f19b792b-ad54-48a6-9192-45099c6e4be7": {
             "paths": [
                 "metadata/resource/js6"
             ],
             "className": "js6"
-        },
-        "27e16bcc-5bbb-4fb5-981e-e056147236be": {
-            "paths": [
-                "metadata/resource/js2"
-            ],
-            "className": "js2"
         }
     },
     "viewOrderMap": {
@@ -169,11 +169,11 @@
             "7b53273d-6764-468c-9f46-9a8b347a6af9",
             "ee5c1194-f7db-4011-aa42-863359a24564",
             "54b84051-a916-4dd3-8fc3-a9f5096ab4aa",
-            "34aee602-8d3f-48db-9fbd-bfb4e3e73e58",
+            "f19b792b-ad54-48a6-9192-45099c6e4be7",
             "124b200b-8535-4cb8-9cad-926c3e13d6e5",
-            "d35f04b8-8c3a-4617-ad2d-73a69666b12c",
+            "27e16bcc-5bbb-4fb5-981e-e056147236be",
             "303488b2-4227-4665-9b1c-cae15b610271",
-            "27e16bcc-5bbb-4fb5-981e-e056147236be"
+            "d35f04b8-8c3a-4617-ad2d-73a69666b12c"
         ],
         "app": [
             "application"

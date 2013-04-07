@@ -1,1 +1,5 @@
 [6108:7844:0330/173746:153442421:ERROR:window_impl.cc(55)] Failed to unregister class Chrome_WidgetWin_0. Error = 1412
+[608:3928:0407/193439:425276140:ERROR:proxy_resolver_winhttp.cc(94)] WinHttpGetProxyForUrl failed: 12167
+[608:7308:0407/193440:425277078:ERROR:proxy_resolver_winhttp.cc(94)] WinHttpGetProxyForUrl failed: 12167
+[608:7404:0407/193553:425349765:ERROR:render_widget_host_impl.cc(1839)] We seem to have a different key type sent from the renderer. (7 vs. 10). Ignoring event.
+[608:7404:0407/193553:425350000:ERROR:render_widget_host_impl.cc(1836)] Got a KeyEvent back from the renderer but we don't seem to have sent it to the renderer!
