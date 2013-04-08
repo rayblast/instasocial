@@ -1,0 +1,162 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Post",
+        "designer|userAlias": "post"
+    },
+    "designerId": "c3fbd4fd-4280-4104-9f3c-2709b3d265e8",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "id",
+                "designer|userClassName": "field16"
+            },
+            "designerId": "04d4d836-07ee-4a08-8fc1-f1e59f733622"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "post_id",
+                "designer|userClassName": "field28"
+            },
+            "designerId": "3878f0e2-c50a-4232-9944-d37cdb0e9058"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "text",
+                "designer|userClassName": "field19"
+            },
+            "designerId": "4d42c859-f523-4ffe-8eee-76c671030c46"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "likes_count",
+                "designer|userClassName": "field21"
+            },
+            "designerId": "e7777ef8-f794-4cf0-a18d-d2df23992790"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "comments_count",
+                "designer|userClassName": "field24"
+            },
+            "designerId": "b6106632-994b-4a82-8209-5e44d661cb04"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "reposts_count",
+                "designer|userClassName": "field25"
+            },
+            "designerId": "2dade4cc-255b-4418-af45-6bf2636c5db0"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "created_time",
+                "designer|userClassName": "field29"
+            },
+            "designerId": "1389e4c0-a80e-4675-8127-8acd4f2aae98"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "type",
+                "designer|userClassName": "field20"
+            },
+            "designerId": "7c7b704d-b3ec-431a-ab2a-0e01dc1eb0c8"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "network_id",
+                "designer|userClassName": "field17"
+            },
+            "designerId": "94e91ef4-5967-4ebd-acbd-f3043904eb5d"
+        },
+        {
+            "type": "Ext.data.association.HasOne",
+            "reference": {
+                "name": "hasOne",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "associationKey": "user",
+                "designer|userClassName": "MyHasOneAssociation1",
+                "designer|displayName": "hasOneUser",
+                "model": "User"
+            },
+            "designerId": "6b5ab272-7a67-4128-abb5-5a342c92b908"
+        },
+        {
+            "type": "Ext.data.association.HasMany",
+            "reference": {
+                "name": "hasMany",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "associationKey": "comments",
+                "designer|userClassName": "MyHasManyAssociation",
+                "designer|displayName": "hasManyComment",
+                "model": "Comment"
+            },
+            "designerId": "f736bbc8-55b7-46aa-9d21-6fbc26402f08"
+        }
+    ]
+}

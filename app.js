@@ -23,18 +23,24 @@ Ext.Loader.setConfig({
 Ext.application({
     models: [
         'NetworkModel',
-        'UserSettingModel'
+        'UserSettingModel',
+        'Comment',
+        'User',
+        'Post'
     ],
     stores: [
         'NetworksStore',
         'UserSettingsStore',
-        'UserSettingsLocalStore'
+        'UserSettingsLocalStore',
+        'NewsFeedVkStore'
     ],
     views: [
         'NetworkListContainer',
         'NetworkList',
         'NetworkPanel',
-        'MainView'
+        'MainView',
+        'NewsFeedVkContainer',
+        'NewsFeedVkList'
     ],
     controllers: [
         'NetworksController',
@@ -51,6 +57,38 @@ Ext.application({
         if(!core.connectivity.loadNetworks()){
             mainView.list.select(2);
         }
+
+
+        var newsFeedVkStore = Ext.getStore('NewsFeedVkStore');
+
+        var testData = {
+            //    "data" : [{
+            "post_id": "123",
+            "user": {
+                "user_id": "1",
+                "first_name": "Roman",
+                "last_name": "Lytvyn",
+                "full_name": "Roman Lytvyn",
+                "photo": "http://vkontakte.ru/images/camera_c.gif",
+                "sex": 2,
+                "online": 1,
+                "network_id": "vk"
+            },
+            "text": "This is a test message.",
+            "likes_count": 2,
+            "comments_count": 1,
+            "reposts_count": 0,
+            "created_time": "08.04.2013 2:30",
+            "type": "post",
+            "network_id": "vk"
+            //    }]
+        };
+
+        newsFeedVkStore.add(testData);
+        newsFeedVkStore.add(testData);
+
+        newsFeedVkStore.sync();
+
     }
 
 });

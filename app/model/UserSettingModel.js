@@ -18,7 +18,6 @@ Ext.define('InstaSocial.model.UserSettingModel', {
     alias: 'model.userSettingModel',
 
     config: {
-        idProperty: 'userSettingModel',
         fields: [
             {
                 name: 'id'

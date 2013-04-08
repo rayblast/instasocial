@@ -143,18 +143,75 @@
                 "metadata/resource/js6"
             ],
             "className": "js6"
+        },
+        "c3f9dc11-9446-40ca-98ea-3a65e50503eb": {
+            "paths": [
+                "metadata/model/Comment",
+                "app/model/override/Comment.js",
+                "app/model/Comment.js"
+            ],
+            "className": "Comment"
+        },
+        "005ec00e-558c-4012-8208-14f22a76f506": {
+            "paths": [
+                "metadata/model/User",
+                "app/model/override/User.js",
+                "app/model/User.js"
+            ],
+            "className": "User"
+        },
+        "c3fbd4fd-4280-4104-9f3c-2709b3d265e8": {
+            "paths": [
+                "metadata/model/Post",
+                "app/model/override/Post.js",
+                "app/model/Post.js"
+            ],
+            "className": "Post"
+        },
+        "270affb2-339c-4b88-9db9-9079cc40d3bf": {
+            "paths": [
+                "metadata/view/NewsFeedVkContainer",
+                "app/view/override/NewsFeedVkContainer.js",
+                "app/view/NewsFeedVkContainer.js"
+            ],
+            "className": "NewsFeedVkContainer"
+        },
+        "38acb443-8b8b-4544-ade0-1e097968e5c0": {
+            "paths": [
+                "metadata/view/NewsFeedVkList",
+                "app/view/override/NewsFeedVkList.js",
+                "app/view/NewsFeedVkList.js"
+            ],
+            "className": "NewsFeedVkList"
+        },
+        "f2c90753-2494-4cb2-8281-dbcafcc54f7b": {
+            "paths": [
+                "metadata/store/NewsFeedVkStore",
+                "app/store/override/NewsFeedVkStore.js",
+                "app/store/NewsFeedVkStore.js"
+            ],
+            "className": "NewsFeedVkStore"
+        },
+        "9cec381a-cc96-4fce-813e-6c99a0b1f216": {
+            "paths": [
+                "metadata/resource/css1"
+            ],
+            "className": "css1"
         }
     },
     "viewOrderMap": {
         "view": [
             "56cf39fd-035c-400b-bb5c-44ae8d82d980",
+            "270affb2-339c-4b88-9db9-9079cc40d3bf",
             "1f540070-7193-4675-bf48-d7bdedbe93f8",
+            "38acb443-8b8b-4544-ade0-1e097968e5c0",
             "7fb1e8e3-87d9-4cfb-a1ec-64e92159390c"
         ],
         "store": [
             "1121f39b-3485-4e4d-a4c7-34086811e080",
             "2ce1f58e-f863-49a0-91eb-b6f7709301de",
-            "309bff0a-b698-4b17-950d-97777abcb2f8"
+            "309bff0a-b698-4b17-950d-97777abcb2f8",
+            "f2c90753-2494-4cb2-8281-dbcafcc54f7b"
         ],
         "controller": [
             "1f06f30f-e66c-4692-b946-e41584021eff",
@@ -162,13 +219,17 @@
         ],
         "model": [
             "b91ae024-1347-4ab2-bc2f-158133a05f49",
-            "1e1c477d-fbb3-4ef7-a6dd-67dbd1d60870"
+            "1e1c477d-fbb3-4ef7-a6dd-67dbd1d60870",
+            "c3f9dc11-9446-40ca-98ea-3a65e50503eb",
+            "005ec00e-558c-4012-8208-14f22a76f506",
+            "c3fbd4fd-4280-4104-9f3c-2709b3d265e8"
         ],
         "resource": [
             "4b24ab5c-d84f-4202-8fae-a791ffde467f",
             "7b53273d-6764-468c-9f46-9a8b347a6af9",
             "ee5c1194-f7db-4011-aa42-863359a24564",
             "54b84051-a916-4dd3-8fc3-a9f5096ab4aa",
+            "9cec381a-cc96-4fce-813e-6c99a0b1f216",
             "f19b792b-ad54-48a6-9192-45099c6e4be7",
             "124b200b-8535-4cb8-9cad-926c3e13d6e5",
             "27e16bcc-5bbb-4fb5-981e-e056147236be",

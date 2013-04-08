@@ -6,7 +6,7 @@
     },
     "codeClass": null,
     "userConfig": {
-        "idProperty": "userSettingModel",
+        "clientIdProperty": null,
         "designer|userClassName": "UserSettingModel",
         "designer|userAlias": "userSettingModel"
     },

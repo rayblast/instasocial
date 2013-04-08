@@ -1,0 +1,73 @@
+{
+    "type": "Ext.dataview.List",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "flex": null,
+        "cls": [
+            "newsfeed-list"
+        ],
+        "height": null,
+        "id": "newsFeedVkList",
+        "showAnimation": "slide",
+        "style": null,
+        "ui": null,
+        "designer|userClassName": "NewsFeedVkList",
+        "designer|userAlias": "newsFeedVkList",
+        "designer|createAlias": "list",
+        "modal": false,
+        "disableSelection": true,
+        "itemCls": null,
+        "store": "NewsFeedVkStore"
+    },
+    "designerId": "38acb443-8b8b-4544-ade0-1e097968e5c0",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "flex",
+            "type": "string"
+        }
+    ],
+    "cn": [
+        {
+            "type": "Ext.XTemplate",
+            "reference": {
+                "name": "itemTpl",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "disableFormats": true,
+                "designer|userClassName": "itemTpl",
+                "implHandler": [
+                    "<div class=\"newsfeed-list-item\">\r",
+                    "\t<div class=\"header\">\r",
+                    "        <div class=\"icon\">\r",
+                    "            <img src=\"{User.photo}\"/>\r",
+                    "    \t</div>\r",
+                    "        <div class=\"info\">\r",
+                    "        \t<div class=\"name\">\r",
+                    "        \t\t{User.full_name}\r",
+                    "    \t\t</div>\r",
+                    "            <div class=\"date\">\r",
+                    "        \t\t{created_time}\r",
+                    "    \t\t</div>\r",
+                    "        </div>\r",
+                    "    </div>\r",
+                    "    <div class=\"body\">\r",
+                    "        {text}\r",
+                    "    </div>\r",
+                    "    <div class=\"footer\">\r",
+                    "        {likes_count} Likes {comments_count} Comment(s)\r",
+                    "    </div>  \r",
+                    "</div>"
+                ],
+                "designer|displayName": "itemTpl"
+            },
+            "designerId": "5e54e527-21a2-4291-9bdd-c44849d2e11b"
+        }
+    ]
+}

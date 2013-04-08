@@ -6,7 +6,6 @@
     },
     "codeClass": null,
     "userConfig": {
-        "idProperty": "networkModel",
         "designer|userClassName": "NetworkModel",
         "designer|userAlias": "networkModel"
     },

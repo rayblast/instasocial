@@ -10,18 +10,24 @@
         "activeVk": null,
         "models": [
             "NetworkModel",
-            "UserSettingModel"
+            "UserSettingModel",
+            "Comment",
+            "User",
+            "Post"
         ],
         "stores": [
             "NetworksStore",
             "UserSettingsStore",
-            "UserSettingsLocalStore"
+            "UserSettingsLocalStore",
+            "NewsFeedVkStore"
         ],
         "views": [
             "NetworkListContainer",
             "NetworkList",
             "NetworkPanel",
-            "MainView"
+            "MainView",
+            "NewsFeedVkContainer",
+            "NewsFeedVkList"
         ],
         "controllers": [
             "NetworksController",
@@ -61,7 +67,39 @@
                     "\r",
                     "if(!core.connectivity.loadNetworks()){\r",
                     "    mainView.list.select(2);\r",
-                    "}"
+                    "}\r",
+                    "\r",
+                    "\r",
+                    "var newsFeedVkStore = Ext.getStore('NewsFeedVkStore');\r",
+                    "\r",
+                    "var testData = {\r",
+                    "//    \"data\" : [{\r",
+                    "        \"post_id\": \"123\",\r",
+                    "        \"user\": {\r",
+                    "            \"user_id\": \"1\",\r",
+                    "            \"first_name\": \"Roman\",\r",
+                    "            \"last_name\": \"Lytvyn\",\r",
+                    "            \"full_name\": \"Roman Lytvyn\",\r",
+                    "            \"photo\": \"http://vkontakte.ru/images/camera_c.gif\",\r",
+                    "            \"sex\": 2,\r",
+                    "            \"online\": 1,\r",
+                    "            \"network_id\": \"vk\"\r",
+                    "        },\r",
+                    "        \"text\": \"This is a test message.\",\r",
+                    "        \"likes_count\": 2,\r",
+                    "        \"comments_count\": 1,\r",
+                    "        \"reposts_count\": 0,\r",
+                    "        \"created_time\": \"08.04.2013 2:30\",\r",
+                    "        \"type\": \"post\",\r",
+                    "        \"network_id\": \"vk\"\r",
+                    "//    }]\r",
+                    "};\r",
+                    "\r",
+                    "newsFeedVkStore.add(testData);\r",
+                    "newsFeedVkStore.add(testData);\r",
+                    "\r",
+                    "newsFeedVkStore.sync();\r",
+                    ""
                 ]
             },
             "designerId": "5273e144-476c-4c55-8f3b-f465e4a594dc"
