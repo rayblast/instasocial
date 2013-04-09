@@ -53,7 +53,16 @@ Ext.define('InstaSocial.view.NewsFeedvkList', {
             {
                 disableFormats: true
             }
-        )
+        ),
+        plugins: [
+            {
+                refreshFn: function(plugin) {
+                    core.newsfeed.networks.vk.getNewsFeed();
+                },
+                pluginId: 'newsFeedvkRefresh',
+                type: 'pullrefresh'
+            }
+        ]
     }
 
 });

@@ -29,6 +29,7 @@
 .newsfeed-list-item .header .icon{
 	float: left;
 	width: 60px;
+    height: 50px;
 }
 
 .newsfeed-list-item .header .info .date{

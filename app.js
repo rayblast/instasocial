@@ -32,7 +32,8 @@ Ext.application({
         'NetworksStore',
         'UserSettingsStore',
         'UserSettingsLocalStore',
-        'NewsFeedvkStore'
+        'NewsFeedvkStore',
+        'NewsFeedfbStore'
     ],
     views: [
         'NetworkListContainer',
@@ -64,11 +65,11 @@ Ext.application({
 
         var newsFeedCarousel = Ext.getCmp('newsFeedCarousel');
 
-        newsFeedCarousel.add({xtype: 'newsFeedvkList'});
         newsFeedCarousel.add({xtype: 'newsFeedfbList'});
+        newsFeedCarousel.add({xtype: 'newsFeedvkList'});
 
 
-        var newsFeedVkStore = Ext.getStore('NewsFeedvkStore');
+        //var newsFeedVkStore = Ext.getStore('NewsFeedvkStore');
 
         var testData = {
             //    "data" : [{
@@ -93,10 +94,10 @@ Ext.application({
             //    }]
         };
 
-        newsFeedVkStore.add(testData);
-        newsFeedVkStore.add(testData);
+        //newsFeedVkStore.add(testData);
+        //newsFeedVkStore.add(testData);
 
-        newsFeedVkStore.sync();
+        //newsFeedVkStore.sync();
 
     }
 

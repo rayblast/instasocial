@@ -23,7 +23,7 @@ Ext.define('InstaSocial.view.NewsFeedfbList', {
         showAnimation: 'slide',
         modal: false,
         disableSelection: true,
-        store: 'NewsFeedvkStore',
+        store: 'NewsFeedfbStore',
         scrollable: {
             direction: 'vertical',
             directionLock: true
@@ -53,7 +53,16 @@ Ext.define('InstaSocial.view.NewsFeedfbList', {
             {
                 disableFormats: true
             }
-        )
+        ),
+        plugins: [
+            {
+                refreshFn: function(plugin) {
+                    core.newsfeed.networks.fb.getNewsFeed();
+                },
+                pluginId: 'newsFeedfbRefresh',
+                type: 'pullrefresh'
+            }
+        ]
     }
 
 });

@@ -221,6 +221,20 @@
                 "app/view/NewsFeedToolbar.js"
             ],
             "className": "NewsFeedToolbar"
+        },
+        "02fcbb71-7b16-47cc-8443-ef325af61afc": {
+            "paths": [
+                "metadata/resource/js7"
+            ],
+            "className": "js7"
+        },
+        "09b8eec8-4662-4007-8206-5470fccfef4d": {
+            "paths": [
+                "metadata/store/NewsFeedfbStore",
+                "app/store/override/NewsFeedfbStore.js",
+                "app/store/NewsFeedfbStore.js"
+            ],
+            "className": "NewsFeedfbStore"
         }
     },
     "viewOrderMap": {
@@ -230,15 +244,16 @@
             "9b26b12d-54ec-4e11-93ea-2e1dccb8a02e",
             "68a8c996-c164-4a3b-8a04-3951851a6f19",
             "1f540070-7193-4675-bf48-d7bdedbe93f8",
-            "38acb443-8b8b-4544-ade0-1e097968e5c0",
             "adde11c8-daba-493c-a204-e041f4b5ca53",
+            "38acb443-8b8b-4544-ade0-1e097968e5c0",
             "7fb1e8e3-87d9-4cfb-a1ec-64e92159390c"
         ],
         "store": [
             "1121f39b-3485-4e4d-a4c7-34086811e080",
             "2ce1f58e-f863-49a0-91eb-b6f7709301de",
             "309bff0a-b698-4b17-950d-97777abcb2f8",
-            "f2c90753-2494-4cb2-8281-dbcafcc54f7b"
+            "f2c90753-2494-4cb2-8281-dbcafcc54f7b",
+            "09b8eec8-4662-4007-8206-5470fccfef4d"
         ],
         "controller": [
             "1f06f30f-e66c-4692-b946-e41584021eff",
@@ -261,7 +276,8 @@
             "3eefa425-1f72-4d64-9030-9e4bcbe23680",
             "27e16bcc-5bbb-4fb5-981e-e056147236be",
             "303488b2-4227-4665-9b1c-cae15b610271",
-            "879f9dc4-fcb6-4135-8ece-7c6b9e81cfce"
+            "879f9dc4-fcb6-4135-8ece-7c6b9e81cfce",
+            "02fcbb71-7b16-47cc-8443-ef325af61afc"
         ],
         "app": [
             "application"

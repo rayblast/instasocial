@@ -27,7 +27,7 @@
         ],
         "disableSelection": true,
         "itemCls": null,
-        "store": "NewsFeedvkStore"
+        "store": "NewsFeedfbStore"
     },
     "configAlternates": {
         "scrollable": "object"
@@ -77,6 +77,42 @@
                 "designer|displayName": "itemTpl"
             },
             "designerId": "5e9e1f66-5487-47b5-87d7-6b865bed54d4"
+        },
+        {
+            "type": "Ext.plugin.PullRefresh",
+            "reference": {
+                "name": "plugins",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "pluginId": "newsFeedfbRefresh",
+                "designer|userClassName": "MyPullRefreshPlugin",
+                "designer|displayName": "NewsFeedfbRefresh",
+                "designer|createAlias": null
+            },
+            "designerId": "78bed89e-053c-4798-8f15-18006581afce",
+            "cn": [
+                {
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "refreshFn",
+                        "fn": "refreshFn",
+                        "designer|params": [
+                            "plugin"
+                        ],
+                        "implHandler": [
+                            "core.newsfeed.networks.fb.getNewsFeed();"
+                        ]
+                    },
+                    "designerId": "1f7b7e24-76cd-41e4-95a7-b87f02c948cf"
+                }
+            ]
         }
     ]
 }

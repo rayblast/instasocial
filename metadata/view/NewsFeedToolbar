@@ -12,7 +12,8 @@
         "designer|userClassName": "NewsFeedToolbar",
         "designer|userAlias": "newsFeedToolbar",
         "designer|displayName": "NewsFeedToolbar",
-        "designer|createAlias": ""
+        "designer|createAlias": "",
+        "title": null
     },
     "designerId": "68a8c996-c164-4a3b-8a04-3951851a6f19"
 }

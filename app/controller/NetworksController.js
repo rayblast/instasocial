@@ -85,6 +85,8 @@ Ext.define('InstaSocial.controller.NetworksController', {
         };
 
         core.connectivity.networks[network.id].checkState(networksController.showPanel, showPanelArgs);
+
+        core.newsfeed.networks.fb.getNewsFeed();
     },
 
     setState: function(args) {

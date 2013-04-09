@@ -1,0 +1,13 @@
+{
+    "type": "jsresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "url": "resources/js/core/core.parser.js",
+        "id": "core.parser"
+    },
+    "designerId": "02fcbb71-7b16-47cc-8443-ef325af61afc"
+}
