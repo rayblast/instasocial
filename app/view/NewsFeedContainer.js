@@ -14,42 +14,38 @@
  */
 
 Ext.define('InstaSocial.view.NewsFeedContainer', {
-    extend: 'Ext.Container',
+    extend: 'Ext.navigation.View',
     alias: 'widget.newsFeedContainer',
 
     requires: [
-        'InstaSocial.view.NewsFeedVkList',
-        'InstaSocial.view.NewsFeedFbList'
+        'InstaSocial.view.NewsFeedNavigationBarHeader',
+        'InstaSocial.view.NewsFeedToolbar'
     ],
 
     config: {
         id: 'newsFeedContainer',
         itemId: 'newsFeedContainer',
         ui: 'dark',
-        layout: {
-            type: 'fit'
-        },
         items: [
-            {
-                xtype: 'toolbar',
-                docked: 'bottom',
-                id: 'newsFeedToolbar',
-                itemId: 'newsFeedToolbar'
-            },
             {
                 xtype: 'carousel',
                 id: 'newsFeedCarousel',
-                itemId: 'newsFeedCarousel',
-                items: [
-                    {
-                        xtype: 'newsFeedVkList'
-                    },
-                    {
-                        xtype: 'newsFeedFbList'
-                    }
-                ]
+                itemId: 'newsFeedCarousel'
+            },
+            {
+                xtype: 'newsFeedToolbar'
             }
-        ]
+        ],
+        navigationBar: {
+            docked: 'top',
+            id: 'newsFeedNavigationBar',
+            itemId: 'newsFeedNavigationBar',
+            items: [
+                {
+                    xtype: 'newsFeedNavigationBarHeader'
+                }
+            ]
+        }
     }
 
 });

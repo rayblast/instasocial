@@ -1,0 +1,13 @@
+{
+    "type": "Ext.Container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "NewsFeedNavigationBarHeader",
+        "designer|userAlias": "newsFeedNavigationBarHeader"
+    },
+    "designerId": "9b26b12d-54ec-4e11-93ea-2e1dccb8a02e"
+}

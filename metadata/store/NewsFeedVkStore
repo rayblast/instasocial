@@ -7,9 +7,9 @@
     "codeClass": null,
     "userConfig": {
         "model": "Post",
-        "storeId": "NewsFeedVkStore",
-        "designer|userClassName": "NewsFeedVkStore",
-        "designer|userAlias": "newsFeedVkStore"
+        "storeId": "NewsFeedvkStore",
+        "designer|userClassName": "NewsFeedvkStore",
+        "designer|userAlias": "newsFeedvkStore"
     },
     "designerId": "f2c90753-2494-4cb2-8281-dbcafcc54f7b",
     "cn": [

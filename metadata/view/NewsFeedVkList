@@ -11,12 +11,12 @@
             "newsfeed-list"
         ],
         "height": null,
-        "id": "newsFeedVkList",
+        "id": "newsFeedvkList",
         "showAnimation": "slide",
         "style": null,
         "ui": null,
-        "designer|userClassName": "NewsFeedVkList",
-        "designer|userAlias": "newsFeedVkList",
+        "designer|userClassName": "NewsFeedvkList",
+        "designer|userAlias": "newsFeedvkList",
         "designer|createAlias": "list",
         "modal": false,
         "scrollable": [
@@ -27,7 +27,7 @@
         ],
         "disableSelection": true,
         "itemCls": null,
-        "store": "NewsFeedVkStore"
+        "store": "NewsFeedvkStore"
     },
     "configAlternates": {
         "scrollable": "object"

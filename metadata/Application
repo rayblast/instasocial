@@ -19,7 +19,7 @@
             "NetworksStore",
             "UserSettingsStore",
             "UserSettingsLocalStore",
-            "NewsFeedVkStore"
+            "NewsFeedvkStore"
         ],
         "views": [
             "NetworkListContainer",
@@ -27,8 +27,10 @@
             "NetworkPanel",
             "MainView",
             "NewsFeedContainer",
-            "NewsFeedVkList",
-            "NewsFeedFbList"
+            "NewsFeedvkList",
+            "NewsFeedfbList",
+            "NewsFeedNavigationBarHeader",
+            "NewsFeedToolbar"
         ],
         "controllers": [
             "NetworksController",
@@ -71,7 +73,13 @@
                     "}\r",
                     "\r",
                     "\r",
-                    "var newsFeedVkStore = Ext.getStore('NewsFeedVkStore');\r",
+                    "var newsFeedCarousel = Ext.getCmp('newsFeedCarousel');\r",
+                    "\r",
+                    "newsFeedCarousel.add({xtype: 'newsFeedvkList'});\r",
+                    "newsFeedCarousel.add({xtype: 'newsFeedfbList'});\r",
+                    "\r",
+                    "\r",
+                    "var newsFeedVkStore = Ext.getStore('NewsFeedvkStore');\r",
                     "\r",
                     "var testData = {\r",
                     "//    \"data\" : [{\r",

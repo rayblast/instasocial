@@ -166,19 +166,19 @@
         },
         "38acb443-8b8b-4544-ade0-1e097968e5c0": {
             "paths": [
-                "metadata/view/NewsFeedVkList",
-                "app/view/override/NewsFeedVkList.js",
-                "app/view/NewsFeedVkList.js"
+                "metadata/view/NewsFeedvkList",
+                "app/view/override/NewsFeedvkList.js",
+                "app/view/NewsFeedvkList.js"
             ],
-            "className": "NewsFeedVkList"
+            "className": "NewsFeedvkList"
         },
         "f2c90753-2494-4cb2-8281-dbcafcc54f7b": {
             "paths": [
-                "metadata/store/NewsFeedVkStore",
-                "app/store/override/NewsFeedVkStore.js",
-                "app/store/NewsFeedVkStore.js"
+                "metadata/store/NewsFeedvkStore",
+                "app/store/override/NewsFeedvkStore.js",
+                "app/store/NewsFeedvkStore.js"
             ],
-            "className": "NewsFeedVkStore"
+            "className": "NewsFeedvkStore"
         },
         "9cec381a-cc96-4fce-813e-6c99a0b1f216": {
             "paths": [
@@ -200,17 +200,35 @@
         },
         "adde11c8-daba-493c-a204-e041f4b5ca53": {
             "paths": [
-                "metadata/view/NewsFeedFbList",
-                "app/view/override/NewsFeedFbList.js",
-                "app/view/NewsFeedFbList.js"
+                "metadata/view/NewsFeedfbList",
+                "app/view/override/NewsFeedfbList.js",
+                "app/view/NewsFeedfbList.js"
             ],
-            "className": "NewsFeedFbList"
+            "className": "NewsFeedfbList"
+        },
+        "9b26b12d-54ec-4e11-93ea-2e1dccb8a02e": {
+            "paths": [
+                "metadata/view/NewsFeedNavigationBarHeader",
+                "app/view/override/NewsFeedNavigationBarHeader.js",
+                "app/view/NewsFeedNavigationBarHeader.js"
+            ],
+            "className": "NewsFeedNavigationBarHeader"
+        },
+        "68a8c996-c164-4a3b-8a04-3951851a6f19": {
+            "paths": [
+                "metadata/view/NewsFeedToolbar",
+                "app/view/override/NewsFeedToolbar.js",
+                "app/view/NewsFeedToolbar.js"
+            ],
+            "className": "NewsFeedToolbar"
         }
     },
     "viewOrderMap": {
         "view": [
             "56cf39fd-035c-400b-bb5c-44ae8d82d980",
             "270affb2-339c-4b88-9db9-9079cc40d3bf",
+            "9b26b12d-54ec-4e11-93ea-2e1dccb8a02e",
+            "68a8c996-c164-4a3b-8a04-3951851a6f19",
             "1f540070-7193-4675-bf48-d7bdedbe93f8",
             "38acb443-8b8b-4544-ade0-1e097968e5c0",
             "adde11c8-daba-493c-a204-e041f4b5ca53",

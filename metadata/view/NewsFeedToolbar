@@ -1,0 +1,18 @@
+{
+    "type": "Ext.Toolbar",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "docked": "bottom",
+        "id": "newsFeedToolbar",
+        "itemId": "newsFeedToolbar",
+        "designer|userClassName": "NewsFeedToolbar",
+        "designer|userAlias": "newsFeedToolbar",
+        "designer|displayName": "NewsFeedToolbar",
+        "designer|createAlias": ""
+    },
+    "designerId": "68a8c996-c164-4a3b-8a04-3951851a6f19"
+}

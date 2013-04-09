@@ -32,7 +32,7 @@ Ext.application({
         'NetworksStore',
         'UserSettingsStore',
         'UserSettingsLocalStore',
-        'NewsFeedVkStore'
+        'NewsFeedvkStore'
     ],
     views: [
         'NetworkListContainer',
@@ -40,8 +40,10 @@ Ext.application({
         'NetworkPanel',
         'MainView',
         'NewsFeedContainer',
-        'NewsFeedVkList',
-        'NewsFeedFbList'
+        'NewsFeedvkList',
+        'NewsFeedfbList',
+        'NewsFeedNavigationBarHeader',
+        'NewsFeedToolbar'
     ],
     controllers: [
         'NetworksController',
@@ -60,7 +62,13 @@ Ext.application({
         }
 
 
-        var newsFeedVkStore = Ext.getStore('NewsFeedVkStore');
+        var newsFeedCarousel = Ext.getCmp('newsFeedCarousel');
+
+        newsFeedCarousel.add({xtype: 'newsFeedvkList'});
+        newsFeedCarousel.add({xtype: 'newsFeedfbList'});
+
+
+        var newsFeedVkStore = Ext.getStore('NewsFeedvkStore');
 
         var testData = {
             //    "data" : [{

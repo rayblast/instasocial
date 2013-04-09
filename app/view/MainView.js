@@ -112,15 +112,11 @@ Ext.define("InstaSocial.view.MainView", {
             // Enable the slide button using the defaults defined above in
             // `slideButtonDefaults`.
             slideButton: {
-                selector: 'toolbar',
+                selector: 'newsFeedNavigationBarHeader',
                 iconMask: true,
                 iconCls: 'home'
             },
             items: [{
-                xtype: 'toolbar',
-                title: labels.lblNewsFeed,
-                docked: 'top'
-            },{
                 xtype: 'newsFeedContainer',
                 html: '',//<img src="resources/images/guide.jpg" width="100%" />',
 
