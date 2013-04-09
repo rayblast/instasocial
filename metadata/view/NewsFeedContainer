@@ -1,0 +1,74 @@
+{
+    "type": "Ext.Container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "id": "newsFeedContainer",
+        "itemId": "newsFeedContainer",
+        "ui": "dark",
+        "designer|userClassName": "NewsFeedContainer",
+        "designer|userAlias": "newsFeedContainer",
+        "layout": "fit"
+    },
+    "designerId": "270affb2-339c-4b88-9db9-9079cc40d3bf",
+    "cn": [
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "bottom",
+                "id": "newsFeedToolbar",
+                "itemId": "newsFeedToolbar",
+                "designer|userClassName": "MyToolbar",
+                "designer|displayName": "NewsFeedToolbar",
+                "designer|createAlias": ""
+            },
+            "designerId": "95b661a9-b896-4017-b05a-6c546637b638"
+        },
+        {
+            "type": "Ext.carousel.Carousel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "newsFeedCarousel",
+                "itemId": "newsFeedCarousel",
+                "designer|userClassName": "MyCarousel",
+                "designer|displayName": "NewsFeedCarousel",
+                "designer|createAlias": null
+            },
+            "designerId": "98c55665-da4d-488d-91a4-75da1ae07c60",
+            "cn": [
+                {
+                    "type": "linkedinstance",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "designerId": "6165e6c4-4963-471e-8d9d-bf2c67f5e9d3",
+                    "masterInstanceId": "38acb443-8b8b-4544-ade0-1e097968e5c0"
+                },
+                {
+                    "type": "linkedinstance",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "designerId": "9bea2e30-4d75-4360-bdec-e45c8ab9f29c",
+                    "masterInstanceId": "adde11c8-daba-493c-a204-e041f4b5ca53"
+                }
+            ]
+        }
+    ]
+}

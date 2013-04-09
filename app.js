@@ -39,8 +39,9 @@ Ext.application({
         'NetworkList',
         'NetworkPanel',
         'MainView',
-        'NewsFeedVkContainer',
-        'NewsFeedVkList'
+        'NewsFeedContainer',
+        'NewsFeedVkList',
+        'NewsFeedFbList'
     ],
     controllers: [
         'NetworksController',

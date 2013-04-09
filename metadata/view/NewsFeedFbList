@@ -11,12 +11,12 @@
             "newsfeed-list"
         ],
         "height": null,
-        "id": "newsFeedVkList",
+        "id": "newsFeedFbList",
         "showAnimation": "slide",
         "style": null,
         "ui": null,
-        "designer|userClassName": "NewsFeedVkList",
-        "designer|userAlias": "newsFeedVkList",
+        "designer|userClassName": "NewsFeedFbList",
+        "designer|userAlias": "newsFeedFbList",
         "designer|createAlias": "list",
         "modal": false,
         "scrollable": [
@@ -32,7 +32,7 @@
     "configAlternates": {
         "scrollable": "object"
     },
-    "designerId": "38acb443-8b8b-4544-ade0-1e097968e5c0",
+    "designerId": "adde11c8-daba-493c-a204-e041f4b5ca53",
     "customConfigs": [
         {
             "group": "(Custom Properties)",
@@ -76,7 +76,7 @@
                 ],
                 "designer|displayName": "itemTpl"
             },
-            "designerId": "5e54e527-21a2-4291-9bdd-c44849d2e11b"
+            "designerId": "5e9e1f66-5487-47b5-87d7-6b865bed54d4"
         }
     ]
 }

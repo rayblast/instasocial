@@ -121,7 +121,7 @@ Ext.define("InstaSocial.view.MainView", {
                 title: labels.lblNewsFeed,
                 docked: 'top'
             },{
-                xtype: 'newsFeedVkContainer',
+                xtype: 'newsFeedContainer',
                 html: '',//<img src="resources/images/guide.jpg" width="100%" />',
 
                 // Mask this item when the container is opened
