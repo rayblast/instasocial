@@ -225,9 +225,7 @@
                     "    target: target\r",
                     "};\r",
                     "\r",
-                    "core.connectivity.networks[network.id].checkState(networksController.showPanel, showPanelArgs);\r",
-                    "\r",
-                    "core.newsfeed.networks.fb.getNewsFeed();"
+                    "core.connectivity.networks[network.id].checkState(networksController.showPanel, showPanelArgs);"
                 ],
                 "name": "itemtap",
                 "designer|targetType": "NetworkList",
