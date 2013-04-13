@@ -15,7 +15,7 @@ core.parser = {
                     var user_id = (data.from !== undefined) ? data.from.id : 0;
                     var full_name = (data.from !== undefined) ? data.from.name : '';
                     var photo = 'http://graph.facebook.com/' + user_id + '/picture';
-                    var text = (data.message !== undefined) ? data.message : '';
+                    var text = (data.message !== undefined) ? core.parser.helper.urlify(data.message) : '';
                     var likes_count = (data.likes !== undefined) ? data.likes.count : 0;
                     var comments_count = (data.comments !== undefined) ? data.comments.count : 0;
                     var created_time = core.parser.helper.getDateTimeFromString(data.created_time);
@@ -57,7 +57,7 @@ core.parser = {
                         core.parser.networks.vk.helper.getUserFromProfilesArrayById(Math.abs(user_id), profilesData) : 
                         core.parser.networks.vk.helper.getUserFromGroupsArrayById(Math.abs(user_id), groupsData);
 
-                    var text = (data.text !== undefined) ? data.text : '';
+                    var text = (data.text !== undefined) ? core.parser.helper.urlify(data.text) : '';
                     var likes_count = (data.likes !== undefined) ? data.likes.count : 0;
                     var comments_count = (data.comments !== undefined) ? data.comments.count : 0;
                     var created_time = core.parser.helper.getDateTimeFromUnixTime(data.date);
@@ -120,6 +120,10 @@ core.parser = {
         },
         getDateTimeFromUnixTime: function(time){
             return core.parser.helper.getDateTimeFromString(time * 1000);
+        },
+        urlify: function(text) {
+            var urlRegex = /(https?:\/\/[^\s]+)/g;
+            return text.replace(urlRegex, '<a href="$1">$1</a>');
         }
     }
 };

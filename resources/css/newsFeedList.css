@@ -54,3 +54,8 @@
     color: #bbb;
     font-size: 80%;
 }
+
+.newsfeed-list-item a{
+    color: #576b95;
+    text-decoration: none;
+}
