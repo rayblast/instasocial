@@ -1,0 +1,147 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Photo",
+        "designer|userAlias": "photo"
+    },
+    "designerId": "1c25147d-70b7-41bb-93fa-48cc4eed49dc",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "id",
+                "designer|userClassName": "field30"
+            },
+            "designerId": "b398348d-ad52-4225-b7b0-d9f490ed676b"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "photo_id",
+                "designer|userClassName": "field31"
+            },
+            "designerId": "9855465c-a7a4-47df-b552-95dc90f4b262"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "album_id",
+                "designer|userClassName": "field32"
+            },
+            "designerId": "851cff22-51aa-45b6-81fe-a31bc54d203c"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "src",
+                "designer|userClassName": "field33"
+            },
+            "designerId": "c8208094-4277-4353-944a-e1184f4c24f6"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "src_big",
+                "designer|userClassName": "field34"
+            },
+            "designerId": "5441c442-958b-4ccc-a310-86cb5826c5f6"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "text",
+                "designer|userClassName": "field35"
+            },
+            "designerId": "2367584d-27db-4064-83a0-deb63c2c3453"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "height",
+                "designer|userClassName": "field36"
+            },
+            "designerId": "229828ab-0234-4199-997d-6e164bb7baab"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "width",
+                "designer|userClassName": "field37"
+            },
+            "designerId": "8eb729b9-12ea-45a1-a67f-630cb1df63a7"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "created_time",
+                "designer|userClassName": "field38"
+            },
+            "designerId": "5fa35f1b-090f-4bf9-ae36-da8bd7715c96"
+        },
+        {
+            "type": "Ext.data.association.HasOne",
+            "reference": {
+                "name": "hasOne",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "associationKey": "user",
+                "designer|userClassName": "MyHasOneAssociation2",
+                "designer|displayName": "hasOneUser",
+                "model": "User"
+            },
+            "designerId": "91b48471-824d-47e5-82e2-675b544d7652"
+        }
+    ]
+}

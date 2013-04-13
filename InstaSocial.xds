@@ -235,6 +235,22 @@
                 "metadata/resource/js7"
             ],
             "className": "js7"
+        },
+        "1c25147d-70b7-41bb-93fa-48cc4eed49dc": {
+            "paths": [
+                "metadata/model/Photo",
+                "app/model/override/Photo.js",
+                "app/model/Photo.js"
+            ],
+            "className": "Photo"
+        },
+        "14f4f1fb-b73d-4145-beca-d1daf3e5133b": {
+            "paths": [
+                "metadata/model/Attachment",
+                "app/model/override/Attachment.js",
+                "app/model/Attachment.js"
+            ],
+            "className": "Attachment"
         }
     },
     "viewOrderMap": {
@@ -264,7 +280,9 @@
             "1e1c477d-fbb3-4ef7-a6dd-67dbd1d60870",
             "c3f9dc11-9446-40ca-98ea-3a65e50503eb",
             "005ec00e-558c-4012-8208-14f22a76f506",
-            "c3fbd4fd-4280-4104-9f3c-2709b3d265e8"
+            "c3fbd4fd-4280-4104-9f3c-2709b3d265e8",
+            "1c25147d-70b7-41bb-93fa-48cc4eed49dc",
+            "14f4f1fb-b73d-4145-beca-d1daf3e5133b"
         ],
         "resource": [
             "4b24ab5c-d84f-4202-8fae-a791ffde467f",

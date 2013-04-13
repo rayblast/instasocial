@@ -26,7 +26,9 @@ Ext.application({
         'UserSettingModel',
         'Comment',
         'User',
-        'Post'
+        'Post',
+        'Photo',
+        'Attachment'
     ],
     stores: [
         'NetworksStore',

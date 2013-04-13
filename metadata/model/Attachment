@@ -1,0 +1,43 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Attachment",
+        "designer|userAlias": "attachment"
+    },
+    "designerId": "14f4f1fb-b73d-4145-beca-d1daf3e5133b",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "type",
+                "designer|userClassName": "field39"
+            },
+            "designerId": "9d7492ef-c7a3-43a1-ba67-9824d6412508"
+        },
+        {
+            "type": "Ext.data.association.HasMany",
+            "reference": {
+                "name": "hasMany",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "associationKey": "photo",
+                "designer|userClassName": "MyHasManyAssociation1",
+                "designer|displayName": "hasManyPhotos",
+                "model": "Photo"
+            },
+            "designerId": "52dc1efa-7d90-48a2-9c5d-61d7e2bd6937"
+        }
+    ]
+}
