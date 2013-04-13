@@ -13,7 +13,8 @@ var config = {
         networksStore: 'NetworksStore',
         userSettingsStore: 'UserSettingsStore',
         userSettingsLocalStore: 'UserSettingsLocalStore',
-        menuItemsStore: 'MenuItemsStore'
+        newsFeedfbStore: 'NewsFeedfbStore',
+        newsFeedvkStore: 'NewsFeedvkStore'
     },
     views: {
         mainNavigationView: 'mainNavigationView',

@@ -89,7 +89,8 @@
                 "pluginId": "newsFeedfbRefresh",
                 "designer|userClassName": "MyPullRefreshPlugin",
                 "designer|displayName": "NewsFeedfbRefresh",
-                "designer|createAlias": null
+                "designer|createAlias": null,
+                "snappingAnimationDuration": null
             },
             "designerId": "78bed89e-053c-4798-8f15-18006581afce",
             "cn": [
@@ -107,7 +108,7 @@
                             "plugin"
                         ],
                         "implHandler": [
-                            "core.newsfeed.networks.fb.getNewsFeed();"
+                            "core.newsfeed.networks.fb.getNewsFeed(); "
                         ]
                     },
                     "designerId": "1f7b7e24-76cd-41e4-95a7-b87f02c948cf"

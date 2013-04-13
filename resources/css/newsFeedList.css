@@ -16,7 +16,8 @@
 	border-style: solid;
 	border-color: #ddd;
 	border-width: 1px;
-	border-radius: 5px;
+	border-radius: 3px;
+    box-shadow: 2px 2px 5px #888888;
     font-size: 90%;
 }
 
@@ -33,11 +34,15 @@
 }
 
 .newsfeed-list-item .header .info .date{
+    color: #bbb;
 	font-size: 70%;
 }
 
 .newsfeed-list-item .body{
 	font-size: 90%;
+    margin-top: 5pt;
+    margin-bottom: 5pt;
+    min-height: 10pt;
 }
 
 .newsfeed-list-item .footer{
@@ -46,5 +51,6 @@
 	border-top-style: solid;
 	border-top-color: #ddd;
 	border-top-width: 1px;
-    font-size: 90%;
+    color: #bbb;
+    font-size: 80%;
 }

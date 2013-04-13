@@ -18,7 +18,7 @@ core.parser = {
                     var text = (data.message !== undefined) ? data.message : '';
                     var likes_count = (data.likes !== undefined) ? data.likes.count : 0;
                     var comments_count = (data.comments !== undefined) ? data.comments.count : 0;
-                    var created_time = core.parser.helper.getDateTime(data.created_time);
+                    var created_time = core.parser.helper.getDateTimeFromString(data.created_time);
                     var post = {
                         "post_id": post_id,
                         "user": {
@@ -41,21 +41,73 @@ core.parser = {
         vk:{
             newsfeed: {
                 posts: function(data){
-                    var postsData = data.data;
+                    var postsData = data.response.items;
+                    var profilesData = data.response.profiles;
+                    var groupsData = data.response.groups;
                     var posts = [];
                     for(var i in postsData){
-                        posts.push(core.parser.networks.vk.newsfeed.post(postsData[i]));
+                        posts.push(core.parser.networks.vk.newsfeed.post(postsData[i], profilesData, groupsData));
                     }
                     return posts;
                 },
-                post: function(data){
-                    
+                post: function(data, profilesData, groupsData){
+                    var post_id = (data.post_id !== undefined) ? data.post_id : 0;
+                    var user_id = (data.source_id !== undefined) ? data.source_id : 0;
+                    var user = (user_id >= 0) ? 
+                        core.parser.networks.vk.helper.getUserFromProfilesArrayById(Math.abs(user_id), profilesData) : 
+                        core.parser.networks.vk.helper.getUserFromGroupsArrayById(Math.abs(user_id), groupsData);
+
+                    var text = (data.text !== undefined) ? data.text : '';
+                    var likes_count = (data.likes !== undefined) ? data.likes.count : 0;
+                    var comments_count = (data.comments !== undefined) ? data.comments.count : 0;
+                    var created_time = core.parser.helper.getDateTimeFromUnixTime(data.date);
+                    var post = {
+                        "post_id": post_id,
+                        "user": user,
+                        "text": text,
+                        "likes_count": likes_count,
+                        "comments_count": comments_count,
+                        "created_time": created_time,
+                        "type": "post",
+                        "network_id": "fb"
+                    };
+                    return post;
+                }
+            },
+            helper: {
+                getUserFromProfilesArrayById: function(id, profilesData){
+                    for(var i = 0; i < profilesData.length; i++){
+                        var profile = profilesData[i];
+                        if(profile.uid == id){
+                            var user = {
+                                "user_id": profile.uid,
+                                "full_name": profile.first_name + " " + profile.last_name,
+                                "photo": profile.photo,
+                                "network_id": "vk"
+                            };
+                            return user;
+                        }
+                    }
+                },
+                getUserFromGroupsArrayById: function(id, groupsData){
+                    for(var i = 0; i < groupsData.length; i++){
+                        var group = groupsData[i];
+                        if(group.gid == id){
+                            var user = {
+                                "user_id": group.gid,
+                                "full_name": group.name,
+                                "photo": group.photo,
+                                "network_id": "vk"
+                            };
+                            return user;
+                        }
+                    }
                 }
             }
         }
     },
     helper: {
-        getDateTime: function(str){
+        getDateTimeFromString: function(str){
             var d = new Date(str);
             var date = d.getDate();
             var month = d.getMonth() + 1;
@@ -63,7 +115,11 @@ core.parser = {
             var hours = d.getHours();
             var minutes = d.getMinutes();
             var seconds = d.getSeconds();
-            var full_date = date + "." + month + " " + hours + ":" + minutes;
+            var full_date = date + "." + month + "." + year +" " + hours + ":" + (minutes <= 9 ? '0' + minutes : minutes);
+            return full_date;
+        },
+        getDateTimeFromUnixTime: function(time){
+            return core.parser.helper.getDateTimeFromString(time * 1000);
         }
     }
 };

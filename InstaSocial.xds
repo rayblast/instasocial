@@ -126,12 +126,6 @@
             ],
             "className": "js3"
         },
-        "f19b792b-ad54-48a6-9192-45099c6e4be7": {
-            "paths": [
-                "metadata/resource/js2"
-            ],
-            "className": "js2"
-        },
         "c3f9dc11-9446-40ca-98ea-3a65e50503eb": {
             "paths": [
                 "metadata/model/Comment",
@@ -188,15 +182,15 @@
         },
         "3eefa425-1f72-4d64-9030-9e4bcbe23680": {
             "paths": [
-                "metadata/resource/js5"
+                "metadata/resource/js2"
             ],
-            "className": "js5"
+            "className": "js2"
         },
         "879f9dc4-fcb6-4135-8ece-7c6b9e81cfce": {
             "paths": [
-                "metadata/resource/js6"
+                "metadata/resource/js5"
             ],
-            "className": "js6"
+            "className": "js5"
         },
         "adde11c8-daba-493c-a204-e041f4b5ca53": {
             "paths": [
@@ -224,9 +218,9 @@
         },
         "02fcbb71-7b16-47cc-8443-ef325af61afc": {
             "paths": [
-                "metadata/resource/js7"
+                "metadata/resource/js6"
             ],
-            "className": "js7"
+            "className": "js6"
         },
         "09b8eec8-4662-4007-8206-5470fccfef4d": {
             "paths": [
@@ -235,6 +229,12 @@
                 "app/store/NewsFeedfbStore.js"
             ],
             "className": "NewsFeedfbStore"
+        },
+        "92f6ab34-b1d8-4074-b9d0-2380bd1ea7b5": {
+            "paths": [
+                "metadata/resource/js7"
+            ],
+            "className": "js7"
         }
     },
     "viewOrderMap": {
@@ -272,7 +272,7 @@
             "ee5c1194-f7db-4011-aa42-863359a24564",
             "54b84051-a916-4dd3-8fc3-a9f5096ab4aa",
             "9cec381a-cc96-4fce-813e-6c99a0b1f216",
-            "f19b792b-ad54-48a6-9192-45099c6e4be7",
+            "92f6ab34-b1d8-4074-b9d0-2380bd1ea7b5",
             "3eefa425-1f72-4d64-9030-9e4bcbe23680",
             "27e16bcc-5bbb-4fb5-981e-e056147236be",
             "303488b2-4227-4665-9b1c-cae15b610271",

@@ -57,7 +57,7 @@ Ext.define('InstaSocial.view.NewsFeedfbList', {
         plugins: [
             {
                 refreshFn: function(plugin) {
-                    core.newsfeed.networks.fb.getNewsFeed();
+                    core.newsfeed.networks.fb.getNewsFeed(); 
                 },
                 pluginId: 'newsFeedfbRefresh',
                 type: 'pullrefresh'
