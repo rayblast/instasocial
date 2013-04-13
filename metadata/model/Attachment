@@ -25,19 +25,19 @@
             "designerId": "9d7492ef-c7a3-43a1-ba67-9824d6412508"
         },
         {
-            "type": "Ext.data.association.HasMany",
+            "type": "Ext.data.association.HasOne",
             "reference": {
-                "name": "hasMany",
+                "name": "hasOne",
                 "type": "object"
             },
             "codeClass": null,
             "userConfig": {
                 "associationKey": "photo",
-                "designer|userClassName": "MyHasManyAssociation1",
-                "designer|displayName": "hasManyPhotos",
+                "designer|userClassName": "MyHasOneAssociation3",
+                "designer|displayName": "hasOnePhoto",
                 "model": "Photo"
             },
-            "designerId": "52dc1efa-7d90-48a2-9c5d-61d7e2bd6937"
+            "designerId": "6db4467b-f541-4d8d-97c9-a7d85f563eb6"
         }
     ]
 }

@@ -1,0 +1,13 @@
+{
+    "type": "jsresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "url": "resources/js/core/core.renderer.js",
+        "id": "core.renderer"
+    },
+    "designerId": "c8e342b2-1275-4e77-9a11-738487bd1c6e"
+}

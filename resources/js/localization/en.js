@@ -3,6 +3,8 @@ var labels = {
     lblError: 'Error',
     lblFacebook: 'Facebook',
     lblLikes: 'Likes',
+    lblLogin: 'Login',
+    lblLogout: 'Logout',
     lblManageNetworks: 'Manage networks',
     lblMenu: 'Menu',
     lblNetworks: 'Networks',

@@ -45,6 +45,10 @@
     min-height: 10pt;
 }
 
+.newsfeed-list-item .attachments{
+	text-align: center;
+}
+
 .newsfeed-list-item .footer{
     height: 15px;
     padding: 4px;

@@ -27,7 +27,7 @@ Ext.define('InstaSocial.model.Attachment', {
                 name: 'type'
             }
         ],
-        hasMany: {
+        hasOne: {
             associationKey: 'photo',
             model: 'InstaSocial.model.Photo'
         }

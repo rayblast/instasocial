@@ -19,7 +19,8 @@ Ext.define('InstaSocial.model.Post', {
 
     uses: [
         'InstaSocial.model.User',
-        'InstaSocial.model.Comment'
+        'InstaSocial.model.Comment',
+        'InstaSocial.model.Attachment'
     ],
 
     config: {
@@ -56,9 +57,15 @@ Ext.define('InstaSocial.model.Post', {
             associationKey: 'user',
             model: 'InstaSocial.model.User'
         },
-        hasMany: {
-            associationKey: 'comments',
-            model: 'InstaSocial.model.Comment'
-        }
+        hasMany: [
+            {
+                associationKey: 'comment',
+                model: 'InstaSocial.model.Comment'
+            },
+            {
+                associationKey: 'attachments',
+                model: 'InstaSocial.model.Attachment'
+            }
+        ]
     }
 });

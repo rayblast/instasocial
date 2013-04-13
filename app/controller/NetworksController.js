@@ -104,6 +104,8 @@ Ext.define('InstaSocial.controller.NetworksController', {
             Ext.getCmp('btLogin').show();
             Ext.getCmp('btLogout').hide();
         }
+
+        InstaSocial.app.getController(config.controllers.networksController).setupNewsFeed();
     },
 
     showPanel: function(args) {
@@ -113,6 +115,20 @@ Ext.define('InstaSocial.controller.NetworksController', {
         networksController.setState(args);
         args.panel.showBy(args.target);
         core.ui.display.loading.stop();
+    },
+
+    setupNewsFeed: function() {
+        var newsFeedCarousel = Ext.getCmp('newsFeedCarousel');
+        if(core.connectivity.networks.fb.state == config.core.connectivity.state.loggedin){
+            newsFeedCarousel.add({xtype: 'newsFeedfbList'});
+        }else{
+            newsFeedCarousel.remove({xtype: 'newsFeedfbList'});
+        }
+        if(core.connectivity.networks.vk.state == config.core.connectivity.state.loggedin){
+            newsFeedCarousel.add({xtype: 'newsFeedvkList'});
+        }else{
+            newsFeedCarousel.remove({xtype: 'newsFeedvkList'});
+        }
     }
 
 });

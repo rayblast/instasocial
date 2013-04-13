@@ -52,6 +52,7 @@ core.connectivity = {
                      
                     if(callback){
                         args = args || {};
+                        args.network_id = 'fb';
                         args.state = state;
                         callback(args);
                     }
@@ -117,6 +118,7 @@ core.connectivity = {
                      
                     if(callback){
                         args = args || {};
+                        args.network_id = 'vk';
                         args.state = state;
                         callback(args);
                     }

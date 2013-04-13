@@ -251,6 +251,12 @@
                 "app/model/Attachment.js"
             ],
             "className": "Attachment"
+        },
+        "c8e342b2-1275-4e77-9a11-738487bd1c6e": {
+            "paths": [
+                "metadata/resource/js8"
+            ],
+            "className": "js8"
         }
     },
     "viewOrderMap": {
@@ -295,7 +301,8 @@
             "27e16bcc-5bbb-4fb5-981e-e056147236be",
             "303488b2-4227-4665-9b1c-cae15b610271",
             "879f9dc4-fcb6-4135-8ece-7c6b9e81cfce",
-            "02fcbb71-7b16-47cc-8443-ef325af61afc"
+            "02fcbb71-7b16-47cc-8443-ef325af61afc",
+            "c8e342b2-1275-4e77-9a11-738487bd1c6e"
         ],
         "app": [
             "application"

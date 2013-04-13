@@ -53,7 +53,7 @@
                 "designer|userClassName": "MyButton",
                 "designer|displayName": "Logout",
                 "designer|createAlias": "",
-                "text": "Logout"
+                "text": null
             },
             "designerId": "fb49a354-1d22-4e66-aba3-30c1902a4100"
         },
@@ -73,7 +73,7 @@
                 "designer|userClassName": "MyButton",
                 "designer|displayName": "Login",
                 "designer|createAlias": "",
-                "text": "Login"
+                "text": null
             },
             "designerId": "f1484bf7-9fc7-4b04-a349-786715f31d95",
             "customConfigs": [
@@ -99,6 +99,24 @@
                 "designer|displayName": "tpl"
             },
             "designerId": "0fb5cbb7-026e-48ca-9c49-efa7e6fc1d14"
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "initialize",
+                "fn": "initialize",
+                "implHandler": [
+                    "this.callParent();\r",
+                    "this.getComponent('btLogin').setText(labels.lblLogin);\r",
+                    "this.getComponent('btLogout').setText(labels.lblLogout);"
+                ]
+            },
+            "designerId": "342827fe-e712-47ec-92dd-ab53ead3248b"
         }
     ]
 }

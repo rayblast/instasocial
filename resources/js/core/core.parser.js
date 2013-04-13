@@ -15,10 +15,11 @@ core.parser = {
                     var user_id = (data.from !== undefined) ? data.from.id : 0;
                     var full_name = (data.from !== undefined) ? data.from.name : '';
                     var photo = 'http://graph.facebook.com/' + user_id + '/picture';
-                    var text = (data.message !== undefined) ? core.parser.helper.urlify(data.message) : '';
+                    var text = (data.message !== undefined) ? core.renderer.urlify(data.message) : '';
                     var likes_count = (data.likes !== undefined) ? data.likes.count : 0;
                     var comments_count = (data.comments !== undefined) ? data.comments.count : 0;
                     var created_time = core.parser.helper.getDateTimeFromString(data.created_time);
+                    var post_photo = (data.picture !== undefined) ? data.picture : '';
                     var post = {
                         "post_id": post_id,
                         "user": {
@@ -31,6 +32,14 @@ core.parser = {
                         "likes_count": likes_count,
                         "comments_count": comments_count,
                         "created_time": created_time,
+                        "attachments": [
+                            {
+                                "type": "photo",
+                                "photo": {
+                                    "src": post_photo
+                                }
+                            }
+                        ],
                         "type": "post",
                         "network_id": "fb"
                     };
@@ -46,6 +55,8 @@ core.parser = {
                     var groupsData = data.response.groups;
                     var posts = [];
                     for(var i in postsData){
+                        if(postsData.type == "wall_photo")
+                            continue;
                         posts.push(core.parser.networks.vk.newsfeed.post(postsData[i], profilesData, groupsData));
                     }
                     return posts;
@@ -57,19 +68,40 @@ core.parser = {
                         core.parser.networks.vk.helper.getUserFromProfilesArrayById(Math.abs(user_id), profilesData) : 
                         core.parser.networks.vk.helper.getUserFromGroupsArrayById(Math.abs(user_id), groupsData);
 
-                    var text = (data.text !== undefined) ? core.parser.helper.urlify(data.text) : '';
+                    var text = (data.text !== undefined) ? core.renderer.urlify(data.text) : '';
                     var likes_count = (data.likes !== undefined) ? data.likes.count : 0;
                     var comments_count = (data.comments !== undefined) ? data.comments.count : 0;
                     var created_time = core.parser.helper.getDateTimeFromUnixTime(data.date);
-                    var post = {
-                        "post_id": post_id,
-                        "user": user,
-                        "text": text,
-                        "likes_count": likes_count,
-                        "comments_count": comments_count,
-                        "created_time": created_time,
-                        "type": "post",
-                        "network_id": "fb"
+                    var attachments; 
+                    
+                    var post;
+                    if(data.type == "post"){        
+                        attachments = data.attachments;
+                    }else if (data.type == "photo"){
+                        attachments = [];
+                        var photos = data.photos;
+                        for(var i = 0; i < photos.length; i++){
+                            if(photos[i].src !== undefined){
+                                attachments.push(
+                                    {
+                                        "type": "photo",
+                                        "photo": photos[i]
+                                    }
+                                );
+                            }
+                        }
+                    }
+                    
+                    post = {
+                            "post_id": post_id,
+                            "user": user,
+                            "text": text,
+                            "likes_count": likes_count,
+                            "comments_count": comments_count,
+                            "created_time": created_time,
+                            "attachments": attachments,
+                            "type": "post",
+                            "network_id": "vk"
                     };
                     return post;
                 }
@@ -120,10 +152,6 @@ core.parser = {
         },
         getDateTimeFromUnixTime: function(time){
             return core.parser.helper.getDateTimeFromString(time * 1000);
-        },
-        urlify: function(text) {
-            var urlRegex = /(https?:\/\/[^\s]+)/g;
-            return text.replace(urlRegex, '<a href="$1">$1</a>');
         }
     }
 };

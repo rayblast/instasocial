@@ -1,0 +1,13 @@
+{
+    "type": "jsresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "url": "resources/js/core/core.connectivity.js",
+        "id": "core.connectivity"
+    },
+    "designerId": "3eefa425-1f72-4d64-9030-9e4bcbe23680"
+}

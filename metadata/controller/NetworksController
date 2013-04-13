@@ -162,7 +162,9 @@
                     "}else{\r",
                     "    Ext.getCmp('btLogin').show();\r",
                     "    Ext.getCmp('btLogout').hide();\r",
-                    "}"
+                    "}\r",
+                    "\r",
+                    "InstaSocial.app.getController(config.controllers.networksController).setupNewsFeed();"
                 ]
             },
             "designerId": "b877b4c5-3643-4f86-9877-5215f357f283"
@@ -232,6 +234,32 @@
                 "designer|controlQuery": "networkList"
             },
             "designerId": "15870795-1e3b-49dd-bffb-2a8a5360867e"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "setupNewsFeed",
+                "fn": "setupNewsFeed",
+                "implHandler": [
+                    "var newsFeedCarousel = Ext.getCmp('newsFeedCarousel');\r",
+                    "if(core.connectivity.networks.fb.state == config.core.connectivity.state.loggedin){\r",
+                    "    newsFeedCarousel.add({xtype: 'newsFeedfbList'});\r",
+                    "}else{\r",
+                    "    newsFeedCarousel.remove({xtype: 'newsFeedfbList'});\r",
+                    "}\r",
+                    "if(core.connectivity.networks.vk.state == config.core.connectivity.state.loggedin){\r",
+                    "    newsFeedCarousel.add({xtype: 'newsFeedvkList'});\r",
+                    "}else{\r",
+                    "    newsFeedCarousel.remove({xtype: 'newsFeedvkList'});\r",
+                    "}"
+                ]
+            },
+            "designerId": "26715a78-07a6-47be-a539-bf72c97eb7c0"
         }
     ]
 }

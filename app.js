@@ -64,11 +64,7 @@ Ext.application({
             mainView.list.select(2);
         }
 
-
-        var newsFeedCarousel = Ext.getCmp('newsFeedCarousel');
-
-        newsFeedCarousel.add({xtype: 'newsFeedfbList'});
-        newsFeedCarousel.add({xtype: 'newsFeedvkList'});
+        this.getApplication().getController(config.controllers.networksController).setupNewsFeed();
 
 
         //var newsFeedVkStore = Ext.getStore('NewsFeedvkStore');

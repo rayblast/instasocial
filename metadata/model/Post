@@ -151,12 +151,27 @@
             },
             "codeClass": null,
             "userConfig": {
-                "associationKey": "comments",
+                "associationKey": "comment",
                 "designer|userClassName": "MyHasManyAssociation",
                 "designer|displayName": "hasManyComment",
                 "model": "Comment"
             },
             "designerId": "f736bbc8-55b7-46aa-9d21-6fbc26402f08"
+        },
+        {
+            "type": "Ext.data.association.HasMany",
+            "reference": {
+                "name": "hasMany",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "associationKey": "attachments",
+                "designer|userClassName": "MyHasManyAssociation2",
+                "designer|displayName": "hasManyAttachments",
+                "model": "Attachment"
+            },
+            "designerId": "d492b666-6071-4b57-91ef-d6927a27d6a0"
         }
     ]
 }

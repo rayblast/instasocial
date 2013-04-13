@@ -42,18 +42,22 @@ Ext.define('InstaSocial.view.NetworkPanel', {
                 id: 'btLogout',
                 itemId: 'btLogout',
                 styleHtmlContent: true,
-                ui: 'decline',
-                text: 'Logout'
+                ui: 'decline'
             },
             {
                 xtype: 'button',
                 id: 'btLogin',
                 itemId: 'btLogin',
                 styleHtmlContent: true,
-                ui: 'confirm',
-                text: 'Login'
+                ui: 'confirm'
             }
         ]
+    },
+
+    initialize: function() {
+        this.callParent();
+        this.getComponent('btLogin').setText(labels.lblLogin);
+        this.getComponent('btLogout').setText(labels.lblLogout);
     }
 
 });
