@@ -55,7 +55,7 @@ core.parser = {
                     var groupsData = data.response.groups;
                     var posts = [];
                     for(var i in postsData){
-                        if(postsData.type == "wall_photo")
+                        if(postsData[i].type == "wall_photo")
                             continue;
                         posts.push(core.parser.networks.vk.newsfeed.post(postsData[i], profilesData, groupsData));
                     }
