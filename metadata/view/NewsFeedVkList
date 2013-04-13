@@ -18,7 +18,7 @@
         "designer|userClassName": "NewsFeedvkList",
         "designer|userAlias": "newsFeedvkList",
         "designer|createAlias": "list",
-        "modal": false,
+        "modal": null,
         "scrollable": [
             "{\r",
             "    direction: 'vertical', \r",
@@ -26,6 +26,7 @@
             "}"
         ],
         "disableSelection": true,
+        "deferEmptyText": false,
         "itemCls": null,
         "store": "NewsFeedvkStore"
     },
@@ -70,13 +71,49 @@
                     "        {text}\r",
                     "    </div>\r",
                     "    <div class=\"footer\">\r",
-                    "        {likes_count} Likes {comments_count} Comment(s)\r",
+                    "        {likes_count} {[this.lblLikes()]} {comments_count} {[this.lblComments()]}\r",
                     "    </div>  \r",
                     "</div>"
                 ],
                 "designer|displayName": "itemTpl"
             },
-            "designerId": "5e54e527-21a2-4291-9bdd-c44849d2e11b"
+            "designerId": "5e54e527-21a2-4291-9bdd-c44849d2e11b",
+            "cn": [
+                {
+                    "type": "templatefunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "lblComments",
+                        "fn": "lblComments",
+                        "implHandler": [
+                            "return labels.lblComments;"
+                        ],
+                        "designer|displayName": "lblComments"
+                    },
+                    "designerId": "faae2525-160c-43af-8a4f-54a8129e3351"
+                },
+                {
+                    "type": "templatefunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "lblLikes",
+                        "fn": "lblLikes",
+                        "implHandler": [
+                            "return labels.lblLikes;"
+                        ],
+                        "designer|displayName": "lblLikes"
+                    },
+                    "designerId": "7d2c1752-f586-4971-b781-8f022d0bbc2d"
+                }
+            ]
         },
         {
             "type": "Ext.plugin.PullRefresh",
@@ -112,6 +149,24 @@
                     "designerId": "e2d94a42-16b9-4b21-b1f8-18640fa41dd0"
                 }
             ]
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "initialize",
+                "fn": "initialize",
+                "implHandler": [
+                    "this.callParent();\r",
+                    "this.setEmptyText(labels.lblNoData);\r",
+                    "this.refresh();"
+                ]
+            },
+            "designerId": "0ec52d0c-500a-47db-bd65-0a40b16886f4"
         }
     ]
 }

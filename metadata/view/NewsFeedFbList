@@ -18,7 +18,7 @@
         "designer|userClassName": "NewsFeedfbList",
         "designer|userAlias": "newsFeedfbList",
         "designer|createAlias": "list",
-        "modal": false,
+        "modal": null,
         "scrollable": [
             "{\r",
             "    direction: 'vertical', \r",
@@ -26,6 +26,8 @@
             "}"
         ],
         "disableSelection": true,
+        "deferEmptyText": false,
+        "emptyText": null,
         "itemCls": null,
         "store": "NewsFeedfbStore"
     },
@@ -70,13 +72,49 @@
                     "        {text}\r",
                     "    </div>\r",
                     "    <div class=\"footer\">\r",
-                    "        {likes_count} Likes {comments_count} Comment(s)\r",
+                    "        {likes_count} {[this.lblLikes()]} {comments_count} {[this.lblComments()]}\r",
                     "    </div>  \r",
                     "</div>"
                 ],
                 "designer|displayName": "itemTpl"
             },
-            "designerId": "5e9e1f66-5487-47b5-87d7-6b865bed54d4"
+            "designerId": "5e9e1f66-5487-47b5-87d7-6b865bed54d4",
+            "cn": [
+                {
+                    "type": "templatefunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "lblComments",
+                        "fn": "lblComments",
+                        "implHandler": [
+                            "return labels.lblComments;"
+                        ],
+                        "designer|displayName": "lblComments"
+                    },
+                    "designerId": "d57736a8-6005-4349-8f74-688d275696dd"
+                },
+                {
+                    "type": "templatefunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "lblLikes",
+                        "fn": "lblLikes",
+                        "implHandler": [
+                            "return labels.lblLikes;"
+                        ],
+                        "designer|displayName": "lblLikes"
+                    },
+                    "designerId": "e5bd74eb-85d3-4c6a-a989-da4d8b13e64f"
+                }
+            ]
         },
         {
             "type": "Ext.plugin.PullRefresh",
@@ -114,6 +152,24 @@
                     "designerId": "1f7b7e24-76cd-41e4-95a7-b87f02c948cf"
                 }
             ]
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "initialize",
+                "fn": "initialize",
+                "implHandler": [
+                    "this.callParent();\r",
+                    "this.setEmptyText(labels.lblNoData);\r",
+                    "this.refresh();"
+                ]
+            },
+            "designerId": "f6ce62b9-256f-4cc8-ac2d-0857ee24533b"
         }
     ]
 }

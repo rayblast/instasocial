@@ -21,8 +21,8 @@ Ext.define('InstaSocial.view.NewsFeedvkList', {
         cls: 'newsfeed-list',
         id: 'newsFeedvkList',
         showAnimation: 'slide',
-        modal: false,
         disableSelection: true,
+        deferEmptyText: false,
         store: 'NewsFeedvkStore',
         scrollable: {
             direction: 'vertical',
@@ -47,10 +47,16 @@ Ext.define('InstaSocial.view.NewsFeedvkList', {
             '        {text}',
             '    </div>',
             '    <div class="footer">',
-            '        {likes_count} Likes {comments_count} Comment(s)',
+            '        {likes_count} {[this.lblLikes()]} {comments_count} {[this.lblComments()]}',
             '    </div>  ',
             '</div>',
             {
+                lblComments: function() {
+                    return labels.lblComments;
+                },
+                lblLikes: function() {
+                    return labels.lblLikes;
+                },
                 disableFormats: true
             }
         ),
@@ -63,6 +69,12 @@ Ext.define('InstaSocial.view.NewsFeedvkList', {
                 type: 'pullrefresh'
             }
         ]
+    },
+
+    initialize: function() {
+        this.callParent();
+        this.setEmptyText(labels.lblNoData);
+        this.refresh();
     }
 
 });

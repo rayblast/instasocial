@@ -21,8 +21,8 @@ Ext.define('InstaSocial.view.NewsFeedfbList', {
         cls: 'newsfeed-list',
         id: 'newsFeedfbList',
         showAnimation: 'slide',
-        modal: false,
         disableSelection: true,
+        deferEmptyText: false,
         store: 'NewsFeedfbStore',
         scrollable: {
             direction: 'vertical',
@@ -47,10 +47,16 @@ Ext.define('InstaSocial.view.NewsFeedfbList', {
             '        {text}',
             '    </div>',
             '    <div class="footer">',
-            '        {likes_count} Likes {comments_count} Comment(s)',
+            '        {likes_count} {[this.lblLikes()]} {comments_count} {[this.lblComments()]}',
             '    </div>  ',
             '</div>',
             {
+                lblComments: function() {
+                    return labels.lblComments;
+                },
+                lblLikes: function() {
+                    return labels.lblLikes;
+                },
                 disableFormats: true
             }
         ),
@@ -63,6 +69,12 @@ Ext.define('InstaSocial.view.NewsFeedfbList', {
                 type: 'pullrefresh'
             }
         ]
+    },
+
+    initialize: function() {
+        this.callParent();
+        this.setEmptyText(labels.lblNoData);
+        this.refresh();
     }
 
 });
