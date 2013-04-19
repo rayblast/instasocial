@@ -16,7 +16,8 @@ var config = {
         userSettingsStore: 'UserSettingsStore',
         userSettingsLocalStore: 'UserSettingsLocalStore',
         newsFeedfbStore: 'NewsFeedfbStore',
-        newsFeedvkStore: 'NewsFeedvkStore'
+        newsFeedvkStore: 'NewsFeedvkStore',
+        dataLocalStore: 'DataLocalStore'
     },
     views: {
         mainNavigationView: 'mainNavigationView',

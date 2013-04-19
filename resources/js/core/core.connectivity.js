@@ -4,7 +4,6 @@ core.connectivity = {
             loaded: config.core.connectivity.state.unavailable,
             state: config.core.connectivity.state.unavailable,
             load: function(callback, args){
-                console.info('core.connectivity.networks.fb.load');
                 core.ui.create.div('fb-root');
                 window.fbAsyncInit = function() {
                     FB.init({
@@ -29,7 +28,6 @@ core.connectivity = {
                 }(document));
             },
             checkState: function(callback, args){
-                console.info('core.connectivity.networks.fb.checkState');
                 if(core.connectivity.networks.fb.loaded < config.core.connectivity.state.loaded){
                     core.connectivity.networks.fb.load(callback, args);
                     return;
@@ -75,7 +73,6 @@ core.connectivity = {
             loaded: config.core.connectivity.state.unavailable,
             state: config.core.connectivity.state.unavailable,
             load: function(callback, args){
-                console.info('core.connectivity.networks.vk.load');
                 core.ui.create.div('vk_api_transport');
                 window.vkAsyncInit = function() {
                     VK.init({
@@ -96,7 +93,6 @@ core.connectivity = {
                 }, 0);
             },
             checkState: function(callback, args){
-                console.info('core.connectivity.networks.vk.checkState');
                 if(core.connectivity.networks.vk.loaded < config.core.connectivity.state.loaded){
                     core.connectivity.networks.vk.load(callback, args);
                     return;
@@ -137,7 +133,6 @@ core.connectivity = {
         }
     },
     loadNetworks: function(){
-        console.info('core.connectivity.loadNetworks');
         var connected = false;
         for(var id in core.connectivity.networks){
            if(core.connectivity.networks[id].state >= config.core.connectivity.state.loggedin){
@@ -148,14 +143,12 @@ core.connectivity = {
         return connected;
     },
     checkNetworksState: function(){
-        console.info('core.connectivity.checkNetworksState');
         for(var id in core.connectivity.networks){
             core.connectivity.networks[id].checkState();
            
         }
     },
     updateNetworksState: function(){
-        console.info('core.connectivity.updateNetworksState');
         var networksStore = Ext.getStore(config.stores.networksStore);
         networksStore.each(function(rec) {
             var id = [rec.data.id];

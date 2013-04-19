@@ -1,6 +1,5 @@
 core.settings = {
     saveUserSetting: function(id, value){
-        console.info('core.settings.saveUserSetting');
         var userSettings = Ext.getStore(config.stores.userSettingsLocalStore);
         var record;
         try{
@@ -13,7 +12,6 @@ core.settings = {
         }
     },
     loadUserSettings: function(retry){
-        console.info('core.settings.loadUserSettings');
         var userSettings = Ext.getStore(config.stores.userSettingsLocalStore).load();
         var userSettingsDefault = Ext.getStore(config.stores.userSettingsStore);
         try{

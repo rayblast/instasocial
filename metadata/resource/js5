@@ -6,8 +6,8 @@
     },
     "codeClass": null,
     "userConfig": {
-        "url": "resources/js/core/core.js",
-        "id": "core"
+        "url": "resources/js/core/core.settings.js",
+        "id": "core.settings"
     },
-    "designerId": "92f6ab34-b1d8-4074-b9d0-2380bd1ea7b5"
+    "designerId": "303488b2-4227-4665-9b1c-cae15b610271"
 }

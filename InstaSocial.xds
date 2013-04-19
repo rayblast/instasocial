@@ -2,13 +2,18 @@
     "name": "InstaSocial",
     "settings": {
         "urlPrefix": "http://localhost:8081/InstaSocial",
-        "exportPath": ""
+        "exportPath": "",
+        "spacesToIndent": 4,
+        "lineEnding": "CRLF",
+        "genTimestamps": false,
+        "cacheBust": false,
+        "buildShouldOverwriteIndex": true
     },
-    "xdsVersion": "2.2.0",
-    "xdsBuild": 908,
+    "xdsVersion": "2.2.1",
+    "xdsBuild": 951,
     "schemaVersion": 1,
-    "upgradeVersion": 210000000499,
-    "framework": "touch21",
+    "upgradeVersion": 210000000500,
+    "framework": "touch22",
     "topInstanceFileMap": {
         "4b24ab5c-d84f-4202-8fae-a791ffde467f": {
             "paths": [
@@ -116,15 +121,15 @@
         },
         "303488b2-4227-4665-9b1c-cae15b610271": {
             "paths": [
-                "metadata/resource/js4"
+                "metadata/resource/js5"
             ],
-            "className": "js4"
+            "className": "js5"
         },
         "27e16bcc-5bbb-4fb5-981e-e056147236be": {
             "paths": [
-                "metadata/resource/js3"
+                "metadata/resource/js4"
             ],
-            "className": "js3"
+            "className": "js4"
         },
         "c3f9dc11-9446-40ca-98ea-3a65e50503eb": {
             "paths": [
@@ -182,15 +187,9 @@
         },
         "3eefa425-1f72-4d64-9030-9e4bcbe23680": {
             "paths": [
-                "metadata/resource/js2"
+                "metadata/resource/js3"
             ],
-            "className": "js2"
-        },
-        "879f9dc4-fcb6-4135-8ece-7c6b9e81cfce": {
-            "paths": [
-                "metadata/resource/js5"
-            ],
-            "className": "js5"
+            "className": "js3"
         },
         "adde11c8-daba-493c-a204-e041f4b5ca53": {
             "paths": [
@@ -232,9 +231,9 @@
         },
         "92f6ab34-b1d8-4074-b9d0-2380bd1ea7b5": {
             "paths": [
-                "metadata/resource/js7"
+                "metadata/resource/js2"
             ],
-            "className": "js7"
+            "className": "js2"
         },
         "1c25147d-70b7-41bb-93fa-48cc4eed49dc": {
             "paths": [
@@ -254,9 +253,37 @@
         },
         "c8e342b2-1275-4e77-9a11-738487bd1c6e": {
             "paths": [
+                "metadata/resource/js7"
+            ],
+            "className": "js7"
+        },
+        "ff9755a7-ecd6-41dc-a76d-d88431388c16": {
+            "paths": [
                 "metadata/resource/js8"
             ],
             "className": "js8"
+        },
+        "e650ad08-ea3c-4692-81e6-b9ec854c5989": {
+            "paths": [
+                "metadata/store/DataLocalStore",
+                "app/store/override/DataLocalStore.js",
+                "app/store/DataLocalStore.js"
+            ],
+            "className": "DataLocalStore"
+        },
+        "906a197c-0c65-44db-9113-552d15b27850": {
+            "paths": [
+                "metadata/model/Data",
+                "app/model/override/Data.js",
+                "app/model/Data.js"
+            ],
+            "className": "Data"
+        },
+        "c4fb856e-8aa8-4d7f-98db-3184b1e1dc87": {
+            "paths": [
+                "metadata/resource/js9"
+            ],
+            "className": "js9"
         }
     },
     "viewOrderMap": {
@@ -274,6 +301,7 @@
             "1121f39b-3485-4e4d-a4c7-34086811e080",
             "2ce1f58e-f863-49a0-91eb-b6f7709301de",
             "309bff0a-b698-4b17-950d-97777abcb2f8",
+            "e650ad08-ea3c-4692-81e6-b9ec854c5989",
             "f2c90753-2494-4cb2-8281-dbcafcc54f7b",
             "09b8eec8-4662-4007-8206-5470fccfef4d"
         ],
@@ -288,7 +316,8 @@
             "005ec00e-558c-4012-8208-14f22a76f506",
             "c3fbd4fd-4280-4104-9f3c-2709b3d265e8",
             "1c25147d-70b7-41bb-93fa-48cc4eed49dc",
-            "14f4f1fb-b73d-4145-beca-d1daf3e5133b"
+            "14f4f1fb-b73d-4145-beca-d1daf3e5133b",
+            "906a197c-0c65-44db-9113-552d15b27850"
         ],
         "resource": [
             "4b24ab5c-d84f-4202-8fae-a791ffde467f",
@@ -300,9 +329,10 @@
             "3eefa425-1f72-4d64-9030-9e4bcbe23680",
             "27e16bcc-5bbb-4fb5-981e-e056147236be",
             "303488b2-4227-4665-9b1c-cae15b610271",
-            "879f9dc4-fcb6-4135-8ece-7c6b9e81cfce",
             "02fcbb71-7b16-47cc-8443-ef325af61afc",
-            "c8e342b2-1275-4e77-9a11-738487bd1c6e"
+            "c8e342b2-1275-4e77-9a11-738487bd1c6e",
+            "c4fb856e-8aa8-4d7f-98db-3184b1e1dc87",
+            "ff9755a7-ecd6-41dc-a76d-d88431388c16"
         ],
         "app": [
             "application"

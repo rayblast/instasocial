@@ -6,8 +6,14 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>InstaSocial</title>
-    <script src="http://cdn.sencha.com/touch/sencha-touch-2.1.1/sencha-touch-all.js"></script>
-    <link rel="stylesheet" href="http://cdn.sencha.com/touch/sencha-touch-2.1.1/resources/css/sencha-touch.css">
+    <script>
+        Ext = Ext || {};
+        Ext.theme = {
+            name: "Default"
+        };
+    </script>
+    <script src="http://cdn.sencha.com/touch/sencha-touch-2.2.0-rc/sencha-touch-all.js"></script>
+    <link rel="stylesheet" href="http://cdn.sencha.com/touch/sencha-touch-2.2.0-rc/resources/css/sencha-touch.css">
     <script src="resources/js/localization/en.js" id="labels"></script>
     <script src="resources/js/config.js" id="config"></script>
     <link rel="stylesheet" href="resources/css/networkList.css" id="networkList">
@@ -16,21 +22,11 @@
     <script src="resources/js/core/core.connectivity.js" id="core.connectivity"></script>
     <script src="resources/js/core/core.newsfeed.js" id="core.newsfeed"></script>
     <script src="resources/js/core/core.settings.js" id="core.settings"></script>
-    <script src="resources/js/core/core.ui.js" id="core.ui"></script>
     <script src="resources/js/core/core.parser.js" id="core.parser"></script>
     <script src="resources/js/core/core.renderer.js" id="core.renderer"></script>
+    <script src="resources/js/core/core.store.js" id="core.store"></script>
+    <script src="resources/js/core/core.ui.js" id="core.ui"></script>
     <script type="text/javascript" src="app.js"></script>
-    <script type="text/javascript">
-        if (!Ext.browser.is.WebKit) {
-            alert("The current browser is unsupported.\n\nSupported browsers:\n" +
-                "Google Chrome\n" +
-                "Apple Safari\n" +
-                "Mobile Safari (iOS)\n" +
-                "Android Browser\n" +
-                "BlackBerry Browser"
-            );
-        }
-    </script>
 </head>
 <body></body>
 </html>

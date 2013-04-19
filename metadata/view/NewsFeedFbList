@@ -29,7 +29,8 @@
         "deferEmptyText": false,
         "emptyText": null,
         "itemCls": null,
-        "store": "NewsFeedfbStore"
+        "store": "NewsFeedfbStore",
+        "variableHeights": true
     },
     "configAlternates": {
         "scrollable": "object"
@@ -116,43 +117,6 @@
                         "designer|displayName": "lblLikes"
                     },
                     "designerId": "e5bd74eb-85d3-4c6a-a989-da4d8b13e64f"
-                }
-            ]
-        },
-        {
-            "type": "Ext.plugin.PullRefresh",
-            "reference": {
-                "name": "plugins",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "pluginId": "newsFeedfbRefresh",
-                "designer|userClassName": "MyPullRefreshPlugin",
-                "designer|displayName": "NewsFeedfbRefresh",
-                "designer|createAlias": null,
-                "snappingAnimationDuration": null
-            },
-            "designerId": "78bed89e-053c-4798-8f15-18006581afce",
-            "cn": [
-                {
-                    "type": "fixedfunction",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "designer|userClassName": "refreshFn",
-                        "fn": "refreshFn",
-                        "designer|params": [
-                            "plugin"
-                        ],
-                        "implHandler": [
-                            "core.newsfeed.networks.fb.getNewsFeed(); "
-                        ]
-                    },
-                    "designerId": "1f7b7e24-76cd-41e4-95a7-b87f02c948cf"
                 }
             ]
         },

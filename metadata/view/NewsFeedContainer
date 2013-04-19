@@ -73,6 +73,50 @@
                     "codeClass": null,
                     "designerId": "10d55042-558d-4112-9b4b-a2c9fd7cf010",
                     "masterInstanceId": "9b26b12d-54ec-4e11-93ea-2e1dccb8a02e"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "align": "right",
+                        "id": "btNewsFeedRefresh",
+                        "itemId": "btNewsFeedRefresh",
+                        "ui": "round",
+                        "designer|userClassName": "MyButton2",
+                        "designer|displayName": "BtNewsFeedRefresh",
+                        "designer|createAlias": null,
+                        "iconCls": "refresh",
+                        "text": null
+                    },
+                    "designerId": "6153a796-b615-471c-bab3-d3c591400050",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "onBtNewsFeedRefreshTap",
+                                "fn": "onBtNewsFeedRefreshTap",
+                                "implHandler": [
+                                    "if(core.connectivity.networks.fb.state == config.core.connectivity.state.loggedin){\r",
+                                    "    core.newsfeed.networks.fb.getNewsFeed();\r",
+                                    "}\r",
+                                    "if(core.connectivity.networks.vk.state == config.core.connectivity.state.loggedin){\r",
+                                    "    core.newsfeed.networks.vk.getNewsFeed();\r",
+                                    "}"
+                                ],
+                                "name": "tap"
+                            },
+                            "designerId": "3cfff7eb-ed4f-4e26-addc-f0f913f3a16d"
+                        }
+                    ]
                 }
             ]
         },

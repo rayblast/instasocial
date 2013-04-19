@@ -129,21 +129,6 @@
             "designerId": "94e91ef4-5967-4ebd-acbd-f3043904eb5d"
         },
         {
-            "type": "Ext.data.association.HasOne",
-            "reference": {
-                "name": "hasOne",
-                "type": "object"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "associationKey": "user",
-                "designer|userClassName": "MyHasOneAssociation1",
-                "designer|displayName": "hasOneUser",
-                "model": "User"
-            },
-            "designerId": "6b5ab272-7a67-4128-abb5-5a342c92b908"
-        },
-        {
             "type": "Ext.data.association.HasMany",
             "reference": {
                 "name": "hasMany",
@@ -151,10 +136,11 @@
             },
             "codeClass": null,
             "userConfig": {
-                "associationKey": "comment",
+                "associationKey": "comments",
                 "designer|userClassName": "MyHasManyAssociation",
                 "designer|displayName": "hasManyComment",
-                "model": "Comment"
+                "model": "Comment",
+                "store": null
             },
             "designerId": "f736bbc8-55b7-46aa-9d21-6fbc26402f08"
         },
@@ -169,9 +155,26 @@
                 "associationKey": "attachments",
                 "designer|userClassName": "MyHasManyAssociation2",
                 "designer|displayName": "hasManyAttachments",
-                "model": "Attachment"
+                "model": "Attachment",
+                "foreignKey": null,
+                "store": null
             },
             "designerId": "d492b666-6071-4b57-91ef-d6927a27d6a0"
+        },
+        {
+            "type": "Ext.data.association.HasOne",
+            "reference": {
+                "name": "hasOne",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "associationKey": "user",
+                "designer|userClassName": "MyHasOneAssociation2",
+                "designer|displayName": "hasOneUser",
+                "model": "User"
+            },
+            "designerId": "0a4408dc-7e73-40e4-914d-8f050cdcc084"
         }
     ]
 }

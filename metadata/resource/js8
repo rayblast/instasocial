@@ -6,8 +6,8 @@
     },
     "codeClass": null,
     "userConfig": {
-        "url": "resources/js/core/core.renderer.js",
-        "id": "core.renderer"
+        "url": "resources/js/core/core.ui.js",
+        "id": "core.ui"
     },
-    "designerId": "c8e342b2-1275-4e77-9a11-738487bd1c6e"
+    "designerId": "ff9755a7-ecd6-41dc-a76d-d88431388c16"
 }

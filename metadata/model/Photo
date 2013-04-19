@@ -142,6 +142,19 @@
                 "model": "User"
             },
             "designerId": "91b48471-824d-47e5-82e2-675b544d7652"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "attachment_id",
+                "designer|userClassName": "field41"
+            },
+            "designerId": "7d0f93a1-7d83-42b0-950e-cbf8e60921d8"
         }
     ]
 }

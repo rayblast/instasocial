@@ -38,6 +38,6 @@ core.renderer = {
         },
         urlify: function(text) {
             var urlRegex = /(https?:\/\/[^\s]+)/g;
-            return text.replace(urlRegex, '<a href="$1">$1</a>');
+            return text.replace(urlRegex, '<a href="$1" target="_blank">$1</a>');
         }
 };

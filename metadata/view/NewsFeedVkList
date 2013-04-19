@@ -28,7 +28,8 @@
         "disableSelection": true,
         "deferEmptyText": false,
         "itemCls": null,
-        "store": "NewsFeedvkStore"
+        "store": "NewsFeedvkStore",
+        "variableHeights": true
     },
     "configAlternates": {
         "scrollable": "object"
@@ -115,41 +116,6 @@
                         "designer|displayName": "lblLikes"
                     },
                     "designerId": "7d2c1752-f586-4971-b781-8f022d0bbc2d"
-                }
-            ]
-        },
-        {
-            "type": "Ext.plugin.PullRefresh",
-            "reference": {
-                "name": "plugins",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "pluginId": "newsFeedvkRefresh",
-                "designer|userClassName": "MyPullRefreshPlugin1",
-                "designer|displayName": "NewsFeedvkRefresh"
-            },
-            "designerId": "5af32fac-dd41-4294-acb9-51a20980477f",
-            "cn": [
-                {
-                    "type": "fixedfunction",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "designer|userClassName": "refreshFn",
-                        "fn": "refreshFn",
-                        "designer|params": [
-                            "plugin"
-                        ],
-                        "implHandler": [
-                            "core.newsfeed.networks.vk.getNewsFeed();"
-                        ]
-                    },
-                    "designerId": "e2d94a42-16b9-4b21-b1f8-18640fa41dd0"
                 }
             ]
         },

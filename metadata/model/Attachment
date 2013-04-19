@@ -6,6 +6,7 @@
     },
     "codeClass": null,
     "userConfig": {
+        "idProperty": null,
         "designer|userClassName": "Attachment",
         "designer|userAlias": "attachment"
     },
@@ -37,7 +38,7 @@
                 "designer|displayName": "hasOnePhoto",
                 "model": "Photo"
             },
-            "designerId": "6db4467b-f541-4d8d-97c9-a7d85f563eb6"
+            "designerId": "4a9c9e11-bd72-4349-9794-89c505366f19"
         }
     ]
 }

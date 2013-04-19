@@ -6,43 +6,12 @@
     },
     "codeClass": null,
     "userConfig": {
+        "autoLoad": null,
+        "clearOnPageLoad": false,
         "model": "Post",
         "storeId": "NewsFeedvkStore",
         "designer|userClassName": "NewsFeedvkStore",
         "designer|userAlias": "newsFeedvkStore"
     },
-    "designerId": "f2c90753-2494-4cb2-8281-dbcafcc54f7b",
-    "cn": [
-        {
-            "type": "Ext.data.proxy.Memory",
-            "reference": {
-                "name": "proxy",
-                "type": "object"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "designer|userClassName": "MyMemoryProxy",
-                "designer|displayName": "newsFeedVkProxy",
-                "designer|createAlias": ""
-            },
-            "designerId": "9492d9f5-f64c-4849-8481-0defdda5f5ed",
-            "cn": [
-                {
-                    "type": "Ext.data.reader.Json",
-                    "reference": {
-                        "name": "reader",
-                        "type": "object"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "rootProperty": "data",
-                        "designer|userClassName": "MyJsonReader",
-                        "designer|displayName": "newsFeedVkReader",
-                        "designer|createAlias": ""
-                    },
-                    "designerId": "6530291a-a853-4f27-b720-11ee9d449fe2"
-                }
-            ]
-        }
-    ]
+    "designerId": "f2c90753-2494-4cb2-8281-dbcafcc54f7b"
 }

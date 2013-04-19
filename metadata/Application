@@ -15,14 +15,16 @@
             "User",
             "Post",
             "Photo",
-            "Attachment"
+            "Attachment",
+            "Data"
         ],
         "stores": [
             "NetworksStore",
             "UserSettingsStore",
             "UserSettingsLocalStore",
             "NewsFeedvkStore",
-            "NewsFeedfbStore"
+            "NewsFeedfbStore",
+            "DataLocalStore"
         ],
         "views": [
             "NetworkListContainer",
@@ -76,6 +78,12 @@
                     "}\r",
                     "\r",
                     "this.getApplication().getController(config.controllers.networksController).setupNewsFeed();\r",
+                    "if(core.connectivity.networks.fb.state == config.core.connectivity.state.loggedin){\r",
+                    "    core.newsfeed.networks.fb.loadData();\r",
+                    "}\r",
+                    "if(core.connectivity.networks.vk.state == config.core.connectivity.state.loggedin){\r",
+                    "    core.newsfeed.networks.vk.loadData();\r",
+                    "}\r",
                     "\r",
                     "\r",
                     "//var newsFeedVkStore = Ext.getStore('NewsFeedvkStore');\r",

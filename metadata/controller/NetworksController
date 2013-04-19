@@ -77,8 +77,6 @@
                 "designer|userClassName": "onBtLoginTap",
                 "fn": "onBtLoginTap",
                 "implHandler": [
-                    "console.info('NetworksController.onBtLoginTap');\r",
-                    "\r",
                     "var networksController = InstaSocial.app.getController(config.controllers.networksController);\r",
                     "var networkPanel = Ext.Viewport.down(config.views.networkPanel);\r",
                     "var record = networkPanel.getRecord();\r",
@@ -118,8 +116,6 @@
                 "designer|userClassName": "onBtLogoutTap",
                 "fn": "onBtLogoutTap",
                 "implHandler": [
-                    "console.info('NetworksController.onBtLogoutTap');\r",
-                    "\r",
                     "var networksController = InstaSocial.app.getController(config.controllers.networksController);\r",
                     "var networkPanel = Ext.Viewport.down(config.views.networkPanel);\r",
                     "var record = networkPanel.getRecord();\r",
@@ -147,8 +143,6 @@
                     "args"
                 ],
                 "implHandler": [
-                    "console.info('NetworksController.setState');\r",
-                    "\r",
                     "var state;\r",
                     "if(args !== null){\r",
                     "    state = args.state;\r",
@@ -183,8 +177,6 @@
                     "args"
                 ],
                 "implHandler": [
-                    "console.info('NetworksController.showPanel');\r",
-                    "\r",
                     "var networksController = InstaSocial.app.getController(config.controllers.networksController);\r",
                     "networksController.setState(args);\r",
                     "args.panel.showBy(args.target);\r",
@@ -204,8 +196,6 @@
                 "designer|userClassName": "onNetworkListItemTap",
                 "fn": "onNetworkListItemTap",
                 "implHandler": [
-                    "console.info('MainController.onNetworkListItemTap');\r",
-                    "\r",
                     "var network = record.data;\r",
                     "var networkPanel = Ext.Viewport.down(config.views.networkPanel);\r",
                     "\r",
