@@ -1,6 +1,7 @@
 core.newsfeed = {
     networks: {
         fb: {
+            localDataLoaded: false,
             getNewsFeed: function(){
                 core.ui.display.loading.start();
                 var timeout = core.ui.create.connectionTimeout();
@@ -30,9 +31,11 @@ core.newsfeed = {
             },
             loadData: function(){
                 core.newsfeed.networks.fb.setData(core.store.local.load(config.stores.newsFeedfbStore));
+                core.newsfeed.networks.fb.localDataLoaded = true;
             }
         },
         vk: {
+            localDataLoaded: false,
             getNewsFeed: function(){
                 core.ui.display.loading.start();
                 var timeout = core.ui.create.connectionTimeout();
@@ -62,6 +65,7 @@ core.newsfeed = {
             },
             loadData: function(){
                 core.newsfeed.networks.vk.setData(core.store.local.load(config.stores.newsFeedvkStore));
+                core.newsfeed.networks.vk.localDataLoaded = true;
             }
         }
     }

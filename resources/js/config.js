@@ -21,7 +21,9 @@ var config = {
     },
     views: {
         mainNavigationView: 'mainNavigationView',
-        networkPanel: 'networkPanel'
+        networkPanel: 'networkPanel',
+        newsFeedNavigationBar: 'newsFeedNavigationBar',
+        newsFeedCarousel: 'newsFeedCarousel'
     },
     controllers: {
         networksController: 'NetworksController'

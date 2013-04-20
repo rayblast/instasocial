@@ -23,12 +23,12 @@ core.store = {
             }
         },
         load: function(id){
-            var dataLocalStore = Ext.getStore(config.stores.dataLocalStore);//.load();
+            var dataLocalStore = Ext.getStore(config.stores.dataLocalStore);
             try{
                 return dataLocalStore.findRecord('id', id).data.value;
             }catch(Exception){  
                 console.error('Local data load failed! (' + id + ')');
-                return "[]";
+                return {};
             }
         }
     },

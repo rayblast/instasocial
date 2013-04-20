@@ -1,0 +1,140 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "activeId": "",
+        "designer|userClassName": "NewsFeedController",
+        "designer|userAlias": "newsFeedController"
+    },
+    "designerId": "eab53465-a410-4e33-868b-61e4ca1534d8",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "activeId",
+            "type": "string"
+        }
+    ],
+    "cn": [
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "newsFeedCarousel",
+                "ref": "newsFeedCarousel",
+                "selector": "#newsFeedCarousel"
+            },
+            "designerId": "b1b813d2-77f5-4cdf-819b-fd00ab9a6836"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "newsFeedNavigationBar",
+                "ref": "newsFeedNavigationBar",
+                "selector": "#newsFeedNavigationBar"
+            },
+            "designerId": "9918220e-7eb3-4b51-ac5f-c4e77a54ea60"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "newsFeedToolbar",
+                "ref": "newsFeedToolbar",
+                "selector": "#newsFeedToolbar"
+            },
+            "designerId": "e55e817b-4f5d-459d-a7a2-f0eb5e457a66"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onNewsFeedCarouselActiveItemChange",
+                "fn": "onNewsFeedCarouselActiveItemChange",
+                "implHandler": [
+                    "this.config.activeId = value.id;\r",
+                    "\r",
+                    "var title = labels.lblNewsFeed + ' - ';\r",
+                    "var id = this.getActiveNetworkId();\r",
+                    "title += labels.networks[id];\r",
+                    "\r",
+                    "Ext.getCmp(config.views.newsFeedNavigationBar).setTitle(title);\r",
+                    "\r",
+                    "if(!core.newsfeed.networks[id].localDataLoaded){\r",
+                    "    core.ui.display.loading.start();\r",
+                    "    core.helper.callAsync(core.newsfeed.networks[id].loadData, core.ui.display.loading.stop);\r",
+                    "}"
+                ],
+                "name": "activeitemchange",
+                "designer|targetType": "NewsFeedCarousel",
+                "designer|controlQuery": "#newsFeedCarousel"
+            },
+            "designerId": "2b9de333-a021-4ca9-9303-e7b91cb394cb"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "target"
+                ],
+                "designer|userClassName": "onBtNewsFeedRefreshTap",
+                "fn": "onBtNewsFeedRefreshTap",
+                "implHandler": [
+                    "var id = this.getActiveNetworkId();\r",
+                    "core.newsfeed.networks[id].getNewsFeed();"
+                ],
+                "name": "tap",
+                "designer|targetType": null,
+                "designer|controlQuery": "#btNewsFeedRefresh"
+            },
+            "designerId": "7bbcd244-31a7-4707-b9b0-4018efb3eb70"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "getActiveNetworkId",
+                "fn": "getActiveNetworkId",
+                "implHandler": [
+                    "var id = this.config.activeId;\r",
+                    "\r",
+                    "if(id == \"newsFeedfbList\"){\r",
+                    "    return 'fb';\r",
+                    "}else if(id == \"newsFeedvkList\"){\r",
+                    "    return 'vk';\r",
+                    "}"
+                ]
+            },
+            "designerId": "cdd12b52-197e-417c-8a37-a4e5a235d895"
+        }
+    ]
+}

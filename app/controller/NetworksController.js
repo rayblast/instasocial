@@ -15,6 +15,7 @@
 
 Ext.define('InstaSocial.controller.NetworksController', {
     extend: 'Ext.app.Controller',
+    alias: 'controller.networksController',
 
     config: {
         refs: {
@@ -108,7 +109,7 @@ Ext.define('InstaSocial.controller.NetworksController', {
     },
 
     setupNewsFeed: function() {
-        var newsFeedCarousel = Ext.getCmp('newsFeedCarousel');
+        var newsFeedCarousel = Ext.getCmp(config.views.newsFeedCarousel);
         if(core.connectivity.networks.fb.state == config.core.connectivity.state.loggedin){
             newsFeedCarousel.add({xtype: 'newsFeedfbList'});
         }else{

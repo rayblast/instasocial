@@ -290,14 +290,31 @@
                 "metadata/resource/js10"
             ],
             "className": "js10"
+        },
+        "eab53465-a410-4e33-868b-61e4ca1534d8": {
+            "paths": [
+                "metadata/controller/NewsFeedController",
+                "app/controller/override/NewsFeedController.js",
+                "app/controller/NewsFeedController.js"
+            ],
+            "className": "NewsFeedController"
+        },
+        "f9e0d041-8d6c-43c6-a230-ed4da1c10fe3": {
+            "paths": [
+                "metadata/view/NewsFeedCarousel",
+                "app/view/override/NewsFeedCarousel.js",
+                "app/view/NewsFeedCarousel.js"
+            ],
+            "className": "NewsFeedCarousel"
         }
     },
     "viewOrderMap": {
         "view": [
-            "56cf39fd-035c-400b-bb5c-44ae8d82d980",
             "270affb2-339c-4b88-9db9-9079cc40d3bf",
             "9b26b12d-54ec-4e11-93ea-2e1dccb8a02e",
+            "f9e0d041-8d6c-43c6-a230-ed4da1c10fe3",
             "68a8c996-c164-4a3b-8a04-3951851a6f19",
+            "56cf39fd-035c-400b-bb5c-44ae8d82d980",
             "1f540070-7193-4675-bf48-d7bdedbe93f8",
             "adde11c8-daba-493c-a204-e041f4b5ca53",
             "38acb443-8b8b-4544-ade0-1e097968e5c0",
@@ -313,7 +330,8 @@
         ],
         "controller": [
             "1f06f30f-e66c-4692-b946-e41584021eff",
-            "8907145b-c0d9-48e2-989b-81af09545c96"
+            "8907145b-c0d9-48e2-989b-81af09545c96",
+            "eab53465-a410-4e33-868b-61e4ca1534d8"
         ],
         "model": [
             "b91ae024-1347-4ab2-bc2f-158133a05f49",
@@ -327,19 +345,19 @@
         ],
         "resource": [
             "4b24ab5c-d84f-4202-8fae-a791ffde467f",
-            "7b53273d-6764-468c-9f46-9a8b347a6af9",
-            "ee5c1194-f7db-4011-aa42-863359a24564",
             "54b84051-a916-4dd3-8fc3-a9f5096ab4aa",
             "9cec381a-cc96-4fce-813e-6c99a0b1f216",
+            "7b53273d-6764-468c-9f46-9a8b347a6af9",
+            "ee5c1194-f7db-4011-aa42-863359a24564",
             "92f6ab34-b1d8-4074-b9d0-2380bd1ea7b5",
             "3eefa425-1f72-4d64-9030-9e4bcbe23680",
+            "093af5d0-a067-422f-b1fc-582ca1147185",
             "27e16bcc-5bbb-4fb5-981e-e056147236be",
             "303488b2-4227-4665-9b1c-cae15b610271",
             "02fcbb71-7b16-47cc-8443-ef325af61afc",
             "c8e342b2-1275-4e77-9a11-738487bd1c6e",
             "c4fb856e-8aa8-4d7f-98db-3184b1e1dc87",
-            "ff9755a7-ecd6-41dc-a76d-d88431388c16",
-            "093af5d0-a067-422f-b1fc-582ca1147185"
+            "ff9755a7-ecd6-41dc-a76d-d88431388c16"
         ],
         "app": [
             "application"

@@ -18,3 +18,8 @@ var labels = {
     msgConnTimeout: 'Connection timeout!',
     msgLoading: 'Loading...'
 };
+
+labels.networks = {
+    fb: 'Facebook',
+    vk: 'Vkontakte'
+};

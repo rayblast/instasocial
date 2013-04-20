@@ -15,22 +15,6 @@
     "designerId": "270affb2-339c-4b88-9db9-9079cc40d3bf",
     "cn": [
         {
-            "type": "Ext.carousel.Carousel",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "id": "newsFeedCarousel",
-                "itemId": "newsFeedCarousel",
-                "designer|userClassName": "MyCarousel",
-                "designer|displayName": "NewsFeedCarousel",
-                "designer|createAlias": null
-            },
-            "designerId": "98c55665-da4d-488d-91a4-75da1ae07c60"
-        },
-        {
             "type": "Ext.navigation.Bar",
             "reference": {
                 "name": "navigationBar",
@@ -86,39 +70,28 @@
                         "id": "btNewsFeedRefresh",
                         "itemId": "btNewsFeedRefresh",
                         "ui": "round",
-                        "designer|userClassName": "MyButton2",
+                        "designer|userClassName": "BtNewsFeedRefresh",
+                        "designer|userAlias": "btNewsFeedRefresh",
                         "designer|displayName": "BtNewsFeedRefresh",
                         "designer|createAlias": null,
+                        "icon": null,
+                        "iconAlign": "right",
                         "iconCls": "refresh",
                         "text": null
                     },
-                    "designerId": "6153a796-b615-471c-bab3-d3c591400050",
-                    "cn": [
-                        {
-                            "type": "basiceventbinding",
-                            "reference": {
-                                "name": "listeners",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "designer|userClassName": "onBtNewsFeedRefreshTap",
-                                "fn": "onBtNewsFeedRefreshTap",
-                                "implHandler": [
-                                    "if(core.connectivity.networks.fb.state == config.core.connectivity.state.loggedin){\r",
-                                    "    core.newsfeed.networks.fb.getNewsFeed();\r",
-                                    "}\r",
-                                    "if(core.connectivity.networks.vk.state == config.core.connectivity.state.loggedin){\r",
-                                    "    core.newsfeed.networks.vk.getNewsFeed();\r",
-                                    "}"
-                                ],
-                                "name": "tap"
-                            },
-                            "designerId": "3cfff7eb-ed4f-4e26-addc-f0f913f3a16d"
-                        }
-                    ]
+                    "designerId": "b74f84fd-69ed-48f8-ab1f-a7dae4895dbd"
                 }
             ]
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "designerId": "0778094d-b52f-43d4-91d5-b8f5271ed69b",
+            "masterInstanceId": "f9e0d041-8d6c-43c6-a230-ed4da1c10fe3"
         },
         {
             "type": "linkedinstance",

@@ -35,11 +35,13 @@
             "NewsFeedvkList",
             "NewsFeedfbList",
             "NewsFeedNavigationBarHeader",
-            "NewsFeedToolbar"
+            "NewsFeedToolbar",
+            "NewsFeedCarousel"
         ],
         "controllers": [
             "NetworksController",
-            "MainController"
+            "MainController",
+            "NewsFeedController"
         ],
         "name": "InstaSocial"
     },
@@ -78,15 +80,14 @@
                     "}\r",
                     "\r",
                     "this.getApplication().getController(config.controllers.networksController).setupNewsFeed();\r",
-                    "if(core.connectivity.networks.fb.state == config.core.connectivity.state.loggedin){\r",
-                    "    core.ui.display.loading.start();\r",
-                    "    core.helper.callAsync(core.newsfeed.networks.fb.loadData, core.ui.display.loading.stop);\r",
-                    "}\r",
-                    "if(core.connectivity.networks.vk.state == config.core.connectivity.state.loggedin){\r",
-                    "    core.ui.display.loading.start();\r",
-                    "    core.helper.callAsync(core.newsfeed.networks.vk.loadData, core.ui.display.loading.stop);\r",
-                    "}\r",
                     "\r",
+                    "var activeNetworks = core.connectivity.getActiveNetworks();\r",
+                    "core.ui.display.loading.start();\r",
+                    "core.helper.callAsync(core.newsfeed.networks[activeNetworks[0]].loadData, core.ui.display.loading.stop);\r",
+                    "\r",
+                    "\r",
+                    "\r",
+                    "//console.log(activeNetworks);\r",
                     "\r",
                     "//var newsFeedVkStore = Ext.getStore('NewsFeedvkStore');\r",
                     "\r",

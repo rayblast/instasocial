@@ -160,5 +160,24 @@ core.connectivity = {
             }
         });
         networksStore.sync();
+    },
+    getNetworks: function(){
+        var networks = core.connectivity.networks;
+        var allNetworks = [];
+        for(var id in networks){
+            allNetworks.push(id);
+        }
+        return allNetworks;
+    },
+    getActiveNetworks: function(){
+        var networks = core.connectivity.networks;
+        var activeNetworks = [];
+        for(var id in networks){
+            var network = networks[id];
+            if(network.state == config.core.connectivity.state.loggedin){
+                activeNetworks.push(id);
+            }
+        }
+        return activeNetworks;
     }
 };

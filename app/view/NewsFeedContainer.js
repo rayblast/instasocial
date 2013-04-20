@@ -19,6 +19,7 @@ Ext.define('InstaSocial.view.NewsFeedContainer', {
 
     requires: [
         'InstaSocial.view.NewsFeedNavigationBarHeader',
+        'InstaSocial.view.NewsFeedCarousel',
         'InstaSocial.view.NewsFeedToolbar'
     ],
 
@@ -26,16 +27,6 @@ Ext.define('InstaSocial.view.NewsFeedContainer', {
         id: 'newsFeedContainer',
         itemId: 'newsFeedContainer',
         ui: 'dark',
-        items: [
-            {
-                xtype: 'carousel',
-                id: 'newsFeedCarousel',
-                itemId: 'newsFeedCarousel'
-            },
-            {
-                xtype: 'newsFeedToolbar'
-            }
-        ],
         navigationBar: {
             docked: 'top',
             id: 'newsFeedNavigationBar',
@@ -50,26 +41,19 @@ Ext.define('InstaSocial.view.NewsFeedContainer', {
                     id: 'btNewsFeedRefresh',
                     itemId: 'btNewsFeedRefresh',
                     ui: 'round',
+                    iconAlign: 'right',
                     iconCls: 'refresh'
                 }
             ]
         },
-        listeners: [
+        items: [
             {
-                fn: 'onBtNewsFeedRefreshTap',
-                event: 'tap',
-                delegate: '#btNewsFeedRefresh'
+                xtype: 'newsFeedCarousel'
+            },
+            {
+                xtype: 'newsFeedToolbar'
             }
         ]
-    },
-
-    onBtNewsFeedRefreshTap: function(button, e, eOpts) {
-        if(core.connectivity.networks.fb.state == config.core.connectivity.state.loggedin){
-            core.newsfeed.networks.fb.getNewsFeed();
-        }
-        if(core.connectivity.networks.vk.state == config.core.connectivity.state.loggedin){
-            core.newsfeed.networks.vk.getNewsFeed();
-        }
     }
 
 });

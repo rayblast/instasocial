@@ -48,11 +48,13 @@ Ext.application({
         'NewsFeedvkList',
         'NewsFeedfbList',
         'NewsFeedNavigationBarHeader',
-        'NewsFeedToolbar'
+        'NewsFeedToolbar',
+        'NewsFeedCarousel'
     ],
     controllers: [
         'NetworksController',
-        'MainController'
+        'MainController',
+        'NewsFeedController'
     ],
     name: 'InstaSocial',
 
@@ -67,15 +69,14 @@ Ext.application({
         }
 
         this.getApplication().getController(config.controllers.networksController).setupNewsFeed();
-        if(core.connectivity.networks.fb.state == config.core.connectivity.state.loggedin){
-            core.ui.display.loading.start();
-            core.helper.callAsync(core.newsfeed.networks.fb.loadData, core.ui.display.loading.stop);
-        }
-        if(core.connectivity.networks.vk.state == config.core.connectivity.state.loggedin){
-            core.ui.display.loading.start();
-            core.helper.callAsync(core.newsfeed.networks.vk.loadData, core.ui.display.loading.stop);
-        }
 
+        var activeNetworks = core.connectivity.getActiveNetworks();
+        core.ui.display.loading.start();
+        core.helper.callAsync(core.newsfeed.networks[activeNetworks[0]].loadData, core.ui.display.loading.stop);
+
+
+
+        //console.log(activeNetworks);
 
         //var newsFeedVkStore = Ext.getStore('NewsFeedvkStore');
 

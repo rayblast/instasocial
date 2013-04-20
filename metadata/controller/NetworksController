@@ -8,7 +8,8 @@
     "userConfig": {
         "network": null,
         "networkPanel": null,
-        "designer|userClassName": "NetworksController"
+        "designer|userClassName": "NetworksController",
+        "designer|userAlias": "networksController"
     },
     "designerId": "1f06f30f-e66c-4692-b946-e41584021eff",
     "customConfigs": [
@@ -236,7 +237,7 @@
                 "designer|userClassName": "setupNewsFeed",
                 "fn": "setupNewsFeed",
                 "implHandler": [
-                    "var newsFeedCarousel = Ext.getCmp('newsFeedCarousel');\r",
+                    "var newsFeedCarousel = Ext.getCmp(config.views.newsFeedCarousel);\r",
                     "if(core.connectivity.networks.fb.state == config.core.connectivity.state.loggedin){\r",
                     "    newsFeedCarousel.add({xtype: 'newsFeedfbList'});\r",
                     "}else{\r",
