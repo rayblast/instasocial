@@ -49,7 +49,8 @@ Ext.application({
         'NewsFeedfbList',
         'NewsFeedNavigationBarHeader',
         'NewsFeedToolbar',
-        'NewsFeedCarousel'
+        'NewsFeedCarousel',
+        'PostPanel'
     ],
     controllers: [
         'NetworksController',

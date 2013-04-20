@@ -23,7 +23,8 @@ var config = {
         mainNavigationView: 'mainNavigationView',
         networkPanel: 'networkPanel',
         newsFeedNavigationBar: 'newsFeedNavigationBar',
-        newsFeedCarousel: 'newsFeedCarousel'
+        newsFeedCarousel: 'newsFeedCarousel',
+        postPanel: 'postPanel'
     },
     controllers: {
         networksController: 'NetworksController'

@@ -1,0 +1,94 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "id": "postPanel",
+        "itemId": "postPanel",
+        "minHeight": "50%",
+        "minWidth": "90%",
+        "designer|userClassName": "PostPanel",
+        "designer|userAlias": "postPanel",
+        "hideOnMaskTap": true,
+        "modal": true
+    },
+    "designerId": "2da5b42f-cb9f-469a-b072-5b7c9f0716ab",
+    "cn": [
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": null,
+                "id": "fsNewPost",
+                "itemId": "fsNewPost",
+                "designer|userClassName": "MyFieldSet",
+                "designer|displayName": "fsNewPost",
+                "title": null
+            },
+            "designerId": "ffe7582c-9b0c-402a-ab44-78d0e2c644f2",
+            "cn": [
+                {
+                    "type": "Ext.field.TextArea",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "taInputPostMessage",
+                        "itemId": "taInputPostMessage",
+                        "designer|userClassName": "MyTextArea",
+                        "designer|displayName": "taInputPostMessage",
+                        "label": null,
+                        "placeHolder": null
+                    },
+                    "designerId": "2363df1a-5d75-4fd7-9113-9ddda8bfd8d4"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "btSendPost",
+                "itemId": "btSendPost",
+                "ui": "action-round",
+                "designer|userClassName": "MyButton4",
+                "designer|displayName": "BtSendPost",
+                "iconCls": null,
+                "text": null
+            },
+            "designerId": "86384a9d-c0a9-47aa-99c6-b0b4f68d9205"
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "initialize",
+                "fn": "initialize",
+                "implHandler": [
+                    "this.callParent();\r",
+                    "Ext.getCmp('fsNewPost').setTitle(labels.lblNewPost);\r",
+                    "Ext.getCmp('taInputPostMessage').setPlaceHolder(labels.lblTypeYourMessageHere);\r",
+                    "Ext.getCmp('btSendPost').setText(labels.lblSend);"
+                ]
+            },
+            "designerId": "ac302cd7-edd1-4b9c-b27d-ca93a8782d12"
+        }
+    ]
+}

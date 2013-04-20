@@ -35,6 +35,9 @@ Ext.define('InstaSocial.controller.NewsFeedController', {
             },
             "#btNewsFeedPost": {
                 tap: 'onBtNewsFeedPostTap'
+            },
+            "#btSendPost": {
+                tap: 'onBtSendPostButtonTap'
             }
         }
     },
@@ -60,11 +63,29 @@ Ext.define('InstaSocial.controller.NewsFeedController', {
     },
 
     onBtNewsFeedPostTap: function(target) {
+        var postPanel = Ext.Viewport.down(config.views.postPanel);
+
+        if(!postPanel){
+            postPanel = Ext.widget(config.views.postPanel);
+        } 
+
+        postPanel.showBy(target);
+
+
+    },
+
+    onBtSendPostButtonTap: function(target) {
         var id = this.getActiveNetworkId();
+        var message = Ext.getCmp('taInputPostMessage').getValue();
 
-        var obj = {'text':'test'};
+        var obj = {'text':message};
 
-        //core.post.networks[id].postToWall(obj);
+        core.post.networks[id].postToWall(obj);
+
+        this.clearPostPanel();
+        Ext.getCmp(config.views.postPanel).hide();
+
+
     },
 
     getActiveNetworkId: function() {
@@ -76,6 +97,11 @@ Ext.define('InstaSocial.controller.NewsFeedController', {
             return 'vk';
         }
         return null;
+    },
+
+    clearPostPanel: function() {
+        var taInputPostMessage = Ext.getCmp('taInputPostMessage');
+        taInputPostMessage.setValue('');
     }
 
 });

@@ -312,6 +312,14 @@
                 "metadata/resource/js11"
             ],
             "className": "js11"
+        },
+        "2da5b42f-cb9f-469a-b072-5b7c9f0716ab": {
+            "paths": [
+                "metadata/view/PostPanel",
+                "app/view/override/PostPanel.js",
+                "app/view/PostPanel.js"
+            ],
+            "className": "PostPanel"
         }
     },
     "viewOrderMap": {
@@ -324,7 +332,8 @@
             "1f540070-7193-4675-bf48-d7bdedbe93f8",
             "adde11c8-daba-493c-a204-e041f4b5ca53",
             "38acb443-8b8b-4544-ade0-1e097968e5c0",
-            "7fb1e8e3-87d9-4cfb-a1ec-64e92159390c"
+            "7fb1e8e3-87d9-4cfb-a1ec-64e92159390c",
+            "2da5b42f-cb9f-469a-b072-5b7c9f0716ab"
         ],
         "store": [
             "1121f39b-3485-4e4d-a4c7-34086811e080",

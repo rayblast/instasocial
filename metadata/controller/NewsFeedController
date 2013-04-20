@@ -151,17 +151,70 @@
                     "target"
                 ],
                 "implHandler": [
-                    "var id = this.getActiveNetworkId();\r",
+                    "var postPanel = Ext.Viewport.down(config.views.postPanel);\r",
                     "\r",
-                    "var obj = {'text':'test'};\r",
+                    "if(!postPanel){\r",
+                    "    postPanel = Ext.widget(config.views.postPanel);\r",
+                    "} \r",
                     "\r",
-                    "//core.post.networks[id].postToWall(obj);"
+                    "postPanel.showBy(target);\r",
+                    "\r",
+                    ""
                 ],
                 "name": "tap",
                 "designer|targetType": null,
                 "designer|controlQuery": "#btNewsFeedPost"
             },
             "designerId": "5e5c13a1-1db7-445f-9f8d-5fb19ed815a7"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "target"
+                ],
+                "designer|userClassName": "onBtSendPostButtonTap",
+                "fn": "onBtSendPostButtonTap",
+                "implHandler": [
+                    "var id = this.getActiveNetworkId();\r",
+                    "var message = Ext.getCmp('taInputPostMessage').getValue();\r",
+                    "\r",
+                    "var obj = {'text':message};\r",
+                    "\r",
+                    "core.post.networks[id].postToWall(obj);\r",
+                    "\r",
+                    "this.clearPostPanel();\r",
+                    "Ext.getCmp(config.views.postPanel).hide();\r",
+                    "\r",
+                    ""
+                ],
+                "name": "tap",
+                "designer|targetType": null,
+                "designer|controlQuery": "#btSendPost"
+            },
+            "designerId": "ab69bc1e-7724-4d6e-b6fb-a021f51c708e"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "clearPostPanel",
+                "fn": "clearPostPanel",
+                "implHandler": [
+                    "var taInputPostMessage = Ext.getCmp('taInputPostMessage');\r",
+                    "taInputPostMessage.setValue('');"
+                ]
+            },
+            "designerId": "5fba0546-167c-46a8-815c-c2dc4ee35fb5"
         }
     ]
 }
