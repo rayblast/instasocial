@@ -8,6 +8,7 @@
     "userConfig": {
         "clearOnPageLoad": false,
         "model": "Post",
+        "pageSize": 10,
         "storeId": "NewsFeedfbStore",
         "designer|userClassName": "NewsFeedfbStore",
         "designer|userAlias": "newsFeedfbStore"

@@ -7,7 +7,7 @@ var config = {
         },
         vk: {
             appId: 3157314,    //dev
-            //appId: 3534951,  //prod
+            //appId: 3591702,  //prod
             permissions: 12287
         }
     },

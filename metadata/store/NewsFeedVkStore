@@ -9,6 +9,7 @@
         "autoLoad": null,
         "clearOnPageLoad": false,
         "model": "Post",
+        "pageSize": 10,
         "storeId": "NewsFeedvkStore",
         "designer|userClassName": "NewsFeedvkStore",
         "designer|userAlias": "newsFeedvkStore"

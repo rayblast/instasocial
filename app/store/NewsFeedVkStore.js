@@ -24,6 +24,7 @@ Ext.define('InstaSocial.store.NewsFeedvkStore', {
     config: {
         clearOnPageLoad: false,
         model: 'InstaSocial.model.Post',
+        pageSize: 10,
         storeId: 'NewsFeedvkStore'
     }
 });
