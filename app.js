@@ -68,10 +68,12 @@ Ext.application({
 
         this.getApplication().getController(config.controllers.networksController).setupNewsFeed();
         if(core.connectivity.networks.fb.state == config.core.connectivity.state.loggedin){
-            core.newsfeed.networks.fb.loadData();
+            core.ui.display.loading.start();
+            core.helper.callAsync(core.newsfeed.networks.fb.loadData, core.ui.display.loading.stop);
         }
         if(core.connectivity.networks.vk.state == config.core.connectivity.state.loggedin){
-            core.newsfeed.networks.vk.loadData();
+            core.ui.display.loading.start();
+            core.helper.callAsync(core.newsfeed.networks.vk.loadData, core.ui.display.loading.stop);
         }
 
 

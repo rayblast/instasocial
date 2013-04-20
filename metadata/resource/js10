@@ -1,0 +1,13 @@
+{
+    "type": "jsresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "url": "resources/js/core/core.helper.js",
+        "id": "core.helper"
+    },
+    "designerId": "093af5d0-a067-422f-b1fc-582ca1147185"
+}

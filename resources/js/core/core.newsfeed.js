@@ -15,15 +15,15 @@ core.newsfeed = {
             },
             addData: function(post){
                 var newsFeedfbStore = Ext.getStore(config.stores.newsFeedfbStore);     
-                core.newsfeed.helper.addData(newsFeedfbStore, post);
+                core.store.helper.addData(newsFeedfbStore, post);
             },
             setData: function(posts){
                 var newsFeedfbStore = Ext.getStore(config.stores.newsFeedfbStore);                   
-                core.newsfeed.helper.setData(newsFeedfbStore, posts);
+                core.store.helper.setData(newsFeedfbStore, posts);
             },
             clearData: function(){
                 var newsFeedfbStore = Ext.getStore(config.stores.newsFeedfbStore);   
-                core.newsfeed.helper.clearData(newsFeedfbStore);
+                core.store.helper.clearData(newsFeedfbStore);
             },
             saveData: function(posts){
                 core.store.local.save(config.stores.newsFeedfbStore, posts);
@@ -47,15 +47,15 @@ core.newsfeed = {
             },
             addData: function(post){
                 var newsFeedvkStore = Ext.getStore(config.stores.newsFeedvkStore);     
-                core.newsfeed.helper.addData(newsFeedvkStore, post);
+                core.store.helper.addData(newsFeedvkStore, post);
             },
             setData: function(posts){
                 var newsFeedvkStore = Ext.getStore(config.stores.newsFeedvkStore);                   
-                core.newsfeed.helper.setData(newsFeedvkStore, posts);
+                core.store.helper.setData(newsFeedvkStore, posts);
             },
             clearData: function(){
                 var newsFeedvkStore = Ext.getStore(config.stores.newsFeedvkStore);   
-                core.newsfeed.helper.clearData(newsFeedvkStore);
+                core.store.helper.clearData(newsFeedvkStore);
             },
             saveData: function(posts){
                 core.store.local.save(config.stores.newsFeedvkStore, posts);
@@ -63,25 +63,6 @@ core.newsfeed = {
             loadData: function(){
                 core.newsfeed.networks.vk.setData(core.store.local.load(config.stores.newsFeedvkStore));
             }
-        }
-    },
-    helper:{
-        addData: function(store, post){
-            store.add(post);
-            store.sync();
-        },
-        setData: function(store, posts){                  
-            store.getProxy().clear();
-            store.data.clear();
-                    
-            for(var i in posts){
-                store.add(posts[i]);
-            }
-            store.sync();
-        },
-        clearData: function(store){                   
-            store.getProxy().clear();
-            store.data.clear();
         }
     }
 };

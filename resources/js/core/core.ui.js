@@ -5,11 +5,17 @@ core.ui = {
             Ext.Msg.alert(labels.lblError,labels.msgConnTimeout);
         },
         loading:{
+            actionCount: 0,
             start: function(){
                 Ext.Viewport.setMasked({xtype:'loadmask',message:labels.msgLoading});
+                core.ui.display.loading.actionCount++;
             },
             stop: function(){
-                Ext.Viewport.setMasked(false);
+                core.ui.display.loading.actionCount--;
+                if(core.ui.display.loading.actionCount <= 0){
+                    Ext.Viewport.setMasked(false);
+                    core.ui.display.loading.actionCount = 0;
+                }
             }
         }
     },

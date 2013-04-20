@@ -45,6 +45,13 @@
     min-height: 10pt;
 }
 
+.newsfeed-list-item .body .text{
+	max-height: 102pt;
+    text-overflow:ellipsis;
+    overflow:hidden;
+    white-space:nowrap;
+}
+
 .newsfeed-list-item .attachments{
 	text-align: center;
 }

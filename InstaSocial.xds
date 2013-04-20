@@ -284,6 +284,12 @@
                 "metadata/resource/js9"
             ],
             "className": "js9"
+        },
+        "093af5d0-a067-422f-b1fc-582ca1147185": {
+            "paths": [
+                "metadata/resource/js10"
+            ],
+            "className": "js10"
         }
     },
     "viewOrderMap": {
@@ -332,7 +338,8 @@
             "02fcbb71-7b16-47cc-8443-ef325af61afc",
             "c8e342b2-1275-4e77-9a11-738487bd1c6e",
             "c4fb856e-8aa8-4d7f-98db-3184b1e1dc87",
-            "ff9755a7-ecd6-41dc-a76d-d88431388c16"
+            "ff9755a7-ecd6-41dc-a76d-d88431388c16",
+            "093af5d0-a067-422f-b1fc-582ca1147185"
         ],
         "app": [
             "application"

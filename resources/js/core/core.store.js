@@ -31,5 +31,21 @@ core.store = {
                 return "[]";
             }
         }
+    },
+    helper: {
+        addData: function(store, data){
+            store.add(data);
+            store.sync();
+        },
+        setData: function(store, data){                  
+            store.getProxy().clear();
+            store.data.clear();
+            store.add(data);
+            store.sync();
+        },
+        clearData: function(store){                   
+            store.getProxy().clear();
+            store.data.clear();
+        }
     }
 };
