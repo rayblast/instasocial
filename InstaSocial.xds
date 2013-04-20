@@ -306,6 +306,12 @@
                 "app/view/NewsFeedCarousel.js"
             ],
             "className": "NewsFeedCarousel"
+        },
+        "dfc4e7aa-584f-4cf8-839f-f2a5e055843d": {
+            "paths": [
+                "metadata/resource/js11"
+            ],
+            "className": "js11"
         }
     },
     "viewOrderMap": {
@@ -355,6 +361,7 @@
             "27e16bcc-5bbb-4fb5-981e-e056147236be",
             "303488b2-4227-4665-9b1c-cae15b610271",
             "02fcbb71-7b16-47cc-8443-ef325af61afc",
+            "dfc4e7aa-584f-4cf8-839f-f2a5e055843d",
             "c8e342b2-1275-4e77-9a11-738487bd1c6e",
             "c4fb856e-8aa8-4d7f-98db-3184b1e1dc87",
             "ff9755a7-ecd6-41dc-a76d-d88431388c16"

@@ -71,8 +71,10 @@ Ext.application({
         this.getApplication().getController(config.controllers.networksController).setupNewsFeed();
 
         var activeNetworks = core.connectivity.getActiveNetworks();
-        core.ui.display.loading.start();
-        core.helper.callAsync(core.newsfeed.networks[activeNetworks[0]].loadData, core.ui.display.loading.stop);
+        if(activeNetworks.length > 0){
+            core.ui.display.loading.start();
+            core.helper.callAsync(core.newsfeed.networks[activeNetworks[0]].loadData, core.ui.display.loading.stop);
+        }
 
 
 

@@ -113,12 +113,12 @@ Ext.define('InstaSocial.controller.NetworksController', {
         if(core.connectivity.networks.fb.state == config.core.connectivity.state.loggedin){
             newsFeedCarousel.add({xtype: 'newsFeedfbList'});
         }else{
-            newsFeedCarousel.remove({xtype: 'newsFeedfbList'});
+            newsFeedCarousel.remove(newsFeedCarousel.down('newsFeedfbList'));
         }
         if(core.connectivity.networks.vk.state == config.core.connectivity.state.loggedin){
             newsFeedCarousel.add({xtype: 'newsFeedvkList'});
         }else{
-            newsFeedCarousel.remove({xtype: 'newsFeedvkList'});
+            newsFeedCarousel.remove(newsFeedCarousel.down('newsFeedvkList'));
         }
     }
 

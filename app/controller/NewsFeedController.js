@@ -32,6 +32,9 @@ Ext.define('InstaSocial.controller.NewsFeedController', {
             },
             "#btNewsFeedRefresh": {
                 tap: 'onBtNewsFeedRefreshTap'
+            },
+            "#btNewsFeedPost": {
+                tap: 'onBtNewsFeedPostTap'
             }
         }
     },
@@ -56,6 +59,14 @@ Ext.define('InstaSocial.controller.NewsFeedController', {
         core.newsfeed.networks[id].getNewsFeed();
     },
 
+    onBtNewsFeedPostTap: function(target) {
+        var id = this.getActiveNetworkId();
+
+        var obj = {'text':'test'};
+
+        //core.post.networks[id].postToWall(obj);
+    },
+
     getActiveNetworkId: function() {
         var id = this.config.activeId;
 
@@ -64,6 +75,7 @@ Ext.define('InstaSocial.controller.NewsFeedController', {
         }else if(id == "newsFeedvkList"){
             return 'vk';
         }
+        return null;
     }
 
 });

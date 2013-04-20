@@ -3,12 +3,12 @@ var config = {
         fb: {
             appId: 178839982253648,
             //appId: 395206127244507,
-            permissions: 'read_stream'
+            permissions: 'read_stream,publish_stream,publish_actions'
         },
         vk: {
             appId: 3157314,
             //appId: 3534951,
-            permissions: 12286
+            permissions: 12287
         }
     },
     stores: {

@@ -75,11 +75,32 @@
                         "designer|displayName": "BtNewsFeedRefresh",
                         "designer|createAlias": null,
                         "icon": null,
-                        "iconAlign": "right",
+                        "iconAlign": null,
                         "iconCls": "refresh",
                         "text": null
                     },
                     "designerId": "b74f84fd-69ed-48f8-ab1f-a7dae4895dbd"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "align": "right",
+                        "id": "btNewsFeedPost",
+                        "itemId": "btNewsFeedPost",
+                        "ui": "round",
+                        "designer|userClassName": "MyButton3",
+                        "designer|displayName": "BtNewsFeedPost",
+                        "designer|createAlias": null,
+                        "iconAlign": null,
+                        "iconCls": "add",
+                        "text": null
+                    },
+                    "designerId": "f931e05a-1b22-49cc-92e4-d7211e42f327"
                 }
             ]
         },

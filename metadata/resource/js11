@@ -1,0 +1,13 @@
+{
+    "type": "jsresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "url": "resources/js/core/core.post.js",
+        "id": "core.post"
+    },
+    "designerId": "dfc4e7aa-584f-4cf8-839f-f2a5e055843d"
+}

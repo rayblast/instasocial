@@ -41,8 +41,15 @@ Ext.define('InstaSocial.view.NewsFeedContainer', {
                     id: 'btNewsFeedRefresh',
                     itemId: 'btNewsFeedRefresh',
                     ui: 'round',
-                    iconAlign: 'right',
                     iconCls: 'refresh'
+                },
+                {
+                    xtype: 'button',
+                    align: 'right',
+                    id: 'btNewsFeedPost',
+                    itemId: 'btNewsFeedPost',
+                    ui: 'round',
+                    iconCls: 'add'
                 }
             ]
         },

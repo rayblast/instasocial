@@ -99,11 +99,11 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "onBtNewsFeedRefreshTap",
+                "fn": "onBtNewsFeedRefreshTap",
                 "designer|params": [
                     "target"
                 ],
-                "designer|userClassName": "onBtNewsFeedRefreshTap",
-                "fn": "onBtNewsFeedRefreshTap",
                 "implHandler": [
                     "var id = this.getActiveNetworkId();\r",
                     "core.newsfeed.networks[id].getNewsFeed();"
@@ -131,10 +131,37 @@
                     "    return 'fb';\r",
                     "}else if(id == \"newsFeedvkList\"){\r",
                     "    return 'vk';\r",
-                    "}"
+                    "}\r",
+                    "return null;"
                 ]
             },
             "designerId": "cdd12b52-197e-417c-8a37-a4e5a235d895"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onBtNewsFeedPostTap",
+                "fn": "onBtNewsFeedPostTap",
+                "designer|params": [
+                    "target"
+                ],
+                "implHandler": [
+                    "var id = this.getActiveNetworkId();\r",
+                    "\r",
+                    "var obj = {'text':'test'};\r",
+                    "\r",
+                    "//core.post.networks[id].postToWall(obj);"
+                ],
+                "name": "tap",
+                "designer|targetType": null,
+                "designer|controlQuery": "#btNewsFeedPost"
+            },
+            "designerId": "5e5c13a1-1db7-445f-9f8d-5fb19ed815a7"
         }
     ]
 }

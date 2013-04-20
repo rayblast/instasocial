@@ -241,12 +241,12 @@
                     "if(core.connectivity.networks.fb.state == config.core.connectivity.state.loggedin){\r",
                     "    newsFeedCarousel.add({xtype: 'newsFeedfbList'});\r",
                     "}else{\r",
-                    "    newsFeedCarousel.remove({xtype: 'newsFeedfbList'});\r",
+                    "    newsFeedCarousel.remove(newsFeedCarousel.down('newsFeedfbList'));\r",
                     "}\r",
                     "if(core.connectivity.networks.vk.state == config.core.connectivity.state.loggedin){\r",
                     "    newsFeedCarousel.add({xtype: 'newsFeedvkList'});\r",
                     "}else{\r",
-                    "    newsFeedCarousel.remove({xtype: 'newsFeedvkList'});\r",
+                    "    newsFeedCarousel.remove(newsFeedCarousel.down('newsFeedvkList'));\r",
                     "}"
                 ]
             },
