@@ -1,13 +1,13 @@
 var config = {
     networks: {
         fb: {
-            appId: 178839982253648,
-            //appId: 395206127244507,
+            appId: 178839982253648,   //dev
+            //appId: 395206127244507, //prod
             permissions: 'read_stream,publish_stream,publish_actions'
         },
         vk: {
-            appId: 3157314,
-            //appId: 3534951,
+            appId: 3157314,    //dev
+            //appId: 3534951,  //prod
             permissions: 12287
         }
     },

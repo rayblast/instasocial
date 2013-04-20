@@ -74,9 +74,10 @@
                 "implHandler": [
                     "this.config.activeId = value.id;\r",
                     "\r",
-                    "var title = labels.lblNewsFeed + ' - ';\r",
+                    "var title = '';\r",
                     "var id = this.getActiveNetworkId();\r",
                     "title += labels.networks[id];\r",
+                    "title += ' - ' + labels.lblNewsFeed;\r",
                     "\r",
                     "Ext.getCmp(config.views.newsFeedNavigationBar).setTitle(title);\r",
                     "\r",

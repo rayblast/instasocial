@@ -20,15 +20,17 @@ Ext.define('InstaSocial.view.PostPanel', {
     config: {
         id: 'postPanel',
         itemId: 'postPanel',
-        minHeight: '50%',
+        minHeight: '200pt',
         minWidth: '90%',
         hideOnMaskTap: true,
         modal: true,
+        scrollable: false,
         items: [
             {
                 xtype: 'fieldset',
                 id: 'fsNewPost',
                 itemId: 'fsNewPost',
+                minHeight: '80%',
                 items: [
                     {
                         xtype: 'textareafield',

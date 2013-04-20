@@ -8,12 +8,13 @@
     "userConfig": {
         "id": "postPanel",
         "itemId": "postPanel",
-        "minHeight": "50%",
+        "minHeight": "200pt",
         "minWidth": "90%",
         "designer|userClassName": "PostPanel",
         "designer|userAlias": "postPanel",
         "hideOnMaskTap": true,
-        "modal": true
+        "modal": true,
+        "scrollable": false
     },
     "designerId": "2da5b42f-cb9f-469a-b072-5b7c9f0716ab",
     "cn": [
@@ -28,6 +29,7 @@
                 "height": null,
                 "id": "fsNewPost",
                 "itemId": "fsNewPost",
+                "minHeight": "80%",
                 "designer|userClassName": "MyFieldSet",
                 "designer|displayName": "fsNewPost",
                 "title": null
@@ -42,8 +44,11 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "height": null,
                         "id": "taInputPostMessage",
                         "itemId": "taInputPostMessage",
+                        "minHeight": null,
+                        "width": null,
                         "designer|userClassName": "MyTextArea",
                         "designer|displayName": "taInputPostMessage",
                         "label": null,
@@ -61,6 +66,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "docked": null,
                 "id": "btSendPost",
                 "itemId": "btSendPost",
                 "ui": "action-round",

@@ -45,9 +45,10 @@ Ext.define('InstaSocial.controller.NewsFeedController', {
     onNewsFeedCarouselActiveItemChange: function(container, value, oldValue, eOpts) {
         this.config.activeId = value.id;
 
-        var title = labels.lblNewsFeed + ' - ';
+        var title = '';
         var id = this.getActiveNetworkId();
         title += labels.networks[id];
+        title += ' - ' + labels.lblNewsFeed;
 
         Ext.getCmp(config.views.newsFeedNavigationBar).setTitle(title);
 
