@@ -30,6 +30,15 @@ core.store = {
                 console.error('Local data load failed! (' + id + ')');
                 return {};
             }
+        },
+        remove: function(id){
+            var dataLocalStore = Ext.getStore(config.stores.dataLocalStore);
+            try{
+                var record = dataLocalStore.findRecord('id', id);
+                dataLocalStore.remove(record);
+            }catch(Exception){  
+                console.error('Local data remove failed! (' + id + ')');
+            }
         }
     },
     helper: {

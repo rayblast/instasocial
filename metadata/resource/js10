@@ -6,8 +6,8 @@
     },
     "codeClass": null,
     "userConfig": {
-        "url": "resources/js/core/core.helper.js",
-        "id": "core.helper"
+        "url": "resources/js/core/core.store.js",
+        "id": "core.store"
     },
-    "designerId": "093af5d0-a067-422f-b1fc-582ca1147185"
+    "designerId": "f7f4802c-d609-45b7-be30-db37dbdede8e"
 }

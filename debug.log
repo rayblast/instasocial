@@ -4,3 +4,34 @@
 [608:7404:0407/193553:425349765:ERROR:render_widget_host_impl.cc(1839)] We seem to have a different key type sent from the renderer. (7 vs. 10). Ignoring event.
 [608:7404:0407/193553:425350000:ERROR:render_widget_host_impl.cc(1836)] Got a KeyEvent back from the renderer but we don't seem to have sent it to the renderer!
 [608:7404:0408/031808:453085171:ERROR:window_impl.cc(55)] Failed to unregister class Chrome_WidgetWin_0. Error = 1412
+[7000:6108:0422/021820:559469734:ERROR:proxy_resolver_winhttp.cc(94)] WinHttpGetProxyForUrl failed: 12167
+[7000:68:0422/021820:559469750:ERROR:proxy_resolver_winhttp.cc(94)] WinHttpGetProxyForUrl failed: 12167
+[7000:4124:0422/021822:559471765:ERROR:proxy_resolver_winhttp.cc(94)] WinHttpGetProxyForUrl failed: 12167
+[7000:8596:0422/021916:559525609:ERROR:window_impl.cc(55)] Failed to unregister class Chrome_WidgetWin_0. Error = 1412
+[9316:6660:0422/021921:559530625:ERROR:proxy_resolver_winhttp.cc(94)] WinHttpGetProxyForUrl failed: 12167
+[9316:8336:0422/021922:559531437:ERROR:proxy_resolver_winhttp.cc(94)] WinHttpGetProxyForUrl failed: 12167
+[9316:5332:0422/022006:559576203:ERROR:window_impl.cc(55)] Failed to unregister class Chrome_WidgetWin_0. Error = 1412
+[7820:728:0422/022011:559580671:ERROR:proxy_resolver_winhttp.cc(94)] WinHttpGetProxyForUrl failed: 12167
+[7820:4924:0422/022012:559582281:ERROR:proxy_resolver_winhttp.cc(94)] WinHttpGetProxyForUrl failed: 12167
+[7820:6396:0422/022144:559674140:ERROR:render_widget_host_impl.cc(1839)] We seem to have a different key type sent from the renderer. (7 vs. 10). Ignoring event.
+[7820:6396:0422/022145:559674437:ERROR:render_widget_host_impl.cc(1836)] Got a KeyEvent back from the renderer but we don't seem to have sent it to the renderer!
+[7820:6396:0422/022210:559699421:ERROR:render_widget_host_impl.cc(1839)] We seem to have a different key type sent from the renderer. (7 vs. 10). Ignoring event.
+[7820:6396:0422/022210:559699671:ERROR:render_widget_host_impl.cc(1836)] Got a KeyEvent back from the renderer but we don't seem to have sent it to the renderer!
+[7820:6396:0422/022434:559844203:ERROR:window_impl.cc(55)] Failed to unregister class Chrome_WidgetWin_0. Error = 1412
+[4040:7840:0422/022445:559854593:ERROR:proxy_resolver_winhttp.cc(94)] WinHttpGetProxyForUrl failed: 12167
+[4040:9872:0422/022447:559856812:ERROR:proxy_resolver_winhttp.cc(94)] WinHttpGetProxyForUrl failed: 12167
+[4040:6424:0422/022620:559950281:ERROR:render_widget_host_impl.cc(1839)] We seem to have a different key type sent from the renderer. (7 vs. 10). Ignoring event.
+[4040:6424:0422/022621:559950593:ERROR:render_widget_host_impl.cc(1836)] Got a KeyEvent back from the renderer but we don't seem to have sent it to the renderer!
+[4040:6424:0422/022637:559966593:ERROR:render_widget_host_impl.cc(1839)] We seem to have a different key type sent from the renderer. (7 vs. 10). Ignoring event.
+[4040:6424:0422/022637:559966843:ERROR:render_widget_host_impl.cc(1836)] Got a KeyEvent back from the renderer but we don't seem to have sent it to the renderer!
+[4040:6424:0422/022658:559987453:ERROR:render_widget_host_impl.cc(1839)] We seem to have a different key type sent from the renderer. (7 vs. 10). Ignoring event.
+[4040:6424:0422/022658:559987703:ERROR:render_widget_host_impl.cc(1836)] Got a KeyEvent back from the renderer but we don't seem to have sent it to the renderer!
+[4040:6424:0422/023103:560233140:ERROR:window_impl.cc(55)] Failed to unregister class Chrome_WidgetWin_0. Error = 1412
+[8184:3592:0422/023114:560243515:ERROR:proxy_resolver_winhttp.cc(94)] WinHttpGetProxyForUrl failed: 12167
+[8184:5900:0422/023118:560248296:ERROR:proxy_resolver_winhttp.cc(94)] WinHttpGetProxyForUrl failed: 12167
+[8184:5396:0422/023216:560305656:ERROR:render_widget_host_impl.cc(1839)] We seem to have a different key type sent from the renderer. (7 vs. 10). Ignoring event.
+[8184:5396:0422/023216:560305937:ERROR:render_widget_host_impl.cc(1836)] Got a KeyEvent back from the renderer but we don't seem to have sent it to the renderer!
+[8184:5396:0422/023350:560399343:ERROR:window_impl.cc(55)] Failed to unregister class Chrome_WidgetWin_0. Error = 1412
+[1560:8496:0422/024524:561093828:ERROR:proxy_resolver_winhttp.cc(94)] WinHttpGetProxyForUrl failed: 12167
+[1560:1736:0422/024525:561095031:ERROR:proxy_resolver_winhttp.cc(94)] WinHttpGetProxyForUrl failed: 12167
+[1560:4972:0422/024622:561151546:ERROR:window_impl.cc(55)] Failed to unregister class Chrome_WidgetWin_0. Error = 1412

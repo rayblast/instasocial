@@ -44,6 +44,7 @@ core.connectivity = {
 
                     }else{
                         state = config.core.connectivity.state.loggedout;
+                        core.newsfeed.networks.fb.clearData();
                     }
                     core.connectivity.networks.fb.state = state;             
                     core.connectivity.updateNetworksState();
@@ -108,6 +109,7 @@ core.connectivity = {
                         state = config.core.connectivity.state.loggedin;                      
                     }else{
                         state = config.core.connectivity.state.loggedout;
+                        core.newsfeed.networks.vk.clearData();
                     }
                     core.connectivity.networks.vk.state = state;             
                     core.connectivity.updateNetworksState();

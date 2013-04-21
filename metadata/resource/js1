@@ -6,8 +6,8 @@
     },
     "codeClass": null,
     "userConfig": {
-        "url": "resources/js/config.js",
-        "id": "config"
+        "url": "resources/js/localization/en.js",
+        "id": "labels"
     },
-    "designerId": "ee5c1194-f7db-4011-aa42-863359a24564"
+    "designerId": "162c3713-fb6f-4f05-9717-0fe627804787"
 }

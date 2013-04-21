@@ -6,8 +6,8 @@
     },
     "codeClass": null,
     "userConfig": {
-        "url": "resources/js/core/core.newsfeed.js",
-        "id": "core.newsfeed"
+        "url": "resources/js/core/core.helper.js",
+        "id": "core.helper"
     },
-    "designerId": "27e16bcc-5bbb-4fb5-981e-e056147236be"
+    "designerId": "10d85d09-30c9-45e3-b42c-7cca2c10591c"
 }

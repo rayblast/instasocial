@@ -46,6 +46,7 @@ core.newsfeed = {
             clearData: function(){
                 var newsFeedfbStore = Ext.getStore(config.stores.newsFeedfbStore);   
                 core.store.helper.clearData(newsFeedfbStore);
+                core.store.local.remove(config.stores.newsFeedfbStore);
             },
             saveData: function(posts){
                 core.store.local.save(config.stores.newsFeedfbStore, posts);
@@ -102,6 +103,7 @@ core.newsfeed = {
             clearData: function(){
                 var newsFeedvkStore = Ext.getStore(config.stores.newsFeedvkStore);   
                 core.store.helper.clearData(newsFeedvkStore);
+                core.store.local.remove(config.stores.newsFeedvkStore);
             },
             saveData: function(posts){
                 core.store.local.save(config.stores.newsFeedvkStore, posts);

@@ -113,12 +113,29 @@ Ext.define('InstaSocial.controller.NetworksController', {
         if(core.connectivity.networks.fb.state == config.core.connectivity.state.loggedin){
             newsFeedCarousel.add({xtype: 'newsFeedfbList'});
         }else{
-            newsFeedCarousel.remove(newsFeedCarousel.down('newsFeedfbList'));
+            var newsFeedfbList = newsFeedCarousel.down('newsFeedfbList');
+            if(newsFeedfbList !== null){
+                newsFeedfbList.hide();
+                newsFeedCarousel.remove(newsFeedfbList);
+            }
         }
         if(core.connectivity.networks.vk.state == config.core.connectivity.state.loggedin){
             newsFeedCarousel.add({xtype: 'newsFeedvkList'});
         }else{
-            newsFeedCarousel.remove(newsFeedCarousel.down('newsFeedvkList'));
+            var newsFeedvkList = newsFeedCarousel.down('newsFeedvkList');
+            if(newsFeedvkList !== null){
+                newsFeedvkList.hide();
+                newsFeedCarousel.remove(newsFeedvkList);
+            }
+        }
+
+        if(core.connectivity.getActiveNetworks().length < 1){
+            Ext.getCmp(config.views.newsFeedNavigationBar).setTitle(labels.lblNewsFeed);
+            Ext.getCmp('btNewsFeedRefresh').hide();
+            Ext.getCmp('btNewsFeedPost').hide();
+        }else{
+            Ext.getCmp('btNewsFeedRefresh').show();
+            Ext.getCmp('btNewsFeedPost').show();
         }
     }
 

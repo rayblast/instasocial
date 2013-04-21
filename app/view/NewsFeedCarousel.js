@@ -19,7 +19,8 @@ Ext.define('InstaSocial.view.NewsFeedCarousel', {
 
     config: {
         id: 'newsFeedCarousel',
-        itemId: 'newsFeedCarousel'
+        itemId: 'newsFeedCarousel',
+        autoDestroy: false
     }
 
 });

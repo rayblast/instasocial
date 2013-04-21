@@ -53,8 +53,6 @@ Ext.define('InstaSocial.controller.NewsFeedController', {
         Ext.getCmp(config.views.newsFeedNavigationBar).setTitle(title);
 
         if(!core.newsfeed.networks[id].localDataLoaded){
-            // core.ui.display.loading.start();
-            // core.newsfeed.networks[id].loadData();
             core.helper.callAsync(core.newsfeed.networks[id].loadData);
         }
     },
@@ -62,6 +60,10 @@ Ext.define('InstaSocial.controller.NewsFeedController', {
     onBtNewsFeedRefreshTap: function(target) {
         var id = this.getActiveNetworkId();
         core.newsfeed.networks[id].getNewsFeed(null, null, null);
+
+        if(core.connectivity.networks.fb.refreshData){
+            Ext.getCmp(config.views.newsFeedfbList).getScrollable().getScroller().scrollTo(0,0,true);
+        }
     },
 
     onBtNewsFeedPostTap: function(target) {

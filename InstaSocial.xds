@@ -21,12 +21,6 @@
             ],
             "className": "Library"
         },
-        "7b53273d-6764-468c-9f46-9a8b347a6af9": {
-            "paths": [
-                "metadata/resource/js"
-            ],
-            "className": "js"
-        },
         "56cf39fd-035c-400b-bb5c-44ae8d82d980": {
             "paths": [
                 "metadata/view/NetworkListContainer",
@@ -91,12 +85,6 @@
             ],
             "className": "UserSettingsLocalStore"
         },
-        "ee5c1194-f7db-4011-aa42-863359a24564": {
-            "paths": [
-                "metadata/resource/js1"
-            ],
-            "className": "js1"
-        },
         "8907145b-c0d9-48e2-989b-81af09545c96": {
             "paths": [
                 "metadata/controller/MainController",
@@ -112,24 +100,6 @@
                 "app/view/NetworkList.js"
             ],
             "className": "NetworkList"
-        },
-        "54b84051-a916-4dd3-8fc3-a9f5096ab4aa": {
-            "paths": [
-                "metadata/resource/css"
-            ],
-            "className": "css"
-        },
-        "303488b2-4227-4665-9b1c-cae15b610271": {
-            "paths": [
-                "metadata/resource/js5"
-            ],
-            "className": "js5"
-        },
-        "27e16bcc-5bbb-4fb5-981e-e056147236be": {
-            "paths": [
-                "metadata/resource/js4"
-            ],
-            "className": "js4"
         },
         "c3f9dc11-9446-40ca-98ea-3a65e50503eb": {
             "paths": [
@@ -179,18 +149,6 @@
             ],
             "className": "NewsFeedvkStore"
         },
-        "9cec381a-cc96-4fce-813e-6c99a0b1f216": {
-            "paths": [
-                "metadata/resource/css1"
-            ],
-            "className": "css1"
-        },
-        "3eefa425-1f72-4d64-9030-9e4bcbe23680": {
-            "paths": [
-                "metadata/resource/js3"
-            ],
-            "className": "js3"
-        },
         "adde11c8-daba-493c-a204-e041f4b5ca53": {
             "paths": [
                 "metadata/view/NewsFeedfbList",
@@ -215,12 +173,6 @@
             ],
             "className": "NewsFeedToolbar"
         },
-        "02fcbb71-7b16-47cc-8443-ef325af61afc": {
-            "paths": [
-                "metadata/resource/js6"
-            ],
-            "className": "js6"
-        },
         "09b8eec8-4662-4007-8206-5470fccfef4d": {
             "paths": [
                 "metadata/store/NewsFeedfbStore",
@@ -228,12 +180,6 @@
                 "app/store/NewsFeedfbStore.js"
             ],
             "className": "NewsFeedfbStore"
-        },
-        "92f6ab34-b1d8-4074-b9d0-2380bd1ea7b5": {
-            "paths": [
-                "metadata/resource/js2"
-            ],
-            "className": "js2"
         },
         "1c25147d-70b7-41bb-93fa-48cc4eed49dc": {
             "paths": [
@@ -251,18 +197,6 @@
             ],
             "className": "Attachment"
         },
-        "c8e342b2-1275-4e77-9a11-738487bd1c6e": {
-            "paths": [
-                "metadata/resource/js7"
-            ],
-            "className": "js7"
-        },
-        "ff9755a7-ecd6-41dc-a76d-d88431388c16": {
-            "paths": [
-                "metadata/resource/js8"
-            ],
-            "className": "js8"
-        },
         "e650ad08-ea3c-4692-81e6-b9ec854c5989": {
             "paths": [
                 "metadata/store/DataLocalStore",
@@ -278,18 +212,6 @@
                 "app/model/Data.js"
             ],
             "className": "Data"
-        },
-        "c4fb856e-8aa8-4d7f-98db-3184b1e1dc87": {
-            "paths": [
-                "metadata/resource/js9"
-            ],
-            "className": "js9"
-        },
-        "093af5d0-a067-422f-b1fc-582ca1147185": {
-            "paths": [
-                "metadata/resource/js10"
-            ],
-            "className": "js10"
         },
         "eab53465-a410-4e33-868b-61e4ca1534d8": {
             "paths": [
@@ -307,12 +229,6 @@
             ],
             "className": "NewsFeedCarousel"
         },
-        "dfc4e7aa-584f-4cf8-839f-f2a5e055843d": {
-            "paths": [
-                "metadata/resource/js11"
-            ],
-            "className": "js11"
-        },
         "2da5b42f-cb9f-469a-b072-5b7c9f0716ab": {
             "paths": [
                 "metadata/view/PostPanel",
@@ -321,7 +237,91 @@
             ],
             "className": "PostPanel"
         },
-        "4c6793ce-ed5e-44b1-b8ee-79ade97b6728": {
+        "6e59df86-e926-408d-b914-14787d45b042": {
+            "paths": [
+                "metadata/resource/css"
+            ],
+            "className": "css"
+        },
+        "0dba6215-4241-460b-9273-7c48708e6e7a": {
+            "paths": [
+                "metadata/resource/css1"
+            ],
+            "className": "css1"
+        },
+        "b1fe0fcf-3f30-428b-9d11-0c8faf031d89": {
+            "paths": [
+                "metadata/resource/js"
+            ],
+            "className": "js"
+        },
+        "162c3713-fb6f-4f05-9717-0fe627804787": {
+            "paths": [
+                "metadata/resource/js1"
+            ],
+            "className": "js1"
+        },
+        "2f1d3604-0cb1-4e3d-9d19-a536008e91fd": {
+            "paths": [
+                "metadata/resource/js2"
+            ],
+            "className": "js2"
+        },
+        "fa07ce6b-91d3-4a67-9f00-2e266acac568": {
+            "paths": [
+                "metadata/resource/js3"
+            ],
+            "className": "js3"
+        },
+        "10d85d09-30c9-45e3-b42c-7cca2c10591c": {
+            "paths": [
+                "metadata/resource/js4"
+            ],
+            "className": "js4"
+        },
+        "834f2409-b6cc-455b-bba4-08890b16f65d": {
+            "paths": [
+                "metadata/resource/js5"
+            ],
+            "className": "js5"
+        },
+        "bc405ac1-12cf-45e3-9ceb-ab951769b5c9": {
+            "paths": [
+                "metadata/resource/js6"
+            ],
+            "className": "js6"
+        },
+        "51bac148-06fd-4a1d-aac6-9c644a3b0ea6": {
+            "paths": [
+                "metadata/resource/js7"
+            ],
+            "className": "js7"
+        },
+        "ae3081b9-bb5d-402e-b8bd-1282edb698d2": {
+            "paths": [
+                "metadata/resource/js8"
+            ],
+            "className": "js8"
+        },
+        "0e3e5912-a6a7-4f7e-9221-1faddf7a05fa": {
+            "paths": [
+                "metadata/resource/js9"
+            ],
+            "className": "js9"
+        },
+        "f7f4802c-d609-45b7-be30-db37dbdede8e": {
+            "paths": [
+                "metadata/resource/js10"
+            ],
+            "className": "js10"
+        },
+        "bc88b432-25c3-45f2-97bb-45a191635a11": {
+            "paths": [
+                "metadata/resource/js11"
+            ],
+            "className": "js11"
+        },
+        "8cd00a78-1590-4dca-adaa-1c77672eff05": {
             "paths": [
                 "metadata/resource/js12"
             ],
@@ -366,21 +366,21 @@
         ],
         "resource": [
             "4b24ab5c-d84f-4202-8fae-a791ffde467f",
-            "54b84051-a916-4dd3-8fc3-a9f5096ab4aa",
-            "9cec381a-cc96-4fce-813e-6c99a0b1f216",
-            "7b53273d-6764-468c-9f46-9a8b347a6af9",
-            "ee5c1194-f7db-4011-aa42-863359a24564",
-            "92f6ab34-b1d8-4074-b9d0-2380bd1ea7b5",
-            "3eefa425-1f72-4d64-9030-9e4bcbe23680",
-            "093af5d0-a067-422f-b1fc-582ca1147185",
-            "27e16bcc-5bbb-4fb5-981e-e056147236be",
-            "303488b2-4227-4665-9b1c-cae15b610271",
-            "02fcbb71-7b16-47cc-8443-ef325af61afc",
-            "dfc4e7aa-584f-4cf8-839f-f2a5e055843d",
-            "c8e342b2-1275-4e77-9a11-738487bd1c6e",
-            "c4fb856e-8aa8-4d7f-98db-3184b1e1dc87",
-            "ff9755a7-ecd6-41dc-a76d-d88431388c16",
-            "4c6793ce-ed5e-44b1-b8ee-79ade97b6728"
+            "6e59df86-e926-408d-b914-14787d45b042",
+            "0dba6215-4241-460b-9273-7c48708e6e7a",
+            "b1fe0fcf-3f30-428b-9d11-0c8faf031d89",
+            "162c3713-fb6f-4f05-9717-0fe627804787",
+            "2f1d3604-0cb1-4e3d-9d19-a536008e91fd",
+            "fa07ce6b-91d3-4a67-9f00-2e266acac568",
+            "10d85d09-30c9-45e3-b42c-7cca2c10591c",
+            "834f2409-b6cc-455b-bba4-08890b16f65d",
+            "bc405ac1-12cf-45e3-9ceb-ab951769b5c9",
+            "51bac148-06fd-4a1d-aac6-9c644a3b0ea6",
+            "ae3081b9-bb5d-402e-b8bd-1282edb698d2",
+            "0e3e5912-a6a7-4f7e-9221-1faddf7a05fa",
+            "f7f4802c-d609-45b7-be30-db37dbdede8e",
+            "bc88b432-25c3-45f2-97bb-45a191635a11",
+            "8cd00a78-1590-4dca-adaa-1c77672eff05"
         ],
         "app": [
             "application"

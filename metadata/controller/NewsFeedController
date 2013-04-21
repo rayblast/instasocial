@@ -82,8 +82,6 @@
                     "Ext.getCmp(config.views.newsFeedNavigationBar).setTitle(title);\r",
                     "\r",
                     "if(!core.newsfeed.networks[id].localDataLoaded){\r",
-                    "    // core.ui.display.loading.start();\r",
-                    "    // core.newsfeed.networks[id].loadData();\r",
                     "    core.helper.callAsync(core.newsfeed.networks[id].loadData);\r",
                     "}"
                 ],
@@ -111,7 +109,7 @@
                     "core.newsfeed.networks[id].getNewsFeed(null, null, null);\r",
                     "\r",
                     "if(core.connectivity.networks.fb.refreshData){\r",
-                    "   Ext.getCmp(config.views.newsFeedfbList).getScrollable().getScroller().scrollTo(0,0,true);\r",
+                    "    Ext.getCmp(config.views.newsFeedfbList).getScrollable().getScroller().scrollTo(0,0,true);\r",
                     "}"
                 ],
                 "name": "tap",
@@ -181,11 +179,11 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "onBtSendPostButtonTap",
+                "fn": "onBtSendPostButtonTap",
                 "designer|params": [
                     "target"
                 ],
-                "designer|userClassName": "onBtSendPostButtonTap",
-                "fn": "onBtSendPostButtonTap",
                 "implHandler": [
                     "var id = this.getActiveNetworkId();\r",
                     "var message = Ext.getCmp('taInputPostMessage').getValue();\r",
