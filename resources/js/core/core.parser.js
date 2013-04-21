@@ -18,7 +18,7 @@ core.parser = {
                     var text = (data.message !== undefined) ? core.renderer.urlify(data.message) : '';
                     var likes_count = (data.likes !== undefined) ? data.likes.count : 0;
                     var comments_count = (data.comments !== undefined) ? data.comments.count : 0;
-                    var created_time = Date.parse(data.created_time)/1000; //core.parser.helper.getDateTimeFromString(data.created_time);
+                    var created_time = (new Date()).getISO8601(data.created_time)/1000;
                     var post_photo = (data.picture !== undefined) ? data.picture : '';
                     var post = {
                         "post_id": post_id,

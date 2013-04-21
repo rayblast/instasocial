@@ -320,6 +320,12 @@
                 "app/view/PostPanel.js"
             ],
             "className": "PostPanel"
+        },
+        "4c6793ce-ed5e-44b1-b8ee-79ade97b6728": {
+            "paths": [
+                "metadata/resource/js12"
+            ],
+            "className": "js12"
         }
     },
     "viewOrderMap": {
@@ -373,7 +379,8 @@
             "dfc4e7aa-584f-4cf8-839f-f2a5e055843d",
             "c8e342b2-1275-4e77-9a11-738487bd1c6e",
             "c4fb856e-8aa8-4d7f-98db-3184b1e1dc87",
-            "ff9755a7-ecd6-41dc-a76d-d88431388c16"
+            "ff9755a7-ecd6-41dc-a76d-d88431388c16",
+            "4c6793ce-ed5e-44b1-b8ee-79ade97b6728"
         ],
         "app": [
             "application"

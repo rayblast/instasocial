@@ -478,6 +478,9 @@
         },
         "ff9755a7-ecd6-41dc-a76d-d88431388c16": {
             "id": "ff9755a7-ecd6-41dc-a76d-d88431388c16"
+        },
+        "4c6793ce-ed5e-44b1-b8ee-79ade97b6728": {
+            "id": "4c6793ce-ed5e-44b1-b8ee-79ade97b6728"
         }
     },
     "tabState": {
@@ -525,7 +528,8 @@
             "3fd110cf-5bae-475c-88a9-88d83e855dff",
             "4b24ab5c-d84f-4202-8fae-a791ffde467f",
             "dfc4e7aa-584f-4cf8-839f-f2a5e055843d",
-            "2da5b42f-cb9f-469a-b072-5b7c9f0716ab"
+            "2da5b42f-cb9f-469a-b072-5b7c9f0716ab",
+            "4c6793ce-ed5e-44b1-b8ee-79ade97b6728"
         ]
     },
     "canvasState": {
