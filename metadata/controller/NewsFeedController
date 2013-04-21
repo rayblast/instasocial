@@ -82,8 +82,9 @@
                     "Ext.getCmp(config.views.newsFeedNavigationBar).setTitle(title);\r",
                     "\r",
                     "if(!core.newsfeed.networks[id].localDataLoaded){\r",
-                    "    core.ui.display.loading.start();\r",
-                    "    core.helper.callAsync(core.newsfeed.networks[id].loadData, core.ui.display.loading.stop);\r",
+                    "    // core.ui.display.loading.start();\r",
+                    "    // core.newsfeed.networks[id].loadData();\r",
+                    "    core.helper.callAsync(core.newsfeed.networks[id].loadData);\r",
                     "}"
                 ],
                 "name": "activeitemchange",
@@ -107,7 +108,11 @@
                 ],
                 "implHandler": [
                     "var id = this.getActiveNetworkId();\r",
-                    "core.newsfeed.networks[id].getNewsFeed();"
+                    "core.newsfeed.networks[id].getNewsFeed(null, null, null);\r",
+                    "\r",
+                    "if(core.connectivity.networks.fb.refreshData){\r",
+                    "   Ext.getCmp(config.views.newsFeedfbList).getScrollable().getScroller().scrollTo(0,0,true);\r",
+                    "}"
                 ],
                 "name": "tap",
                 "designer|targetType": null,

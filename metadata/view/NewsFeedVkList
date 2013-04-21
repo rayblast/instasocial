@@ -7,6 +7,7 @@
     "codeClass": null,
     "userConfig": {
         "flex": null,
+        "locked": false,
         "cls": [
             "newsfeed-list"
         ],
@@ -28,17 +29,24 @@
         "disableSelection": true,
         "deferEmptyText": false,
         "itemCls": null,
+        "scrollToTopOnRefresh": false,
         "store": "NewsFeedvkStore",
         "variableHeights": true
     },
     "configAlternates": {
-        "scrollable": "object"
+        "scrollable": "object",
+        "locked": "boolean"
     },
     "designerId": "38acb443-8b8b-4544-ade0-1e097968e5c0",
     "customConfigs": [
         {
             "group": "(Custom Properties)",
             "name": "flex",
+            "type": "string"
+        },
+        {
+            "group": "(Custom Properties)",
+            "name": "locked",
             "type": "string"
         }
     ],
@@ -64,7 +72,7 @@
                     "        \t\t{User.full_name}\r",
                     "    \t\t</div>\r",
                     "            <div class=\"date\">\r",
-                    "        \t\t{created_time}\r",
+                    "        \t\t{[core.helper.getDateTimeFromUnix(values.created_time)]}\r",
                     "    \t\t</div>\r",
                     "        </div>\r",
                     "    </div>\r",
@@ -75,49 +83,13 @@
                     "        {[core.renderer.attachments(values.attachments)]}\r",
                     "    </div>\r",
                     "    <div class=\"footer\">\r",
-                    "        {likes_count} {[this.lblLikes()]} {comments_count} {[this.lblComments()]}\r",
+                    "        {likes_count} {[labels.lblLikes]} {comments_count} {[labels.lblComments]}\r",
                     "    </div>  \r",
                     "</div>"
                 ],
                 "designer|displayName": "itemTpl"
             },
-            "designerId": "5e54e527-21a2-4291-9bdd-c44849d2e11b",
-            "cn": [
-                {
-                    "type": "templatefunction",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "designer|userClassName": "lblComments",
-                        "fn": "lblComments",
-                        "implHandler": [
-                            "return labels.lblComments;"
-                        ],
-                        "designer|displayName": "lblComments"
-                    },
-                    "designerId": "faae2525-160c-43af-8a4f-54a8129e3351"
-                },
-                {
-                    "type": "templatefunction",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "designer|userClassName": "lblLikes",
-                        "fn": "lblLikes",
-                        "implHandler": [
-                            "return labels.lblLikes;"
-                        ],
-                        "designer|displayName": "lblLikes"
-                    },
-                    "designerId": "7d2c1752-f586-4971-b781-8f022d0bbc2d"
-                }
-            ]
+            "designerId": "5e54e527-21a2-4291-9bdd-c44849d2e11b"
         },
         {
             "type": "fixedfunction",
@@ -132,7 +104,24 @@
                 "implHandler": [
                     "this.callParent();\r",
                     "this.setEmptyText(labels.lblNoData);\r",
-                    "this.refresh();"
+                    "this.refresh();\r",
+                    "\r",
+                    "\r",
+                    "var scroller = this.getScrollable().getScroller();\r",
+                    "scroller.on({\r",
+                    "    scroll: function(scroller, x, y){\r",
+                    "        if (!this.config.locked && y >= scroller.maxPosition.y - config.core.ui.newsFeedvkUpdateOffset) {\r",
+                    "            this.config.locked = true;\r",
+                    "            var newsFeedvkStore = Ext.getStore(config.stores.newsFeedvkStore);\r",
+                    "            var post = newsFeedvkStore.last();\r",
+                    "            core.newsfeed.networks.vk.getNewsFeed(null, post.data.created_time, null);\r",
+                    "        }\r",
+                    "    },\r",
+                    "    maxpositionchange: function(scroller, maxPosition, eOpts){\r",
+                    "        this.config.locked = false;\r",
+                    "    },\r",
+                    "    scope: this\r",
+                    "});"
                 ]
             },
             "designerId": "0ec52d0c-500a-47db-bd65-0a40b16886f4"

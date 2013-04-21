@@ -53,14 +53,15 @@ Ext.define('InstaSocial.controller.NewsFeedController', {
         Ext.getCmp(config.views.newsFeedNavigationBar).setTitle(title);
 
         if(!core.newsfeed.networks[id].localDataLoaded){
-            core.ui.display.loading.start();
-            core.helper.callAsync(core.newsfeed.networks[id].loadData, core.ui.display.loading.stop);
+            // core.ui.display.loading.start();
+            // core.newsfeed.networks[id].loadData();
+            core.helper.callAsync(core.newsfeed.networks[id].loadData);
         }
     },
 
     onBtNewsFeedRefreshTap: function(target) {
         var id = this.getActiveNetworkId();
-        core.newsfeed.networks[id].getNewsFeed();
+        core.newsfeed.networks[id].getNewsFeed(null, null, null);
     },
 
     onBtNewsFeedPostTap: function(target) {

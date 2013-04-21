@@ -18,7 +18,7 @@ core.parser = {
                     var text = (data.message !== undefined) ? core.renderer.urlify(data.message) : '';
                     var likes_count = (data.likes !== undefined) ? data.likes.count : 0;
                     var comments_count = (data.comments !== undefined) ? data.comments.count : 0;
-                    var created_time = core.parser.helper.getDateTimeFromString(data.created_time);
+                    var created_time = Date.parse(data.created_time)/1000; //core.parser.helper.getDateTimeFromString(data.created_time);
                     var post_photo = (data.picture !== undefined) ? data.picture : '';
                     var post = {
                         "post_id": post_id,
@@ -50,6 +50,8 @@ core.parser = {
         vk:{
             newsfeed: {
                 posts: function(data){
+                    if(data.response === undefined)
+                        return [];
                     var postsData = data.response.items;
                     var profilesData = data.response.profiles;
                     var groupsData = data.response.groups;
@@ -71,7 +73,7 @@ core.parser = {
                     var text = (data.text !== undefined) ? core.renderer.urlify(data.text) : '';
                     var likes_count = (data.likes !== undefined) ? data.likes.count : 0;
                     var comments_count = (data.comments !== undefined) ? data.comments.count : 0;
-                    var created_time = core.parser.helper.getDateTimeFromUnixTime(data.date);
+                    var created_time = data.date;
                     var attachments; 
                     
                     var post;

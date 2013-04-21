@@ -18,11 +18,13 @@ Ext.define('InstaSocial.view.NewsFeedvkList', {
     alias: 'widget.newsFeedvkList',
 
     config: {
+        locked: false,
         cls: 'newsfeed-list',
         id: 'newsFeedvkList',
         showAnimation: 'slide',
         disableSelection: true,
         deferEmptyText: false,
+        scrollToTopOnRefresh: false,
         store: 'NewsFeedvkStore',
         variableHeights: true,
         scrollable: {
@@ -40,7 +42,7 @@ Ext.define('InstaSocial.view.NewsFeedvkList', {
             '        		{User.full_name}',
             '    		</div>',
             '            <div class="date">',
-            '        		{created_time}',
+            '        		{[core.helper.getDateTimeFromUnix(values.created_time)]}',
             '    		</div>',
             '        </div>',
             '    </div>',
@@ -51,16 +53,10 @@ Ext.define('InstaSocial.view.NewsFeedvkList', {
             '        {[core.renderer.attachments(values.attachments)]}',
             '    </div>',
             '    <div class="footer">',
-            '        {likes_count} {[this.lblLikes()]} {comments_count} {[this.lblComments()]}',
+            '        {likes_count} {[labels.lblLikes]} {comments_count} {[labels.lblComments]}',
             '    </div>  ',
             '</div>',
             {
-                lblComments: function() {
-                    return labels.lblComments;
-                },
-                lblLikes: function() {
-                    return labels.lblLikes;
-                },
                 disableFormats: true
             }
         )
@@ -70,6 +66,23 @@ Ext.define('InstaSocial.view.NewsFeedvkList', {
         this.callParent();
         this.setEmptyText(labels.lblNoData);
         this.refresh();
+
+
+        var scroller = this.getScrollable().getScroller();
+        scroller.on({
+            scroll: function(scroller, x, y){
+                if (!this.config.locked && y >= scroller.maxPosition.y - config.core.ui.newsFeedvkUpdateOffset) {
+                    this.config.locked = true;
+                    var newsFeedvkStore = Ext.getStore(config.stores.newsFeedvkStore);
+                    var post = newsFeedvkStore.last();
+                    core.newsfeed.networks.vk.getNewsFeed(null, post.data.created_time, null);
+                }
+            },
+            maxpositionchange: function(scroller, maxPosition, eOpts){
+                this.config.locked = false;
+            },
+            scope: this
+        });
     }
 
 });

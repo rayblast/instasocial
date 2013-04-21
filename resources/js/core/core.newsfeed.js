@@ -2,15 +2,36 @@ core.newsfeed = {
     networks: {
         fb: {
             localDataLoaded: false,
-            getNewsFeed: function(){
+            refreshData: false,
+            getNewsFeed: function(since, until, count){
                 core.ui.display.loading.start();
+                core.newsfeed.networks.fb.refreshData = true;
+                var url = '/me/home?fields=actions,created_time,from,id,link,message,name,picture,to,likes,icon';
+                
+                if(since !== null){
+                    url += '&since=' + since;
+                }
+                if(until !== null){
+                    url += '&until=' + until;
+                    core.newsfeed.networks.fb.refreshData = false;
+                }
+                if(count !== null){
+                    url += '&limit=' + count;
+                }else{
+                    url += '&limit=' + config.core.ui.newsFeedfbPageSize;
+                }
+                
                 var timeout = core.ui.create.connectionTimeout();
-                FB.api('/me/home?fields=actions,created_time,from,id,link,message,name,picture,to,likes,icon', function(response) {
+                FB.api(url, function(response) {
                     clearTimeout(timeout);
                     var posts = core.parser.networks.fb.newsfeed.posts(response);
                     
-                    core.newsfeed.networks.fb.setData(posts);
-                    core.newsfeed.networks.fb.saveData(posts);
+                    if(core.newsfeed.networks.fb.refreshData){
+                        core.newsfeed.networks.fb.setData(posts);
+                        core.newsfeed.networks.fb.saveData(posts);
+                    }else{
+                        core.newsfeed.networks.fb.addData(posts);
+                    }
                     core.ui.display.loading.stop();
                 });
             },
@@ -36,15 +57,37 @@ core.newsfeed = {
         },
         vk: {
             localDataLoaded: false,
-            getNewsFeed: function(){
+            refreshData: false,
+            getNewsFeed: function(since, until, count){
                 core.ui.display.loading.start();
+                core.newsfeed.networks.vk.refreshData = true;
+                var url = 'newsfeed.get';
+                var params = {};
+                if(since !== null){
+                    params.start_time = since;
+                }
+                if(until !== null){
+                    params.start_time = 1;
+                    params.end_time = until - 1;
+                    core.newsfeed.networks.vk.refreshData = false;
+                }
+                if(count !== null){
+                    params.count = count;
+                }else{
+                    params.count = config.core.ui.newsFeedvkPageSize;
+                }
+                
                 var timeout = core.ui.create.connectionTimeout();
-                VK.api('newsfeed.get', {}, function(response) {
+                VK.api(url, params, function(response) {
                     clearTimeout(timeout);
                     var posts = core.parser.networks.vk.newsfeed.posts(response);
                     
-                    core.newsfeed.networks.vk.setData(posts);
-                    core.newsfeed.networks.vk.saveData(posts);
+                    if(core.newsfeed.networks.vk.refreshData){
+                        core.newsfeed.networks.vk.setData(posts);
+                        core.newsfeed.networks.vk.saveData(posts);
+                    }else{
+                        core.newsfeed.networks.vk.addData(posts);
+                    }
                     core.ui.display.loading.stop();
                 });
             },

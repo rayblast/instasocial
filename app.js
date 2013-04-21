@@ -70,47 +70,6 @@ Ext.application({
         }
 
         this.getApplication().getController(config.controllers.networksController).setupNewsFeed();
-
-        var activeNetworks = core.connectivity.getActiveNetworks();
-        if(activeNetworks.length > 0){
-            core.ui.display.loading.start();
-            core.helper.callAsync(core.newsfeed.networks[activeNetworks[0]].loadData, core.ui.display.loading.stop);
-        }
-
-
-
-        //console.log(activeNetworks);
-
-        //var newsFeedVkStore = Ext.getStore('NewsFeedvkStore');
-
-        var testData = {
-            //    "data" : [{
-            "post_id": "123",
-            "user": {
-                "user_id": "1",
-                "first_name": "Roman",
-                "last_name": "Lytvyn",
-                "full_name": "Roman Lytvyn",
-                "photo": "http://vkontakte.ru/images/camera_c.gif",
-                "sex": 2,
-                "online": 1,
-                "network_id": "vk"
-            },
-            "text": "This is a test message.",
-            "likes_count": 2,
-            "comments_count": 1,
-            "reposts_count": 0,
-            "created_time": "08.04.2013 2:30",
-            "type": "post",
-            "network_id": "vk"
-            //    }]
-        };
-
-        //newsFeedVkStore.add(testData);
-        //newsFeedVkStore.add(testData);
-
-        //newsFeedVkStore.sync();
-
     }
 
 });

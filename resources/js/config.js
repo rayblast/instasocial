@@ -24,6 +24,8 @@ var config = {
         networkPanel: 'networkPanel',
         newsFeedNavigationBar: 'newsFeedNavigationBar',
         newsFeedCarousel: 'newsFeedCarousel',
+        newsFeedfbList: 'newsFeedfbList',
+        newsFeedvkList: 'newsFeedvkList',
         postPanel: 'postPanel'
     },
     controllers: {
@@ -43,6 +45,12 @@ var config = {
         settings: {
             networkFbState: 'networkfbstate',
             networkVkState: 'networkvkstate'
+        },
+        ui:{
+            newsFeedfbPageSize: 10,
+            newsFeedfbUpdateOffset: 500,
+            newsFeedvkPageSize: 10,
+            newsFeedvkUpdateOffset: 500
         }
     }
 };
