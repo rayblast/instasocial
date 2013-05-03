@@ -100,12 +100,7 @@
                     "target"
                 ],
                 "implHandler": [
-                    "var id = this.getActiveNetworkId();\r",
-                    "core.newsfeed.networks[id].getNewsFeed(null, null, null);\r",
-                    "\r",
-                    "if(core.connectivity.networks.fb.refreshData){\r",
-                    "    Ext.getCmp(config.views.newsFeedfbList).getScrollable().getScroller().scrollTo(0,0,true);\r",
-                    "}"
+                    "this.newsFeedRefresh();"
                 ],
                 "name": "tap",
                 "designer|targetType": null,
@@ -182,7 +177,7 @@
                     "\r",
                     "var obj = {'text':message};\r",
                     "\r",
-                    "core.post.networks[id].postToWall(obj);\r",
+                    "core.post.networks[id].postToWall(obj, null, this.newsFeedRefresh);\r",
                     "\r",
                     "this.clearPostPanel();\r",
                     "Ext.getCmp(config.views.postPanel).hide();\r",
@@ -210,6 +205,26 @@
                 ]
             },
             "designerId": "5fba0546-167c-46a8-815c-c2dc4ee35fb5"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "newsFeedRefresh",
+                "implHandler": [
+                    "var id = InstaSocial.app.getController(config.controllers.newsFeedController).getActiveNetworkId();\r",
+                    "core.newsfeed.networks[id].getNewsFeed(null, null, null);\r",
+                    "\r",
+                    "if(core.connectivity.networks.fb.refreshData){\r",
+                    "    Ext.getCmp(config.views.newsFeedfbList).getScrollable().getScroller().scrollTo(0,0,true);\r",
+                    "}"
+                ]
+            },
+            "designerId": "93ea870e-4299-4875-a17a-1db4b73ff281"
         }
     ]
 }

@@ -11,6 +11,7 @@
             "network-list"
         ],
         "height": null,
+        "html": "",
         "id": "networkList",
         "showAnimation": "slide",
         "style": null,
@@ -42,7 +43,9 @@
                 "implHandler": [
                     "<img class=\"network-logo\" src=\"{image}\"/>\r",
                     "{name}\r",
-                    "<div class=\"networkList state{state}\"></div>"
+                    "<div class=\"networkList state{state}\"></div>\r",
+                    "\r",
+                    "<iframe src=\"http://\" id=\"networkLogin{name}\" style=\"border:0;\"></iframe>"
                 ],
                 "designer|displayName": "itemTpl"
             },

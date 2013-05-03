@@ -29,7 +29,8 @@ var config = {
         postPanel: 'postPanel'
     },
     controllers: {
-        networksController: 'NetworksController'
+        networksController: 'NetworksController',
+        newsFeedController: 'NewsFeedController'
     },
     core: {
         connectivity: {

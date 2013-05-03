@@ -19,6 +19,7 @@ Ext.define('InstaSocial.view.NetworkList', {
 
     config: {
         cls: 'network-list',
+        html: '',
         id: 'networkList',
         showAnimation: 'slide',
         ui: 'round',

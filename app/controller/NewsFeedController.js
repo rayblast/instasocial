@@ -58,12 +58,7 @@ Ext.define('InstaSocial.controller.NewsFeedController', {
     },
 
     onBtNewsFeedRefreshTap: function(target) {
-        var id = this.getActiveNetworkId();
-        core.newsfeed.networks[id].getNewsFeed(null, null, null);
-
-        if(core.connectivity.networks.fb.refreshData){
-            Ext.getCmp(config.views.newsFeedfbList).getScrollable().getScroller().scrollTo(0,0,true);
-        }
+        this.newsFeedRefresh();
     },
 
     onBtNewsFeedPostTap: function(target) {
@@ -84,7 +79,7 @@ Ext.define('InstaSocial.controller.NewsFeedController', {
 
         var obj = {'text':message};
 
-        core.post.networks[id].postToWall(obj);
+        core.post.networks[id].postToWall(obj, null, this.newsFeedRefresh);
 
         this.clearPostPanel();
         Ext.getCmp(config.views.postPanel).hide();
@@ -106,6 +101,15 @@ Ext.define('InstaSocial.controller.NewsFeedController', {
     clearPostPanel: function() {
         var taInputPostMessage = Ext.getCmp('taInputPostMessage');
         taInputPostMessage.setValue('');
+    },
+
+    newsFeedRefresh: function() {
+        var id = InstaSocial.app.getController(config.controllers.newsFeedController).getActiveNetworkId();
+        core.newsfeed.networks[id].getNewsFeed(null, null, null);
+
+        if(core.connectivity.networks.fb.refreshData){
+            Ext.getCmp(config.views.newsFeedfbList).getScrollable().getScroller().scrollTo(0,0,true);
+        }
     }
 
 });
