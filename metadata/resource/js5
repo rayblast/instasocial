@@ -6,6 +6,7 @@
     },
     "codeClass": null,
     "userConfig": {
+        "designer|userClassName": "js5",
         "url": "resources/js/core/core.newsfeed.js",
         "id": "core.newsfeed"
     },

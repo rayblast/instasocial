@@ -17,7 +17,6 @@
         "ui": "round",
         "designer|userClassName": "NetworkList",
         "designer|userAlias": "networkList",
-        "designer|createAlias": "list",
         "modal": false,
         "disableSelection": false,
         "store": "NetworksStore"
@@ -40,7 +39,6 @@
             "codeClass": null,
             "userConfig": {
                 "disableFormats": true,
-                "designer|userClassName": "itemTpl",
                 "implHandler": [
                     "<img class=\"network-logo\" src=\"{image}\"/>\r",
                     "{name}\r",

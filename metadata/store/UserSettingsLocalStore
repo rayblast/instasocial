@@ -23,7 +23,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyLocalStorageProxy1",
                 "id": "userSettingsLocal"
             },
             "designerId": "bd71b7a1-c6bb-4eb3-b229-ffc485bc18d3"

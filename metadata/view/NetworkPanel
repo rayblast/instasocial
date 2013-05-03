@@ -31,7 +31,6 @@
                 "html": null,
                 "id": "lblNetworkName",
                 "itemId": "lblNetworkName",
-                "designer|userClassName": "MyTextField",
                 "label": "    ",
                 "name": "name",
                 "readOnly": true
@@ -50,7 +49,6 @@
                 "itemId": "btLogout",
                 "styleHtmlContent": true,
                 "ui": "decline",
-                "designer|userClassName": "MyButton",
                 "designer|displayName": "Logout",
                 "designer|createAlias": "",
                 "text": null
@@ -70,7 +68,6 @@
                 "itemId": "btLogin",
                 "styleHtmlContent": true,
                 "ui": "confirm",
-                "designer|userClassName": "MyButton",
                 "designer|displayName": "Login",
                 "designer|createAlias": "",
                 "text": null
@@ -92,7 +89,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "tpl",
                 "implHandler": [
                     "<img id=\"network-logo-panel\" class=\"network-logo-panel\" src=\"{image}\"/>"
                 ],
@@ -108,7 +104,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "initialize",
                 "fn": "initialize",
                 "implHandler": [
                     "this.callParent();\r",

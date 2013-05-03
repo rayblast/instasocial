@@ -30,7 +30,6 @@
                 "id": "fsNewPost",
                 "itemId": "fsNewPost",
                 "minHeight": "80%",
-                "designer|userClassName": "MyFieldSet",
                 "designer|displayName": "fsNewPost",
                 "title": null
             },
@@ -49,7 +48,6 @@
                         "itemId": "taInputPostMessage",
                         "minHeight": null,
                         "width": null,
-                        "designer|userClassName": "MyTextArea",
                         "designer|displayName": "taInputPostMessage",
                         "label": null,
                         "placeHolder": null
@@ -70,7 +68,6 @@
                 "id": "btSendPost",
                 "itemId": "btSendPost",
                 "ui": "action-round",
-                "designer|userClassName": "MyButton4",
                 "designer|displayName": "BtSendPost",
                 "iconCls": null,
                 "text": null
@@ -85,7 +82,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "initialize",
                 "fn": "initialize",
                 "implHandler": [
                     "this.callParent();\r",

@@ -6,6 +6,7 @@
     },
     "codeClass": null,
     "userConfig": {
+        "designer|userClassName": "js6",
         "url": "resources/js/core/core.parser.js",
         "id": "core.parser"
     },

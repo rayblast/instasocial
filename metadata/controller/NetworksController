@@ -33,7 +33,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "networkList",
                 "ref": "networkList",
                 "selector": "networkList"
             },
@@ -47,7 +46,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "btLogin",
                 "ref": "btLogin",
                 "selector": "#btLogin"
             },
@@ -61,7 +59,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "btLogout",
                 "ref": "btLogout",
                 "selector": "#btLogout"
             },
@@ -75,7 +72,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onBtLoginTap",
                 "fn": "onBtLoginTap",
                 "implHandler": [
                     "var networksController = InstaSocial.app.getController(config.controllers.networksController);\r",
@@ -100,7 +96,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "networkPanel",
                 "ref": "networkPanel",
                 "selector": "#networkPanel"
             },
@@ -114,7 +109,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onBtLogoutTap",
                 "fn": "onBtLogoutTap",
                 "implHandler": [
                     "var networksController = InstaSocial.app.getController(config.controllers.networksController);\r",
@@ -138,7 +132,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "setState",
                 "fn": "setState",
                 "designer|params": [
                     "args"
@@ -172,7 +165,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "showPanel",
                 "fn": "showPanel",
                 "designer|params": [
                     "args"
@@ -194,7 +186,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onNetworkListItemTap",
                 "fn": "onNetworkListItemTap",
                 "implHandler": [
                     "var network = record.data;\r",
@@ -234,7 +225,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "setupNewsFeed",
                 "fn": "setupNewsFeed",
                 "implHandler": [
                     "var newsFeedCarousel = Ext.getCmp(config.views.newsFeedCarousel);\r",

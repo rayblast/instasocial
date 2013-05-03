@@ -6,45 +6,33 @@
     },
     "codeClass": null,
     "userConfig": {
-        "flex": null,
         "locked": false,
         "cls": [
             "newsfeed-list"
         ],
-        "height": null,
         "id": "newsFeedfbList",
+        "itemId": "newsFeedfbList",
         "showAnimation": "slide",
-        "style": null,
-        "ui": null,
         "designer|userClassName": "NewsFeedfbList",
         "designer|userAlias": "newsFeedfbList",
-        "designer|createAlias": "list",
-        "modal": null,
         "scrollable": [
             "{\r",
-            "    direction: 'vertical', \r",
-            "\tdirectionLock: true\r",
-            "}"
+            "    direction: 'vertical',\r",
+            "    directionLock: true\r",
+            "}\r",
+            ""
         ],
         "disableSelection": true,
         "deferEmptyText": false,
-        "emptyText": null,
-        "itemCls": null,
         "scrollToTopOnRefresh": false,
         "store": "NewsFeedfbStore",
         "variableHeights": true
     },
     "configAlternates": {
-        "scrollable": "object",
         "locked": "boolean"
     },
-    "designerId": "adde11c8-daba-493c-a204-e041f4b5ca53",
+    "designerId": "3f2ab6a1-f5e2-423d-ad23-a6346102c33b",
     "customConfigs": [
-        {
-            "group": "(Custom Properties)",
-            "name": "flex",
-            "type": "string"
-        },
         {
             "group": "(Custom Properties)",
             "name": "locked",
@@ -61,7 +49,6 @@
             "codeClass": null,
             "userConfig": {
                 "disableFormats": true,
-                "designer|userClassName": "itemTpl",
                 "implHandler": [
                     "<div class=\"newsfeed-list-item\">\r",
                     "\t<div class=\"header\">\r",
@@ -85,12 +72,13 @@
                     "    </div>\r",
                     "    <div class=\"footer\">\r",
                     "        {likes_count} {[labels.lblLikes]} {comments_count} {[labels.lblComments]}\r",
-                    "    </div>  \r",
-                    "</div>"
+                    "    </div>\r",
+                    "</div>\r",
+                    ""
                 ],
                 "designer|displayName": "itemTpl"
             },
-            "designerId": "5e9e1f66-5487-47b5-87d7-6b865bed54d4"
+            "designerId": "d6ba8005-f0a9-4399-b146-f5f428b8dabd"
         },
         {
             "type": "fixedfunction",
@@ -100,32 +88,31 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "initialize",
                 "fn": "initialize",
                 "implHandler": [
-                    "this.callParent();\r",
-                    "this.setEmptyText(labels.lblNoData);\r",
-                    "this.refresh();\r",
+                    "    this.callParent();\r",
+                    "    this.setEmptyText(labels.lblNoData);\r",
+                    "    this.refresh();\r",
                     "\r",
-                    "\r",
-                    "var scroller = this.getScrollable().getScroller();\r",
-                    "scroller.on({\r",
-                    "    scroll: function(scroller, x, y){\r",
-                    "        if (!this.config.locked && y >= scroller.maxPosition.y - config.core.ui.newsFeedfbUpdateOffset) {\r",
-                    "            this.config.locked = true;\r",
-                    "            var newsFeedfbStore = Ext.getStore(config.stores.newsFeedfbStore);\r",
-                    "            var post = newsFeedfbStore.last();\r",
-                    "            core.newsfeed.networks.fb.getNewsFeed(null, post.data.created_time, null);\r",
-                    "        }\r",
-                    "    },\r",
-                    "    maxpositionchange: function(scroller, maxPosition, eOpts){\r",
-                    "        this.config.locked = false;\r",
-                    "    },\r",
-                    "    scope: this\r",
-                    "});"
+                    "    var scroller = this.getScrollable().getScroller();\r",
+                    "    scroller.on({\r",
+                    "        scroll: function(scroller, x, y){\r",
+                    "            if (!this.config.locked && y >= scroller.maxPosition.y - config.core.ui.newsFeedfbUpdateOffset) {\r",
+                    "                this.config.locked = true;\r",
+                    "                var newsFeedfbStore = Ext.getStore(config.stores.newsFeedfbStore);\r",
+                    "                var post = newsFeedfbStore.last();\r",
+                    "                core.newsfeed.networks.fb.getNewsFeed(null, post.data.created_time, null);\r",
+                    "             }\r",
+                    "        },\r",
+                    "        maxpositionchange: function(scroller, maxPosition, eOpts){\r",
+                    "            this.config.locked = false;\r",
+                    "        },\r",
+                    "        scope: this\r",
+                    "    });\r",
+                    ""
                 ]
             },
-            "designerId": "f6ce62b9-256f-4cc8-ac2d-0857ee24533b"
+            "designerId": "4233f5aa-591d-4060-9e6b-afaeeafde6d4"
         }
     ]
 }

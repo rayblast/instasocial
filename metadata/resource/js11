@@ -6,6 +6,7 @@
     },
     "codeClass": null,
     "userConfig": {
+        "designer|userClassName": "js11",
         "url": "resources/js/core/core.ui.js",
         "id": "core.ui"
     },

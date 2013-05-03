@@ -6,6 +6,7 @@
     },
     "codeClass": null,
     "userConfig": {
+        "designer|userClassName": "js1",
         "url": "resources/js/localization/en.js",
         "id": "labels"
     },

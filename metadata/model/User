@@ -19,8 +19,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "id",
-                "designer|userClassName": "field6"
+                "name": "id"
             },
             "designerId": "895fb326-e0f7-4c61-acdd-0c48107c0c03"
         },
@@ -32,8 +31,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "user_id",
-                "designer|userClassName": "field27"
+                "name": "user_id"
             },
             "designerId": "34c9a298-4c1c-4f3d-85cb-070cdaa446a5"
         },
@@ -45,8 +43,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "first_name",
-                "designer|userClassName": "field7"
+                "name": "first_name"
             },
             "designerId": "f886cf54-bfaf-405c-953f-0ad0331672d1"
         },
@@ -58,8 +55,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "last_name",
-                "designer|userClassName": "field14"
+                "name": "last_name"
             },
             "designerId": "e6f6e4c4-0920-4d32-9aa5-101dce9c0df5"
         },
@@ -71,8 +67,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "full_name",
-                "designer|userClassName": "field15"
+                "name": "full_name"
             },
             "designerId": "46ead683-2873-4f05-9c9a-96de71d66daa"
         },
@@ -84,8 +79,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "photo",
-                "designer|userClassName": "field18"
+                "name": "photo"
             },
             "designerId": "7c288602-52c1-4caa-b96e-301f6f7f138a"
         },
@@ -97,8 +91,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "sex",
-                "designer|userClassName": "field22"
+                "name": "sex"
             },
             "designerId": "dcd5fd57-d632-4c33-99e8-d413b789008a"
         },
@@ -110,8 +103,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "online",
-                "designer|userClassName": "field23"
+                "name": "online"
             },
             "designerId": "b6a51fb9-a38a-4fea-a959-483e4c35b346"
         },
@@ -123,8 +115,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "network_id",
-                "designer|userClassName": "field8"
+                "name": "network_id"
             },
             "designerId": "c8674c12-908f-4c12-abc9-0101ef579a7d"
         }

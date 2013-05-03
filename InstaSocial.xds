@@ -9,10 +9,10 @@
         "cacheBust": false,
         "buildShouldOverwriteIndex": true
     },
-    "xdsVersion": "2.2.1",
-    "xdsBuild": 951,
+    "xdsVersion": "2.2.2",
+    "xdsBuild": 971,
     "schemaVersion": 1,
-    "upgradeVersion": 210000000500,
+    "upgradeVersion": 210000000501,
     "framework": "touch22",
     "topInstanceFileMap": {
         "4b24ab5c-d84f-4202-8fae-a791ffde467f": {
@@ -132,30 +132,6 @@
                 "app/view/NewsFeedContainer.js"
             ],
             "className": "NewsFeedContainer"
-        },
-        "38acb443-8b8b-4544-ade0-1e097968e5c0": {
-            "paths": [
-                "metadata/view/NewsFeedvkList",
-                "app/view/override/NewsFeedvkList.js",
-                "app/view/NewsFeedvkList.js"
-            ],
-            "className": "NewsFeedvkList"
-        },
-        "f2c90753-2494-4cb2-8281-dbcafcc54f7b": {
-            "paths": [
-                "metadata/store/NewsFeedvkStore",
-                "app/store/override/NewsFeedvkStore.js",
-                "app/store/NewsFeedvkStore.js"
-            ],
-            "className": "NewsFeedvkStore"
-        },
-        "adde11c8-daba-493c-a204-e041f4b5ca53": {
-            "paths": [
-                "metadata/view/NewsFeedfbList",
-                "app/view/override/NewsFeedfbList.js",
-                "app/view/NewsFeedfbList.js"
-            ],
-            "className": "NewsFeedfbList"
         },
         "9b26b12d-54ec-4e11-93ea-2e1dccb8a02e": {
             "paths": [
@@ -326,6 +302,30 @@
                 "metadata/resource/js12"
             ],
             "className": "js12"
+        },
+        "9924a71e-a8cf-4054-956e-ce698bc1e77a": {
+            "paths": [
+                "metadata/store/NewsFeedvkStore",
+                "app/store/override/NewsFeedvkStore.js",
+                "app/store/NewsFeedvkStore.js"
+            ],
+            "className": "NewsFeedvkStore"
+        },
+        "3f2ab6a1-f5e2-423d-ad23-a6346102c33b": {
+            "paths": [
+                "metadata/view/NewsFeedfbList",
+                "app/view/override/NewsFeedfbList.js",
+                "app/view/NewsFeedfbList.js"
+            ],
+            "className": "NewsFeedfbList"
+        },
+        "c55e1ef1-eab7-4bc7-9ea7-ed7527f3c371": {
+            "paths": [
+                "metadata/view/NewsFeedvkList",
+                "app/view/override/NewsFeedvkList.js",
+                "app/view/NewsFeedvkList.js"
+            ],
+            "className": "NewsFeedvkList"
         }
     },
     "viewOrderMap": {
@@ -333,11 +333,11 @@
             "270affb2-339c-4b88-9db9-9079cc40d3bf",
             "9b26b12d-54ec-4e11-93ea-2e1dccb8a02e",
             "f9e0d041-8d6c-43c6-a230-ed4da1c10fe3",
+            "3f2ab6a1-f5e2-423d-ad23-a6346102c33b",
+            "c55e1ef1-eab7-4bc7-9ea7-ed7527f3c371",
             "68a8c996-c164-4a3b-8a04-3951851a6f19",
             "56cf39fd-035c-400b-bb5c-44ae8d82d980",
             "1f540070-7193-4675-bf48-d7bdedbe93f8",
-            "adde11c8-daba-493c-a204-e041f4b5ca53",
-            "38acb443-8b8b-4544-ade0-1e097968e5c0",
             "7fb1e8e3-87d9-4cfb-a1ec-64e92159390c",
             "2da5b42f-cb9f-469a-b072-5b7c9f0716ab"
         ],
@@ -347,7 +347,7 @@
             "309bff0a-b698-4b17-950d-97777abcb2f8",
             "e650ad08-ea3c-4692-81e6-b9ec854c5989",
             "09b8eec8-4662-4007-8206-5470fccfef4d",
-            "f2c90753-2494-4cb2-8281-dbcafcc54f7b"
+            "9924a71e-a8cf-4054-956e-ce698bc1e77a"
         ],
         "controller": [
             "1f06f30f-e66c-4692-b946-e41584021eff",

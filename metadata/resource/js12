@@ -6,6 +6,7 @@
     },
     "codeClass": null,
     "userConfig": {
+        "designer|userClassName": "js12",
         "url": "resources/js/libs/lib.date.js",
         "id": "lib.date"
     },

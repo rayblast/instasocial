@@ -68,7 +68,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "launch",
                 "fn": "launch",
                 "implHandler": [
                     "console.info('Application.launch');\r",
@@ -96,7 +95,6 @@
                 "paths": [
                     "{\"Ext.ux\":\"app/plugins/ux\"}"
                 ],
-                "designer|userClassName": "Loader151",
                 "designer|displayName": "uxLoader",
                 "designer|createAlias": "uxLoader"
             },

@@ -6,6 +6,7 @@
     },
     "codeClass": null,
     "userConfig": {
+        "designer|userClassName": "js10",
         "url": "resources/js/core/core.store.js",
         "id": "core.store"
     },

@@ -19,8 +19,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "id",
-                "designer|userClassName": "field9"
+                "name": "id"
             },
             "designerId": "c63ddef9-a3bb-4faf-bef7-bc488cba7d09"
         },
@@ -32,8 +31,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "comment_id",
-                "designer|userClassName": "field26"
+                "name": "comment_id"
             },
             "designerId": "c6fa0686-2903-4974-bd81-8da7758353bd"
         },
@@ -45,8 +43,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "text",
-                "designer|userClassName": "field10"
+                "name": "text"
             },
             "designerId": "e3fc61ed-173e-4965-b23b-7772bec6bcd5"
         },
@@ -58,8 +55,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "created_time",
-                "designer|userClassName": "field11"
+                "name": "created_time"
             },
             "designerId": "fa71fa44-4e23-4a22-821b-f15260a3d043"
         },
@@ -71,8 +67,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "like_count",
-                "designer|userClassName": "field12"
+                "name": "like_count"
             },
             "designerId": "07396ec4-e9c7-4cfe-b064-3e4e768a7a14"
         },
@@ -84,8 +79,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "parent_id",
-                "designer|userClassName": "field13"
+                "name": "parent_id"
             },
             "designerId": "a48b2628-a1a0-4353-b15d-3af5807a1a80"
         },
@@ -99,7 +93,6 @@
             "userConfig": {
                 "associatedName": null,
                 "associationKey": "user",
-                "designer|userClassName": "MyHasOneAssociation",
                 "designer|displayName": "hasOneUser",
                 "model": "User",
                 "foreignKey": null

@@ -10,8 +10,6 @@
         "itemId": "newsFeedCarousel",
         "designer|userClassName": "NewsFeedCarousel",
         "designer|userAlias": "newsFeedCarousel",
-        "designer|displayName": "NewsFeedCarousel",
-        "designer|createAlias": "newsFeedCarousel",
         "autoDestroy": false
     },
     "designerId": "f9e0d041-8d6c-43c6-a230-ed4da1c10fe3"

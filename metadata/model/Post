@@ -19,8 +19,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "id",
-                "designer|userClassName": "field16"
+                "name": "id"
             },
             "designerId": "04d4d836-07ee-4a08-8fc1-f1e59f733622"
         },
@@ -32,8 +31,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "post_id",
-                "designer|userClassName": "field28"
+                "name": "post_id"
             },
             "designerId": "3878f0e2-c50a-4232-9944-d37cdb0e9058"
         },
@@ -45,8 +43,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "text",
-                "designer|userClassName": "field19"
+                "name": "text"
             },
             "designerId": "4d42c859-f523-4ffe-8eee-76c671030c46"
         },
@@ -58,8 +55,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "likes_count",
-                "designer|userClassName": "field21"
+                "name": "likes_count"
             },
             "designerId": "e7777ef8-f794-4cf0-a18d-d2df23992790"
         },
@@ -71,8 +67,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "comments_count",
-                "designer|userClassName": "field24"
+                "name": "comments_count"
             },
             "designerId": "b6106632-994b-4a82-8209-5e44d661cb04"
         },
@@ -84,8 +79,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "reposts_count",
-                "designer|userClassName": "field25"
+                "name": "reposts_count"
             },
             "designerId": "2dade4cc-255b-4418-af45-6bf2636c5db0"
         },
@@ -97,8 +91,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "created_time",
-                "designer|userClassName": "field29"
+                "name": "created_time"
             },
             "designerId": "1389e4c0-a80e-4675-8127-8acd4f2aae98"
         },
@@ -110,8 +103,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "type",
-                "designer|userClassName": "field20"
+                "name": "type"
             },
             "designerId": "7c7b704d-b3ec-431a-ab2a-0e01dc1eb0c8"
         },
@@ -123,8 +115,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "network_id",
-                "designer|userClassName": "field17"
+                "name": "network_id"
             },
             "designerId": "94e91ef4-5967-4ebd-acbd-f3043904eb5d"
         },
@@ -137,7 +128,6 @@
             "codeClass": null,
             "userConfig": {
                 "associationKey": "comments",
-                "designer|userClassName": "MyHasManyAssociation",
                 "designer|displayName": "hasManyComment",
                 "model": "Comment",
                 "store": null
@@ -153,7 +143,6 @@
             "codeClass": null,
             "userConfig": {
                 "associationKey": "attachments",
-                "designer|userClassName": "MyHasManyAssociation2",
                 "designer|displayName": "hasManyAttachments",
                 "model": "Attachment",
                 "foreignKey": null,
@@ -170,7 +159,6 @@
             "codeClass": null,
             "userConfig": {
                 "associationKey": "user",
-                "designer|userClassName": "MyHasOneAssociation2",
                 "designer|displayName": "hasOneUser",
                 "model": "User"
             },

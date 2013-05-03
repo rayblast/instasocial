@@ -19,8 +19,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "id",
-                "designer|userClassName": "field30"
+                "name": "id"
             },
             "designerId": "b398348d-ad52-4225-b7b0-d9f490ed676b"
         },
@@ -32,8 +31,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "photo_id",
-                "designer|userClassName": "field31"
+                "name": "photo_id"
             },
             "designerId": "9855465c-a7a4-47df-b552-95dc90f4b262"
         },
@@ -45,8 +43,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "album_id",
-                "designer|userClassName": "field32"
+                "name": "album_id"
             },
             "designerId": "851cff22-51aa-45b6-81fe-a31bc54d203c"
         },
@@ -58,8 +55,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "src",
-                "designer|userClassName": "field33"
+                "name": "src"
             },
             "designerId": "c8208094-4277-4353-944a-e1184f4c24f6"
         },
@@ -71,8 +67,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "src_big",
-                "designer|userClassName": "field34"
+                "name": "src_big"
             },
             "designerId": "5441c442-958b-4ccc-a310-86cb5826c5f6"
         },
@@ -84,8 +79,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "text",
-                "designer|userClassName": "field35"
+                "name": "text"
             },
             "designerId": "2367584d-27db-4064-83a0-deb63c2c3453"
         },
@@ -97,8 +91,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "height",
-                "designer|userClassName": "field36"
+                "name": "height"
             },
             "designerId": "229828ab-0234-4199-997d-6e164bb7baab"
         },
@@ -110,8 +103,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "width",
-                "designer|userClassName": "field37"
+                "name": "width"
             },
             "designerId": "8eb729b9-12ea-45a1-a67f-630cb1df63a7"
         },
@@ -123,8 +115,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "created_time",
-                "designer|userClassName": "field38"
+                "name": "created_time"
             },
             "designerId": "5fa35f1b-090f-4bf9-ae36-da8bd7715c96"
         },
@@ -137,7 +128,6 @@
             "codeClass": null,
             "userConfig": {
                 "associationKey": "user",
-                "designer|userClassName": "MyHasOneAssociation2",
                 "designer|displayName": "hasOneUser",
                 "model": "User"
             },
@@ -151,8 +141,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "attachment_id",
-                "designer|userClassName": "field41"
+                "name": "attachment_id"
             },
             "designerId": "7d0f93a1-7d83-42b0-950e-cbf8e60921d8"
         }

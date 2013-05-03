@@ -6,44 +6,33 @@
     },
     "codeClass": null,
     "userConfig": {
-        "flex": null,
         "locked": false,
         "cls": [
             "newsfeed-list"
         ],
-        "height": null,
         "id": "newsFeedvkList",
+        "itemId": "newsFeedvkList",
         "showAnimation": "slide",
-        "style": null,
-        "ui": null,
         "designer|userClassName": "NewsFeedvkList",
         "designer|userAlias": "newsFeedvkList",
-        "designer|createAlias": "list",
-        "modal": null,
         "scrollable": [
             "{\r",
-            "    direction: 'vertical', \r",
-            "\tdirectionLock: true\r",
-            "}"
+            "    direction: 'vertical',\r",
+            "    directionLock: true\r",
+            "}\r",
+            ""
         ],
         "disableSelection": true,
         "deferEmptyText": false,
-        "itemCls": null,
         "scrollToTopOnRefresh": false,
         "store": "NewsFeedvkStore",
         "variableHeights": true
     },
     "configAlternates": {
-        "scrollable": "object",
         "locked": "boolean"
     },
-    "designerId": "38acb443-8b8b-4544-ade0-1e097968e5c0",
+    "designerId": "c55e1ef1-eab7-4bc7-9ea7-ed7527f3c371",
     "customConfigs": [
-        {
-            "group": "(Custom Properties)",
-            "name": "flex",
-            "type": "string"
-        },
         {
             "group": "(Custom Properties)",
             "name": "locked",
@@ -60,7 +49,6 @@
             "codeClass": null,
             "userConfig": {
                 "disableFormats": true,
-                "designer|userClassName": "itemTpl",
                 "implHandler": [
                     "<div class=\"newsfeed-list-item\">\r",
                     "\t<div class=\"header\">\r",
@@ -72,7 +60,7 @@
                     "        \t\t{User.full_name}\r",
                     "    \t\t</div>\r",
                     "            <div class=\"date\">\r",
-                    "        \t\t{[core.helper.getDateTimeFromUnix(values.created_time)]}\r",
+                    "                {[core.helper.getDateTimeFromUnix(values.created_time)]}\r",
                     "    \t\t</div>\r",
                     "        </div>\r",
                     "    </div>\r",
@@ -84,12 +72,13 @@
                     "    </div>\r",
                     "    <div class=\"footer\">\r",
                     "        {likes_count} {[labels.lblLikes]} {comments_count} {[labels.lblComments]}\r",
-                    "    </div>  \r",
-                    "</div>"
+                    "    </div>\r",
+                    "</div>\r",
+                    ""
                 ],
                 "designer|displayName": "itemTpl"
             },
-            "designerId": "5e54e527-21a2-4291-9bdd-c44849d2e11b"
+            "designerId": "3e5e3589-2500-44df-b97c-26d874d2082b"
         },
         {
             "type": "fixedfunction",
@@ -99,13 +88,11 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "initialize",
                 "fn": "initialize",
                 "implHandler": [
                     "this.callParent();\r",
                     "this.setEmptyText(labels.lblNoData);\r",
                     "this.refresh();\r",
-                    "\r",
                     "\r",
                     "var scroller = this.getScrollable().getScroller();\r",
                     "scroller.on({\r",
@@ -121,10 +108,11 @@
                     "        this.config.locked = false;\r",
                     "    },\r",
                     "    scope: this\r",
-                    "});"
+                    "});\r",
+                    ""
                 ]
             },
-            "designerId": "0ec52d0c-500a-47db-bd65-0a40b16886f4"
+            "designerId": "10897599-f0fc-45a7-bd2b-b4584c62a6bc"
         }
     ]
 }

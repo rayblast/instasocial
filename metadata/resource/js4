@@ -6,6 +6,7 @@
     },
     "codeClass": null,
     "userConfig": {
+        "designer|userClassName": "js4",
         "url": "resources/js/core/core.helper.js",
         "id": "core.helper"
     },

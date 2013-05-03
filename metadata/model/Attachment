@@ -20,8 +20,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "type",
-                "designer|userClassName": "field39"
+                "name": "type"
             },
             "designerId": "9d7492ef-c7a3-43a1-ba67-9824d6412508"
         },
@@ -34,7 +33,6 @@
             "codeClass": null,
             "userConfig": {
                 "associationKey": "photo",
-                "designer|userClassName": "MyHasOneAssociation3",
                 "designer|displayName": "hasOnePhoto",
                 "model": "Photo"
             },

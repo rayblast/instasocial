@@ -6,7 +6,6 @@
     },
     "codeClass": null,
     "userConfig": {
-        "autoLoad": null,
         "clearOnPageLoad": false,
         "model": "Post",
         "pageSize": 10,
@@ -14,5 +13,5 @@
         "designer|userClassName": "NewsFeedvkStore",
         "designer|userAlias": "newsFeedvkStore"
     },
-    "designerId": "f2c90753-2494-4cb2-8281-dbcafcc54f7b"
+    "designerId": "9924a71e-a8cf-4054-956e-ce698bc1e77a"
 }
