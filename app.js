@@ -29,7 +29,8 @@ Ext.application({
         'Post',
         'Photo',
         'Attachment',
-        'Data'
+        'Data',
+        'ParentUser'
     ],
     stores: [
         'NetworksStore',

@@ -326,6 +326,14 @@
                 "app/view/NewsFeedvkList.js"
             ],
             "className": "NewsFeedvkList"
+        },
+        "eee085da-5e77-47d3-97eb-e0942cbbcb8d": {
+            "paths": [
+                "metadata/model/ParentUser",
+                "app/model/override/ParentUser.js",
+                "app/model/ParentUser.js"
+            ],
+            "className": "ParentUser"
         }
     },
     "viewOrderMap": {
@@ -359,6 +367,7 @@
             "1e1c477d-fbb3-4ef7-a6dd-67dbd1d60870",
             "c3f9dc11-9446-40ca-98ea-3a65e50503eb",
             "005ec00e-558c-4012-8208-14f22a76f506",
+            "eee085da-5e77-47d3-97eb-e0942cbbcb8d",
             "c3fbd4fd-4280-4104-9f3c-2709b3d265e8",
             "1c25147d-70b7-41bb-93fa-48cc4eed49dc",
             "14f4f1fb-b73d-4145-beca-d1daf3e5133b",

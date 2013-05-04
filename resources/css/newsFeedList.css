@@ -33,9 +33,18 @@
     height: 50px;
 }
 
-.newsfeed-list-item .header .info .date{
-    color: #bbb;
+.newsfeed-list-item .header .info .repost{
 	font-size: 70%;
+}
+
+.newsfeed-list-item .header .info .repost_icon{
+    float: left;
+    margin-right: 5pt;
+    height: 30px;
+}
+
+.newsfeed-list-item .header .info .repost_date{
+    color: #bbb;
 }
 
 .newsfeed-list-item .body{
@@ -64,6 +73,19 @@
 	border-top-width: 1px;
     color: #bbb;
     font-size: 80%;
+}
+
+.newsfeed-list-item .footer .date{
+    float: left;
+}
+
+.newsfeed-list-item .footer .likes{
+    float: right;
+    margin-right: 5pt;
+}
+
+.newsfeed-list-item .footer .comments{
+    float: right;
 }
 
 .newsfeed-list-item a{

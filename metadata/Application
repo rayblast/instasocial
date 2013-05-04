@@ -16,7 +16,8 @@
             "Post",
             "Photo",
             "Attachment",
-            "Data"
+            "Data",
+            "ParentUser"
         ],
         "stores": [
             "NetworksStore",

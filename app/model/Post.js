@@ -20,7 +20,8 @@ Ext.define('InstaSocial.model.Post', {
     uses: [
         'InstaSocial.model.Comment',
         'InstaSocial.model.Attachment',
-        'InstaSocial.model.User'
+        'InstaSocial.model.User',
+        'InstaSocial.model.ParentUser'
     ],
 
     config: {
@@ -47,6 +48,12 @@ Ext.define('InstaSocial.model.Post', {
                 name: 'created_time'
             },
             {
+                name: 'parent_post_id'
+            },
+            {
+                name: 'parent_created_time'
+            },
+            {
                 name: 'type'
             },
             {
@@ -63,9 +70,15 @@ Ext.define('InstaSocial.model.Post', {
                 model: 'InstaSocial.model.Attachment'
             }
         ],
-        hasOne: {
-            associationKey: 'user',
-            model: 'InstaSocial.model.User'
-        }
+        hasOne: [
+            {
+                associationKey: 'user',
+                model: 'InstaSocial.model.User'
+            },
+            {
+                associationKey: 'parent_user',
+                model: 'InstaSocial.model.ParentUser'
+            }
+        ]
     }
 });

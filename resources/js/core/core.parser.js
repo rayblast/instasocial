@@ -65,11 +65,19 @@ core.parser = {
                 },
                 post: function(data, profilesData, groupsData){
                     var post_id = (data.post_id !== undefined) ? data.post_id : 0;
+                    
                     var user_id = (data.source_id !== undefined) ? data.source_id : 0;
                     var user = (user_id >= 0) ? 
                         core.parser.networks.vk.helper.getUserFromProfilesArrayById(Math.abs(user_id), profilesData) : 
                         core.parser.networks.vk.helper.getUserFromGroupsArrayById(Math.abs(user_id), groupsData);
-
+                    
+                    var parent_user_id = (data.copy_owner_id !== undefined) ? data.copy_owner_id : 0;
+                    var parent_user = (parent_user_id >= 0) ? 
+                        core.parser.networks.vk.helper.getUserFromProfilesArrayById(Math.abs(parent_user_id), profilesData) : 
+                        core.parser.networks.vk.helper.getUserFromGroupsArrayById(Math.abs(parent_user_id), groupsData);                    
+                    var parent_post_id = (data.copy_post_id !== undefined) ? data.copy_post_id : 0;
+                    var parent_created_time = (data.copy_post_date !== undefined) ? data.copy_post_date : 0;
+                           
                     var text = (data.text !== undefined) ? core.renderer.urlify(data.text) : '';
                     var likes_count = (data.likes !== undefined) ? data.likes.count : 0;
                     var comments_count = (data.comments !== undefined) ? data.comments.count : 0;
@@ -102,6 +110,9 @@ core.parser = {
                             "comments_count": comments_count,
                             "created_time": created_time,
                             "attachments": attachments,
+                            "parent_user": parent_user,
+                            "parent_post_id": parent_post_id,
+                            "parent_created_time": parent_created_time,
                             "type": "post",
                             "network_id": "vk"
                     };

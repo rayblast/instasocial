@@ -1,4 +1,23 @@
 core.renderer = {
+        repost: function(parent_user, parent_created_time){
+            if(parent_user !== null && parent_user !== undefined){
+                var output = '';
+                output += '<div class="repost">';
+                output += '<div class="repost_icon">';
+                output += '<img src="' + parent_user.photo + '" style="height:100%;"/>';
+                output += '</div>';
+                output += '<div class="repost_name">';
+                output += parent_user.full_name;
+                output += '</div>';
+                if(parent_created_time > 0){
+                    output += '<div class="repost_date">';
+                    output += core.helper.getDateTimeFromUnix(parent_created_time);
+                    output += '</div>';
+                }
+                output += '</div>';
+                return output;
+            }
+        },
         attachments: function(attachments){
             var output = '';
             output += '<div class="attachments">';

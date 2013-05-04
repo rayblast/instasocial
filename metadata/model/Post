@@ -103,6 +103,30 @@
             },
             "codeClass": null,
             "userConfig": {
+                "name": "parent_post_id"
+            },
+            "designerId": "14c392eb-e910-4922-8055-eea6ee60588e"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "parent_created_time"
+            },
+            "designerId": "7dda3d63-a516-45ad-a975-eb81eec9875c"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
                 "name": "type"
             },
             "designerId": "7c7b704d-b3ec-431a-ab2a-0e01dc1eb0c8"
@@ -163,6 +187,20 @@
                 "model": "User"
             },
             "designerId": "0a4408dc-7e73-40e4-914d-8f050cdcc084"
+        },
+        {
+            "type": "Ext.data.association.HasOne",
+            "reference": {
+                "name": "hasOne",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "associationKey": "parent_user",
+                "designer|displayName": "hasOneParentUser",
+                "model": "ParentUser"
+            },
+            "designerId": "4700d626-cde5-4ee6-824a-7d7bf53846c4"
         }
     ]
 }
