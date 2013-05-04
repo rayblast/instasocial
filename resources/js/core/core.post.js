@@ -1,7 +1,7 @@
 core.post = {
     networks:{
         fb:{
-            postToWall: function(data, userId, callback){
+            postToWall: function(data, userId, callback, params){
                 if(userId === undefined || userId === null)
                     userId = 'me';
                 var url = '/' + userId + '/feed';
@@ -13,13 +13,13 @@ core.post = {
                 FB.api(url, 'post', post, function(data) {
                     console.log(data);
                     if (typeof callback === 'function') {
-                        callback();
+                        callback(params);
                     }
                });
             }
         },
         vk:{
-            postToWall: function(data, userId, callback){
+            postToWall: function(data, userId, callback, params){
                 if(userId === undefined || userId === null)
                     userId = '';
                 
@@ -33,7 +33,7 @@ core.post = {
                         console.log(r.response.post_id);
                     }
                     if (typeof callback === 'function') {
-                        callback();
+                        callback(params);
                     }
                 });
             }

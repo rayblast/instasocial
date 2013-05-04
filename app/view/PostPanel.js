@@ -20,7 +20,7 @@ Ext.define('InstaSocial.view.PostPanel', {
     config: {
         id: 'postPanel',
         itemId: 'postPanel',
-        minHeight: '200pt',
+        minHeight: '230pt',
         minWidth: '90%',
         hideOnMaskTap: true,
         modal: true,
@@ -38,6 +38,25 @@ Ext.define('InstaSocial.view.PostPanel', {
                         itemId: 'taInputPostMessage'
                     }
                 ]
+            },
+            {
+                xtype: 'segmentedbutton',
+                centered: false,
+                height: '20pt',
+                id: 'newsFeedPostToggle',
+                itemId: 'newsFeedPostToggle',
+                minHeight: '20pt',
+                autoDestroy: false,
+                allowDepress: true,
+                allowMultiple: true,
+                layout: {
+                    align: 'center',
+                    type: 'hbox'
+                }
+            },
+            {
+                xtype: 'spacer',
+                height: 17
             },
             {
                 xtype: 'button',

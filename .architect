@@ -2,7 +2,7 @@
     "expandedState": {
         "data": false,
         "model": false,
-        "component": true,
+        "component": false,
         "controller": true,
         "resource": true,
         "270affb2-339c-4b88-9db9-9079cc40d3bf": {
@@ -66,7 +66,6 @@
         },
         "68a8c996-c164-4a3b-8a04-3951851a6f19": {
             "id": "68a8c996-c164-4a3b-8a04-3951851a6f19",
-            "expanded": false,
             "cn": [
                 {
                     "id": "ab776994-c0a5-4487-b35e-1123bfb85445"
@@ -117,7 +116,6 @@
         },
         "2da5b42f-cb9f-469a-b072-5b7c9f0716ab": {
             "id": "2da5b42f-cb9f-469a-b072-5b7c9f0716ab",
-            "expanded": false,
             "cn": [
                 {
                     "id": "ffe7582c-9b0c-402a-ab44-78d0e2c644f2",
@@ -126,6 +124,12 @@
                             "id": "2363df1a-5d75-4fd7-9113-9ddda8bfd8d4"
                         }
                     ]
+                },
+                {
+                    "id": "e7503965-94bd-4437-a6fc-253060300c43"
+                },
+                {
+                    "id": "a6a3f406-68bc-47bc-ae76-71c609ce5f2b"
                 },
                 {
                     "id": "86384a9d-c0a9-47aa-99c6-b0b4f68d9205"
@@ -449,6 +453,9 @@
                 },
                 {
                     "id": "20e43568-5019-4364-a196-00660daaac9f"
+                },
+                {
+                    "id": "80c70e98-fa95-42b6-b452-5c053fb27dba"
                 }
             ]
         },
@@ -553,11 +560,11 @@
         "topInstance": null
     },
     "inspectorState": {
-        "topInstance": "1f06f30f-e66c-4692-b946-e41584021eff",
-        "selectedInstance": "26715a78-07a6-47be-a539-bf72c97eb7c0"
+        "topInstance": "eab53465-a410-4e33-868b-61e4ca1534d8",
+        "selectedInstance": "80c70e98-fa95-42b6-b452-5c053fb27dba"
     },
     "codeState": {
-        "topInstance": "1f06f30f-e66c-4692-b946-e41584021eff"
+        "topInstance": "eab53465-a410-4e33-868b-61e4ca1534d8"
     },
     "editMode": "code"
 }

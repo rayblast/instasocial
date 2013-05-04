@@ -104,6 +104,7 @@ Ext.define('InstaSocial.controller.NetworksController', {
     showPanel: function(args) {
         var networksController = InstaSocial.app.getController(config.controllers.networksController);
         networksController.setState(args);
+
         args.panel.showBy(args.target);
         core.ui.display.loading.stop();
     },
@@ -113,7 +114,7 @@ Ext.define('InstaSocial.controller.NetworksController', {
         var newsFeedToggle = Ext.getCmp('newsFeedToggle');
         var activeNetworksNum = core.connectivity.getActiveNetworks().length;
 
-        var newsFeedToggleBtWidth = Ext.fly('newsFeedToolbar').getSize().width / activeNetworksNum - 10;
+        var newsFeedToggleBtWidth = Ext.getBody().getSize().width / activeNetworksNum - 10;
 
         for(var id in core.connectivity.networks){
             var newsFeedToggleButton = Ext.getCmp('btNewsFeedToggle' + id);
@@ -121,15 +122,14 @@ Ext.define('InstaSocial.controller.NetworksController', {
             if(core.connectivity.networks[id].state == config.core.connectivity.state.loggedin){
                 newsFeedCarousel.add({xtype: 'newsFeed' + id + 'List'});
 
-                if(newsFeedToggleButton === null || newsFeedToggleButton === undefined){
-                    newsFeedToggleButton = {
-                        xtype: 'button',
-                        action: 'onBtNewsFeedToggleTap',
-                        id: 'btNewsFeedToggle' + id,
-                        style: 'width:' + newsFeedToggleBtWidth + 'px',
-                        html:'<img src="resources/img/network-' + id + '.png" style="max-height:100%; max-width:100%;"/>'
-                    };
-                }
+                newsFeedToggle.remove(newsFeedToggleButton);
+                newsFeedToggleButton = {
+                    xtype: 'button',
+                    action: 'onBtNewsFeedToggleTap',
+                    id: 'btNewsFeedToggle' + id,
+                    style: 'width:' + newsFeedToggleBtWidth + 'px;',
+                    html:'<img src="resources/img/network-' + id + '.png" style="max-height:100%; max-width:100%;"/>'
+                };
                 newsFeedToggle.add(newsFeedToggleButton);
 
             }else{

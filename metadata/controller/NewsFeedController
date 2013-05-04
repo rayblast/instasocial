@@ -148,6 +148,8 @@
                     "    postPanel = Ext.widget(config.views.postPanel);\r",
                     "} \r",
                     "\r",
+                    "this.setupPostPanel();\r",
+                    "\r",
                     "postPanel.showBy(target);\r",
                     "\r",
                     ""
@@ -171,12 +173,19 @@
                     "target"
                 ],
                 "implHandler": [
-                    "var id = this.getActiveNetworkId();\r",
+                    "var newsFeedPostToggle = Ext.getCmp('newsFeedPostToggle');\r",
+                    "var btId = 'btNewsFeedPostToggle';\r",
                     "var message = Ext.getCmp('taInputPostMessage').getValue();\r",
+                    "var pressedNetworkButtons = newsFeedPostToggle.getPressedButtons();\r",
+                    "\r",
+                    "if(message === '' || pressedNetworkButtons.length < 1)\r",
+                    "    return;\r",
                     "\r",
                     "var obj = {'text':message};\r",
-                    "\r",
-                    "core.post.networks[id].postToWall(obj, null, this.newsFeedRefresh);\r",
+                    "for(var i = 0; i < pressedNetworkButtons.length; i++){\r",
+                    "    var id = pressedNetworkButtons[i].id.slice(btId.length, btId.length + 2);\r",
+                    "\tcore.post.networks[id].postToWall(obj, null, this.newsFeedRefresh, id);\r",
+                    "}\r",
                     "\r",
                     "this.clearPostPanel();\r",
                     "Ext.getCmp(config.views.postPanel).hide();\r",
@@ -214,13 +223,20 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "newsFeedRefresh",
+                "designer|params": [
+                    "id"
+                ],
                 "implHandler": [
-                    "var id = InstaSocial.app.getController(config.controllers.newsFeedController).getActiveNetworkId();\r",
+                    "if(id === null || id === undefined){\r",
+                    "    id = InstaSocial.app.getController(config.controllers.newsFeedController).getActiveNetworkId();\r",
+                    "}\r",
+                    "\r",
                     "core.newsfeed.networks[id].getNewsFeed(null, null, null);\r",
                     "\r",
                     "if(core.connectivity.networks.fb.refreshData){\r",
                     "    Ext.getCmp(config.views.newsFeedfbList).getScrollable().getScroller().scrollTo(0,0,true);\r",
-                    "}"
+                    "}\r",
+                    ""
                 ]
             },
             "designerId": "93ea870e-4299-4875-a17a-1db4b73ff281"
@@ -268,6 +284,48 @@
                 ]
             },
             "designerId": "20e43568-5019-4364-a196-00660daaac9f"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "setupPostPanel",
+                "implHandler": [
+                    "var newsFeedPostToggle = Ext.getCmp('newsFeedPostToggle');\r",
+                    "\r",
+                    "for(var id in core.connectivity.networks){\r",
+                    "    var btNewsFeedPostToggle = Ext.getCmp('btNewsFeedPostToggle' + id);\r",
+                    "\r",
+                    "    if(core.connectivity.networks[id].state == config.core.connectivity.state.loggedin){\r",
+                    "\r",
+                    "        if(btNewsFeedPostToggle === null || btNewsFeedPostToggle === undefined){\r",
+                    "            btNewsFeedPostToggle = {\r",
+                    "                xtype: 'button',\r",
+                    "                //action: 'onBtNewsFeedToggleTap',\r",
+                    "                id: 'btNewsFeedPostToggle' + id,\r",
+                    "                style: 'height:20pt; padding-top: 0.1em;',\r",
+                    "                html:'<img src=\"resources/img/network-' + id + '.png\" style=\"max-height:20pt; max-width:100%;\"/>'\r",
+                    "            };\r",
+                    "        }\r",
+                    "        newsFeedPostToggle.add(btNewsFeedPostToggle);\r",
+                    "\r",
+                    "    }else{\r",
+                    "        if(btNewsFeedPostToggle !== null && btNewsFeedPostToggle !== undefined){\r",
+                    "            newsFeedPostToggle.remove(btNewsFeedPostToggle);\r",
+                    "        }\r",
+                    "    }\r",
+                    "}\r",
+                    "\r",
+                    "var network_id = this.getActiveNetworkId();\r",
+                    "\r",
+                    "newsFeedPostToggle.setPressedButtons(['btNewsFeedPostToggle' + network_id]);"
+                ]
+            },
+            "designerId": "80c70e98-fa95-42b6-b452-5c053fb27dba"
         }
     ]
 }

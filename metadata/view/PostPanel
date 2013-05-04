@@ -8,7 +8,7 @@
     "userConfig": {
         "id": "postPanel",
         "itemId": "postPanel",
-        "minHeight": "200pt",
+        "minHeight": "230pt",
         "minWidth": "90%",
         "designer|userClassName": "PostPanel",
         "designer|userAlias": "postPanel",
@@ -57,6 +57,39 @@
             ]
         },
         {
+            "type": "Ext.SegmentedButton",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "container|align": "center",
+                "centered": false,
+                "height": "20pt",
+                "id": "newsFeedPostToggle",
+                "itemId": "newsFeedPostToggle",
+                "minHeight": "20pt",
+                "designer|displayName": "NewsFeedPostToggle",
+                "autoDestroy": false,
+                "allowDepress": true,
+                "allowMultiple": true
+            },
+            "designerId": "e7503965-94bd-4437-a6fc-253060300c43"
+        },
+        {
+            "type": "Ext.Spacer",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 17
+            },
+            "designerId": "a6a3f406-68bc-47bc-ae76-71c609ce5f2b"
+        },
+        {
             "type": "Ext.Button",
             "reference": {
                 "name": "items",
@@ -65,8 +98,12 @@
             "codeClass": null,
             "userConfig": {
                 "docked": null,
+                "height": null,
                 "id": "btSendPost",
                 "itemId": "btSendPost",
+                "margin": null,
+                "minHeight": null,
+                "top": null,
                 "ui": "action-round",
                 "designer|displayName": "BtSendPost",
                 "iconCls": null,

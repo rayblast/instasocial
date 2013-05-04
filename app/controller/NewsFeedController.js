@@ -75,18 +75,27 @@ Ext.define('InstaSocial.controller.NewsFeedController', {
             postPanel = Ext.widget(config.views.postPanel);
         } 
 
+        this.setupPostPanel();
+
         postPanel.showBy(target);
 
 
     },
 
     onBtSendPostButtonTap: function(target) {
-        var id = this.getActiveNetworkId();
+        var newsFeedPostToggle = Ext.getCmp('newsFeedPostToggle');
+        var btId = 'btNewsFeedPostToggle';
         var message = Ext.getCmp('taInputPostMessage').getValue();
+        var pressedNetworkButtons = newsFeedPostToggle.getPressedButtons();
+
+        if(message === '' || pressedNetworkButtons.length < 1)
+        return;
 
         var obj = {'text':message};
-
-        core.post.networks[id].postToWall(obj, null, this.newsFeedRefresh);
+        for(var i = 0; i < pressedNetworkButtons.length; i++){
+            var id = pressedNetworkButtons[i].id.slice(btId.length, btId.length + 2);
+            core.post.networks[id].postToWall(obj, null, this.newsFeedRefresh, id);
+        }
 
         this.clearPostPanel();
         Ext.getCmp(config.views.postPanel).hide();
@@ -114,13 +123,17 @@ Ext.define('InstaSocial.controller.NewsFeedController', {
         taInputPostMessage.setValue('');
     },
 
-    newsFeedRefresh: function() {
-        var id = InstaSocial.app.getController(config.controllers.newsFeedController).getActiveNetworkId();
+    newsFeedRefresh: function(id) {
+        if(id === null || id === undefined){
+            id = InstaSocial.app.getController(config.controllers.newsFeedController).getActiveNetworkId();
+        }
+
         core.newsfeed.networks[id].getNewsFeed(null, null, null);
 
         if(core.connectivity.networks.fb.refreshData){
             Ext.getCmp(config.views.newsFeedfbList).getScrollable().getScroller().scrollTo(0,0,true);
         }
+
     },
 
     setActiveNetwork: function(id) {
@@ -128,6 +141,37 @@ Ext.define('InstaSocial.controller.NewsFeedController', {
         var itemId = 'newsFeed' + id + 'List';
 
         newsFeedCarousel.setActiveItem(itemId);
+    },
+
+    setupPostPanel: function() {
+        var newsFeedPostToggle = Ext.getCmp('newsFeedPostToggle');
+
+        for(var id in core.connectivity.networks){
+            var btNewsFeedPostToggle = Ext.getCmp('btNewsFeedPostToggle' + id);
+
+            if(core.connectivity.networks[id].state == config.core.connectivity.state.loggedin){
+
+                if(btNewsFeedPostToggle === null || btNewsFeedPostToggle === undefined){
+                    btNewsFeedPostToggle = {
+                        xtype: 'button',
+                        //action: 'onBtNewsFeedToggleTap',
+                        id: 'btNewsFeedPostToggle' + id,
+                        style: 'height:20pt; padding-top: 0.1em;',
+                        html:'<img src="resources/img/network-' + id + '.png" style="max-height:20pt; max-width:100%;"/>'
+                    };
+                }
+                newsFeedPostToggle.add(btNewsFeedPostToggle);
+
+            }else{
+                if(btNewsFeedPostToggle !== null && btNewsFeedPostToggle !== undefined){
+                    newsFeedPostToggle.remove(btNewsFeedPostToggle);
+                }
+            }
+        }
+
+        var network_id = this.getActiveNetworkId();
+
+        newsFeedPostToggle.setPressedButtons(['btNewsFeedPostToggle' + network_id]);
     }
 
 });
