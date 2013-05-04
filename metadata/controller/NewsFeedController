@@ -77,6 +77,10 @@
                     "\r",
                     "Ext.getCmp(config.views.newsFeedNavigationBar).setTitle(title);\r",
                     "\r",
+                    "var newsFeedToggle = Ext.getCmp('newsFeedToggle');\r",
+                    "var newsFeedToggleButton = Ext.getCmp('btNewsFeedToggle' + id);\r",
+                    "newsFeedToggle.setPressedButtons([newsFeedToggleButton]);\r",
+                    "\r",
                     "if(!core.newsfeed.networks[id].localDataLoaded){\r",
                     "    core.helper.callAsync(core.newsfeed.networks[id].loadData);\r",
                     "}"
@@ -118,14 +122,9 @@
             "userConfig": {
                 "fn": "getActiveNetworkId",
                 "implHandler": [
-                    "var id = this.config.activeId;\r",
+                    "var actId = 'newsFeed';\r",
                     "\r",
-                    "if(id == \"newsFeedfbList\"){\r",
-                    "    return 'fb';\r",
-                    "}else if(id == \"newsFeedvkList\"){\r",
-                    "    return 'vk';\r",
-                    "}\r",
-                    "return null;"
+                    "return this.config.activeId.slice(actId.length, actId.length + 2);"
                 ]
             },
             "designerId": "cdd12b52-197e-417c-8a37-a4e5a235d895"
@@ -225,6 +224,50 @@
                 ]
             },
             "designerId": "93ea870e-4299-4875-a17a-1db4b73ff281"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onBtNewsFeedToggleTap",
+                "implHandler": [
+                    "var btId = 'btNewsFeedToggle';\r",
+                    "\r",
+                    "if(button.id.slice(0, btId.length) == btId){\r",
+                    "    var id = button.id.slice(btId.length, btId.length + 2);\r",
+                    "    this.setActiveNetwork(id);\r",
+                    "}"
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "button"
+            },
+            "designerId": "cdb498ac-94d1-47d7-970c-1d6df8c81644"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "setActiveNetwork",
+                "designer|params": [
+                    "id"
+                ],
+                "implHandler": [
+                    "var newsFeedCarousel = Ext.getCmp(config.views.newsFeedCarousel);\r",
+                    "var itemId = 'newsFeed' + id + 'List';\r",
+                    "\r",
+                    "newsFeedCarousel.setActiveItem(itemId);"
+                ]
+            },
+            "designerId": "20e43568-5019-4364-a196-00660daaac9f"
         }
     ]
 }

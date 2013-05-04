@@ -43,9 +43,7 @@
                 "implHandler": [
                     "<img class=\"network-logo\" src=\"{image}\"/>\r",
                     "{name}\r",
-                    "<div class=\"networkList state{state}\"></div>\r",
-                    "\r",
-                    "<iframe src=\"http://\" id=\"networkLogin{name}\" style=\"border:0;\"></iframe>"
+                    "<div class=\"networkList state{state}\"></div>"
                 ],
                 "designer|displayName": "itemTpl"
             },

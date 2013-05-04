@@ -110,23 +110,39 @@ Ext.define('InstaSocial.controller.NetworksController', {
 
     setupNewsFeed: function() {
         var newsFeedCarousel = Ext.getCmp(config.views.newsFeedCarousel);
-        if(core.connectivity.networks.fb.state == config.core.connectivity.state.loggedin){
-            newsFeedCarousel.add({xtype: 'newsFeedfbList'});
-        }else{
-            var newsFeedfbList = newsFeedCarousel.down('newsFeedfbList');
-            if(newsFeedfbList !== null){
-                newsFeedfbList.hide();
-                newsFeedCarousel.remove(newsFeedfbList);
+        var newsFeedToggle = Ext.getCmp('newsFeedToggle');
+
+        for(var id in core.connectivity.networks){
+            var newsFeedToggleButton = Ext.getCmp('btNewsFeedToggle' + id);
+
+            if(core.connectivity.networks[id].state == config.core.connectivity.state.loggedin){
+                newsFeedCarousel.add({xtype: 'newsFeed' + id + 'List'});
+
+                if(newsFeedToggleButton === null || newsFeedToggleButton === undefined){
+                    newsFeedToggleButton = {
+                        xtype: 'button',
+                        action: 'onBtNewsFeedToggleTap',
+                        id: 'btNewsFeedToggle' + id,
+                        html:'<img src="resources/img/network-' + id + '.png" style="max-height:100%; max-width:100%;"/>'
+                    };
+                }
+                newsFeedToggle.add(newsFeedToggleButton);
+
+            }else{
+                var newsFeedList = newsFeedCarousel.down('newsFeed' + id + 'List');
+                if(newsFeedList !== null){
+                    newsFeedList.hide();
+                    newsFeedCarousel.remove(newsFeedList);
+                }
+                if(newsFeedToggleButton !== null && newsFeedToggleButton !== undefined){
+                    newsFeedToggle.remove(newsFeedToggleButton);
+                }
             }
         }
-        if(core.connectivity.networks.vk.state == config.core.connectivity.state.loggedin){
-            newsFeedCarousel.add({xtype: 'newsFeedvkList'});
-        }else{
-            var newsFeedvkList = newsFeedCarousel.down('newsFeedvkList');
-            if(newsFeedvkList !== null){
-                newsFeedvkList.hide();
-                newsFeedCarousel.remove(newsFeedvkList);
-            }
+
+        if(newsFeedToggle.items.items.length > 0){
+            newsFeedCarousel.setActiveItem(0);
+            newsFeedToggle.setPressedButtons([0]);
         }
 
         if(core.connectivity.getActiveNetworks().length < 1){

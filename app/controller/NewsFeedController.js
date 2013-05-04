@@ -38,6 +38,9 @@ Ext.define('InstaSocial.controller.NewsFeedController', {
             },
             "#btSendPost": {
                 tap: 'onBtSendPostButtonTap'
+            },
+            "button": {
+                tap: 'onBtNewsFeedToggleTap'
             }
         }
     },
@@ -51,6 +54,10 @@ Ext.define('InstaSocial.controller.NewsFeedController', {
         title += ' - ' + labels.lblNewsFeed;
 
         Ext.getCmp(config.views.newsFeedNavigationBar).setTitle(title);
+
+        var newsFeedToggle = Ext.getCmp('newsFeedToggle');
+        var newsFeedToggleButton = Ext.getCmp('btNewsFeedToggle' + id);
+        newsFeedToggle.setPressedButtons([newsFeedToggleButton]);
 
         if(!core.newsfeed.networks[id].localDataLoaded){
             core.helper.callAsync(core.newsfeed.networks[id].loadData);
@@ -87,15 +94,19 @@ Ext.define('InstaSocial.controller.NewsFeedController', {
 
     },
 
-    getActiveNetworkId: function() {
-        var id = this.config.activeId;
+    onBtNewsFeedToggleTap: function(button, e, eOpts) {
+        var btId = 'btNewsFeedToggle';
 
-        if(id == "newsFeedfbList"){
-            return 'fb';
-        }else if(id == "newsFeedvkList"){
-            return 'vk';
+        if(button.id.slice(0, btId.length) == btId){
+            var id = button.id.slice(btId.length, btId.length + 2);
+            this.setActiveNetwork(id);
         }
-        return null;
+    },
+
+    getActiveNetworkId: function() {
+        var actId = 'newsFeed';
+
+        return this.config.activeId.slice(actId.length, actId.length + 2);
     },
 
     clearPostPanel: function() {
@@ -110,6 +121,13 @@ Ext.define('InstaSocial.controller.NewsFeedController', {
         if(core.connectivity.networks.fb.refreshData){
             Ext.getCmp(config.views.newsFeedfbList).getScrollable().getScroller().scrollTo(0,0,true);
         }
+    },
+
+    setActiveNetwork: function(id) {
+        var newsFeedCarousel = Ext.getCmp(config.views.newsFeedCarousel);
+        var itemId = 'newsFeed' + id + 'List';
+
+        newsFeedCarousel.setActiveItem(itemId);
     }
 
 });

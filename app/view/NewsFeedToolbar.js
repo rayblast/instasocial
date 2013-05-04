@@ -20,7 +20,17 @@ Ext.define('InstaSocial.view.NewsFeedToolbar', {
     config: {
         docked: 'bottom',
         id: 'newsFeedToolbar',
-        itemId: 'newsFeedToolbar'
+        itemId: 'newsFeedToolbar',
+        items: [
+            {
+                xtype: 'segmentedbutton',
+                centered: true,
+                id: 'newsFeedToggle',
+                itemId: 'newsFeedToggle',
+                autoDestroy: false,
+                modal: false
+            }
+        ]
     }
 
 });
