@@ -33,6 +33,12 @@
     height: 50px;
 }
 
+.newsfeed-list-item .header .info .name{
+	overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
 .newsfeed-list-item .header .info .repost{
 	font-size: 70%;
 }
@@ -41,6 +47,12 @@
     float: left;
     margin-right: 5pt;
     height: 30px;
+}
+
+.newsfeed-list-item .header .info .repost_name{
+	overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .newsfeed-list-item .header .info .repost_date{

@@ -11,6 +11,7 @@
         "id": "newsFeedToolbar",
         "itemId": "newsFeedToolbar",
         "minHeight": "25pt",
+        "width": null,
         "designer|userClassName": "NewsFeedToolbar",
         "designer|userAlias": "newsFeedToolbar",
         "title": null
@@ -30,7 +31,7 @@
                 "centered": true,
                 "id": "newsFeedToggle",
                 "itemId": "newsFeedToggle",
-                "width": null,
+                "width": "100%",
                 "designer|displayName": "NewsFeedToggle",
                 "autoDestroy": false,
                 "modal": false

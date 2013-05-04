@@ -114,7 +114,7 @@ Ext.define('InstaSocial.controller.NetworksController', {
         var newsFeedToggle = Ext.getCmp('newsFeedToggle');
         var activeNetworksNum = core.connectivity.getActiveNetworks().length;
 
-        var newsFeedToggleBtWidth = Ext.getBody().getSize().width / activeNetworksNum - 10;
+        var newsFeedToggleBtWidth = 100 / activeNetworksNum;
 
         for(var id in core.connectivity.networks){
             var newsFeedToggleButton = Ext.getCmp('btNewsFeedToggle' + id);
@@ -127,7 +127,7 @@ Ext.define('InstaSocial.controller.NetworksController', {
                     xtype: 'button',
                     action: 'onBtNewsFeedToggleTap',
                     id: 'btNewsFeedToggle' + id,
-                    style: 'width:' + newsFeedToggleBtWidth + 'px;',
+                    style: 'width:' + newsFeedToggleBtWidth + '%;',
                     html:'<img src="resources/img/network-' + id + '.png" style="max-height:100%; max-width:100%;"/>'
                 };
                 newsFeedToggle.add(newsFeedToggleButton);

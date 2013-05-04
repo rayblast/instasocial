@@ -29,6 +29,7 @@ Ext.define('InstaSocial.view.NewsFeedToolbar', {
                 centered: true,
                 id: 'newsFeedToggle',
                 itemId: 'newsFeedToggle',
+                width: '100%',
                 autoDestroy: false,
                 modal: false
             }
