@@ -245,7 +245,7 @@
                     "                action: 'onBtNewsFeedToggleTap',\r",
                     "                id: 'btNewsFeedToggle' + id,\r",
                     "                style: 'width:' + newsFeedToggleBtWidth + 'px',\r",
-                    "                html:'<img src=\"resources/img/network-' + id + '.png\" style=\"max-height:45px; max-width:100%;\"/>'\r",
+                    "                html:'<img src=\"resources/img/network-' + id + '.png\" style=\"max-height:100%; max-width:100%;\"/>'\r",
                     "            };\r",
                     "        }\r",
                     "        newsFeedToggle.add(newsFeedToggleButton);\r",

@@ -7,8 +7,10 @@
     "codeClass": null,
     "userConfig": {
         "docked": "bottom",
+        "height": "25pt",
         "id": "newsFeedToolbar",
         "itemId": "newsFeedToolbar",
+        "minHeight": "25pt",
         "designer|userClassName": "NewsFeedToolbar",
         "designer|userAlias": "newsFeedToolbar",
         "title": null

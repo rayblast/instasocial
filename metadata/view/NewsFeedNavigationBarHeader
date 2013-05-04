@@ -6,7 +6,9 @@
     },
     "codeClass": null,
     "userConfig": {
+        "height": null,
         "html": null,
+        "minHeight": null,
         "designer|userClassName": "NewsFeedNavigationBarHeader",
         "designer|userAlias": "newsFeedNavigationBarHeader"
     },

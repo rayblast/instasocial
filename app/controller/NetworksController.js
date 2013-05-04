@@ -127,7 +127,7 @@ Ext.define('InstaSocial.controller.NetworksController', {
                         action: 'onBtNewsFeedToggleTap',
                         id: 'btNewsFeedToggle' + id,
                         style: 'width:' + newsFeedToggleBtWidth + 'px',
-                        html:'<img src="resources/img/network-' + id + '.png" style="max-height:45px; max-width:100%;"/>'
+                        html:'<img src="resources/img/network-' + id + '.png" style="max-height:100%; max-width:100%;"/>'
                     };
                 }
                 newsFeedToggle.add(newsFeedToggleButton);

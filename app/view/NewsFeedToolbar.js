@@ -19,8 +19,10 @@ Ext.define('InstaSocial.view.NewsFeedToolbar', {
 
     config: {
         docked: 'bottom',
+        height: '25pt',
         id: 'newsFeedToolbar',
         itemId: 'newsFeedToolbar',
+        minHeight: '25pt',
         items: [
             {
                 xtype: 'segmentedbutton',
