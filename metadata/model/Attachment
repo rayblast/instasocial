@@ -37,6 +37,20 @@
                 "model": "Photo"
             },
             "designerId": "4a9c9e11-bd72-4349-9794-89c505366f19"
+        },
+        {
+            "type": "Ext.data.association.HasOne",
+            "reference": {
+                "name": "hasOne",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "associationKey": "link",
+                "designer|displayName": "hasOneLink",
+                "model": "Link"
+            },
+            "designerId": "8a546864-a929-4ec1-873d-4f4750b98b96"
         }
     ]
 }

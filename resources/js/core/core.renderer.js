@@ -28,6 +28,9 @@ core.renderer = {
                     case 'photo':
                         output += core.renderer.photo(attachment.Photo);
                         break;
+                    case 'link':
+                        output += core.renderer.link(attachment.Link);
+                        break;
                 }
                 output += '</div>';
             }
@@ -54,6 +57,34 @@ core.renderer = {
                 output += '<div class="text">' + photo.text + '</div>';
             output += '</div>';
             return output;
+        },
+        link: function(link){
+            var output = '';
+            output += '<div class="link">';
+            
+            if(link.image_src !== undefined){
+                output += '<div class="photo">';
+                output += '<img src="' + link.image_src + '" style="max-height:100%;"/>';
+                output += '</div>';
+            }
+            
+            output += '<div class="title">';
+            output += core.renderer.textToUrl(link.title, link.url);
+            output += '</div>';
+            
+            output += '<div class="description">';
+            output += link.description;
+            output += '</div>';
+            
+            output += '<div class="url">';
+            output += core.renderer.urlify(link.url);
+            output += '</div>';
+            
+            output += '</div>';
+            return output;
+        },
+        textToUrl: function(text, url) {
+            return '<a href="' + url + '" target="_blank">' + text + '</a>';
         },
         urlify: function(text) {
             var urlRegex = /(https?:\/\/[^\s]+)/g;

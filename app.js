@@ -30,7 +30,8 @@ Ext.application({
         'Photo',
         'Attachment',
         'Data',
-        'ParentUser'
+        'ParentUser',
+        'Link'
     ],
     stores: [
         'NetworksStore',

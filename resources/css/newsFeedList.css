@@ -65,6 +65,20 @@
 	text-align: center;
 }
 
+.newsfeed-list-item .attachment .link{
+	min-height: 100px;
+    margin: 15pt;
+    text-align: left;
+    border-left: 2px solid #C3D1E0;
+    padding-left: 5pt;
+}
+
+.newsfeed-list-item .attachment .link .photo{
+    height: 100px;
+	float: left;
+    margin-right: 5pt;
+}
+
 .newsfeed-list-item .footer{
     height: 15px;
     padding: 4px;

@@ -50,6 +50,7 @@ core.parser = {
         vk:{
             newsfeed: {
                 posts: function(data){
+                    console.log(data);
                     if(data.response === undefined)
                         return [];
                     var postsData = data.response.items;

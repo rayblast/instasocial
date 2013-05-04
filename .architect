@@ -1,10 +1,10 @@
 {
     "expandedState": {
         "data": false,
-        "model": false,
-        "component": true,
+        "model": true,
+        "component": false,
         "controller": false,
-        "resource": false,
+        "resource": true,
         "270affb2-339c-4b88-9db9-9079cc40d3bf": {
             "id": "270affb2-339c-4b88-9db9-9079cc40d3bf",
             "expanded": false,
@@ -382,6 +382,9 @@
                 },
                 {
                     "id": "4a9c9e11-bd72-4349-9794-89c505366f19"
+                },
+                {
+                    "id": "8a546864-a929-4ec1-873d-4f4750b98b96"
                 }
             ]
         },
@@ -394,6 +397,24 @@
                 },
                 {
                     "id": "54c6a706-4ce6-4bc7-9333-898b7afe32db"
+                }
+            ]
+        },
+        "b97cf6c1-c497-45cd-a831-475d2def093e": {
+            "id": "b97cf6c1-c497-45cd-a831-475d2def093e",
+            "expanded": false,
+            "cn": [
+                {
+                    "id": "a90890d1-80e4-4e67-a05a-8946ad94ba77"
+                },
+                {
+                    "id": "ac14daee-ec0e-484b-b6e5-e1b9c1d680ff"
+                },
+                {
+                    "id": "429ccb1f-896e-4864-87ca-17f58e5406a1"
+                },
+                {
+                    "id": "8095dab4-b5d3-4477-8450-433f9888d7a3"
                 }
             ]
         },
@@ -585,18 +606,19 @@
             "9924a71e-a8cf-4054-956e-ce698bc1e77a",
             "3f2ab6a1-f5e2-423d-ad23-a6346102c33b",
             "c55e1ef1-eab7-4bc7-9ea7-ed7527f3c371",
-            "eee085da-5e77-47d3-97eb-e0942cbbcb8d"
+            "eee085da-5e77-47d3-97eb-e0942cbbcb8d",
+            "b97cf6c1-c497-45cd-a831-475d2def093e"
         ]
     },
     "canvasState": {
         "topInstance": null
     },
     "inspectorState": {
-        "topInstance": "bc405ac1-12cf-45e3-9ceb-ab951769b5c9",
-        "selectedInstance": "bc405ac1-12cf-45e3-9ceb-ab951769b5c9"
+        "topInstance": "ae3081b9-bb5d-402e-b8bd-1282edb698d2",
+        "selectedInstance": "ae3081b9-bb5d-402e-b8bd-1282edb698d2"
     },
     "codeState": {
-        "topInstance": "bc405ac1-12cf-45e3-9ceb-ab951769b5c9"
+        "topInstance": "ae3081b9-bb5d-402e-b8bd-1282edb698d2"
     },
     "editMode": "code"
 }

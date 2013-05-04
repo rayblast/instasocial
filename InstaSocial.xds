@@ -334,6 +334,14 @@
                 "app/model/ParentUser.js"
             ],
             "className": "ParentUser"
+        },
+        "b97cf6c1-c497-45cd-a831-475d2def093e": {
+            "paths": [
+                "metadata/model/Link",
+                "app/model/override/Link.js",
+                "app/model/Link.js"
+            ],
+            "className": "Link"
         }
     },
     "viewOrderMap": {
@@ -371,7 +379,8 @@
             "c3fbd4fd-4280-4104-9f3c-2709b3d265e8",
             "1c25147d-70b7-41bb-93fa-48cc4eed49dc",
             "14f4f1fb-b73d-4145-beca-d1daf3e5133b",
-            "906a197c-0c65-44db-9113-552d15b27850"
+            "906a197c-0c65-44db-9113-552d15b27850",
+            "b97cf6c1-c497-45cd-a831-475d2def093e"
         ],
         "resource": [
             "4b24ab5c-d84f-4202-8fae-a791ffde467f",
