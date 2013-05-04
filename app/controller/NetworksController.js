@@ -111,6 +111,9 @@ Ext.define('InstaSocial.controller.NetworksController', {
     setupNewsFeed: function() {
         var newsFeedCarousel = Ext.getCmp(config.views.newsFeedCarousel);
         var newsFeedToggle = Ext.getCmp('newsFeedToggle');
+        var activeNetworksNum = core.connectivity.getActiveNetworks().length;
+
+        var newsFeedToggleBtWidth = Ext.fly('newsFeedToolbar').getSize().width / activeNetworksNum - 10;
 
         for(var id in core.connectivity.networks){
             var newsFeedToggleButton = Ext.getCmp('btNewsFeedToggle' + id);
@@ -123,7 +126,8 @@ Ext.define('InstaSocial.controller.NetworksController', {
                         xtype: 'button',
                         action: 'onBtNewsFeedToggleTap',
                         id: 'btNewsFeedToggle' + id,
-                        html:'<img src="resources/img/network-' + id + '.png" style="max-height:100%; max-width:100%;"/>'
+                        style: 'width:' + newsFeedToggleBtWidth + 'px',
+                        html:'<img src="resources/img/network-' + id + '.png" style="max-height:45px; max-width:100%;"/>'
                     };
                 }
                 newsFeedToggle.add(newsFeedToggleButton);
@@ -145,7 +149,7 @@ Ext.define('InstaSocial.controller.NetworksController', {
             newsFeedToggle.setPressedButtons([0]);
         }
 
-        if(core.connectivity.getActiveNetworks().length < 1){
+        if(activeNetworksNum < 1){
             Ext.getCmp(config.views.newsFeedNavigationBar).setTitle(labels.lblNewsFeed);
             Ext.getCmp('btNewsFeedRefresh').hide();
             Ext.getCmp('btNewsFeedPost').hide();
