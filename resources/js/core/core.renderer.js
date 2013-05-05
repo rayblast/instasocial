@@ -6,6 +6,8 @@ core.renderer = {
                 output += '<div class="repost_icon">';
                 output += '<img src="' + parent_user.photo + '" style="height:100%;"/>';
                 output += '</div>';
+                output += '<div class="repost_pic">';
+                output += '</div>';
                 output += '<div class="repost_name">';
                 output += parent_user.full_name;
                 output += '</div>';

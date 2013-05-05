@@ -49,6 +49,13 @@
     height: 30px;
 }
 
+.newsfeed-list-item .header .info .repost_pic{
+	background: url(../img/icons_post.png) no-repeat -136px center;
+    height: 17px;
+    width: 15px;
+    float: left;
+}
+
 .newsfeed-list-item .header .info .repost_name{
 	overflow: hidden;
     text-overflow: ellipsis;
@@ -110,7 +117,31 @@
     margin-right: 5pt;
 }
 
+.newsfeed-list-item .footer .likes .likes_img{
+    background: url(../img/icons_like.png) no-repeat 0px center;
+    height: 17px;
+    width: 14px;
+    float: left;
+    margin-right: 2pt;
+}
+
+.newsfeed-list-item .footer .likes .likes_count{
+    float: right;
+}
+
 .newsfeed-list-item .footer .comments{
+    float: right;
+    margin-left: 5pt;
+}
+
+.newsfeed-list-item .footer .comments .comments_img{
+    background: url(../img/icons_post.png) no-repeat -120px center;
+    height: 17px;
+    width: 15px;
+    float: left;
+}
+
+.newsfeed-list-item .footer .comments .comments_count{
     float: right;
 }
 
