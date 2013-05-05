@@ -1,4 +1,29 @@
 core.renderer = {
+        networks:{
+            vk: {
+                audio: function(id){
+                    if(document.getElementById('audioPlayer_' + id) !== null)
+                        return;
+                    
+                    core.helper.removeElementsByClass('.audioPlayer');
+                    
+                    var url = 'audio.getById';
+                    var params = {
+                        audios: id
+                    };
+                    
+                    VK.api(url, params, function(data) {
+                        var audioDiv = document.getElementById('audio_' + id);
+                        var audio_url = data.response[0].url;
+                        var player = '';
+                        player += '<audio controls class="audioPlayer" id="audioPlayer_' + id + '">';
+                        player += '<source src="' + audio_url + '" type="audio/mpeg" codecs="mp3">';
+                        player += '</audio>';
+                        audioDiv.innerHTML += player;
+                    });
+                }
+            }
+        },
         repost: function(parent_user, parent_created_time){
             if(parent_user !== null && parent_user !== undefined){
                 var output = '';
@@ -32,6 +57,9 @@ core.renderer = {
                         break;
                     case 'link':
                         output += core.renderer.link(attachment.Link);
+                        break;
+                    case 'audio':
+                        output += core.renderer.audio(attachment.Audio);
                         break;
                 }
                 output += '</div>';
@@ -82,6 +110,21 @@ core.renderer = {
             output += core.renderer.urlify(link.url);
             output += '</div>';
             
+            output += '</div>';
+            return output;
+        },
+        audio: function(audio){
+            var output = '';
+            var audio_id = audio.owner_id + '_' + audio.aid;
+            output += '<div class="audio" id="audio_' + audio_id + '" onclick="core.renderer.networks.vk.audio(\'' + audio_id + '\');">';
+            output += '<div class="controls">';
+            output += '</div>';
+            output += '<div class="title">';
+            output += '<b>' + audio.performer + '</b>' +  ' - ' + audio.title;
+            output += '</div>';
+            output += '<div class="duration">';
+            output += core.helper.getTimeFromSeconds(audio.duration);
+            output += '</div>';
             output += '</div>';
             return output;
         },

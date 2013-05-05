@@ -51,6 +51,20 @@
                 "model": "Link"
             },
             "designerId": "8a546864-a929-4ec1-873d-4f4750b98b96"
+        },
+        {
+            "type": "Ext.data.association.HasOne",
+            "reference": {
+                "name": "hasOne",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "associationKey": "audio",
+                "designer|displayName": "hasOneAudio",
+                "model": "Audio"
+            },
+            "designerId": "70f5512f-e85a-41aa-8e34-d785a1d8e8df"
         }
     ]
 }

@@ -342,6 +342,14 @@
                 "app/model/Link.js"
             ],
             "className": "Link"
+        },
+        "3d4d7205-c028-41fa-9fb4-673226db36b8": {
+            "paths": [
+                "metadata/model/Audio",
+                "app/model/override/Audio.js",
+                "app/model/Audio.js"
+            ],
+            "className": "Audio"
         }
     },
     "viewOrderMap": {
@@ -380,7 +388,8 @@
             "1c25147d-70b7-41bb-93fa-48cc4eed49dc",
             "14f4f1fb-b73d-4145-beca-d1daf3e5133b",
             "906a197c-0c65-44db-9113-552d15b27850",
-            "b97cf6c1-c497-45cd-a831-475d2def093e"
+            "b97cf6c1-c497-45cd-a831-475d2def093e",
+            "3d4d7205-c028-41fa-9fb4-673226db36b8"
         ],
         "resource": [
             "4b24ab5c-d84f-4202-8fae-a791ffde467f",

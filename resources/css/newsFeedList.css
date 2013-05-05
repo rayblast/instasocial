@@ -75,9 +75,9 @@
 
 .newsfeed-list-item .body .text{
 	max-height: 102pt;
-    text-overflow:ellipsis;
-    overflow:hidden;
-    white-space:nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 .newsfeed-list-item .attachments{
@@ -96,6 +96,40 @@
     height: 100px;
 	float: left;
     margin-right: 5pt;
+}
+
+.newsfeed-list-item .attachment .link .description{
+    width: 100%;
+    word-break: break-all;
+}
+
+.newsfeed-list-item .attachment .audio{
+	min-height: 25pt;
+    text-align: left;
+    padding-left: 5pt;
+    margin: 5pt;
+}
+
+.newsfeed-list-item .attachment .audio .controls{
+    background: url(../img/icons_play.png) no-repeat -3px center;
+    float: left;
+    height: 27pt;
+    width: 25pt;
+    margin-right: 3pt;
+}
+
+.newsfeed-list-item .attachment .audio .title{
+    float: left;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    padding-top: 7pt;
+    width: 70%;
+}
+                
+.newsfeed-list-item .attachment .audio .duration{
+    float: right;
+    padding-top: 7pt;
 }
 
 .newsfeed-list-item .footer{

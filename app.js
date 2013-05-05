@@ -31,7 +31,8 @@ Ext.application({
         'Attachment',
         'Data',
         'ParentUser',
-        'Link'
+        'Link',
+        'Audio'
     ],
     stores: [
         'NetworksStore',

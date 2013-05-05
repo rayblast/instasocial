@@ -18,7 +18,8 @@
             "Attachment",
             "Data",
             "ParentUser",
-            "Link"
+            "Link",
+            "Audio"
         ],
         "stores": [
             "NetworksStore",
@@ -81,14 +82,7 @@
                     "    mainView.list.select(2);\r",
                     "}\r",
                     "\r",
-                    "this.getApplication().getController(config.controllers.networksController).setupNewsFeed();\r",
-                    "\r",
-                    "var newsFeedPostToggle = Ext.getCmp('newsFeedPostToggle');\r",
-                    "console.log(newsFeedPostToggle);\r",
-                    "Ext.EventManager.onWindowResize(function () {\r",
-                    "    //newsFeedPostToggle\r",
-                    "    Ext.getBody().getSize().width;\r",
-                    "});"
+                    "this.getApplication().getController(config.controllers.networksController).setupNewsFeed();"
                 ]
             },
             "designerId": "5273e144-476c-4c55-8f3b-f465e4a594dc"
