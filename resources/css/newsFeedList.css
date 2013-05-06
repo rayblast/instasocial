@@ -6,8 +6,8 @@
     border-top: 0px;
 }
 
-.newsfeed-list .x-list-item-body{
-    padding: 5pt;
+.newsfeed-list .x-innerhtml {
+    padding: 5pt !important;
 }
 
 .newsfeed-list-item{
@@ -74,14 +74,18 @@
 }
 
 .newsfeed-list-item .body .text{
-	max-height: 102pt;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
+	overflow: hidden;
+    margin-top: 5pt;
+    margin-bottom: 5pt;
+    display: -webkit-box;
+    -webkit-line-clamp: 10;
+    -webkit-box-orient: vertical;
 }
 
 .newsfeed-list-item .attachments{
 	text-align: center;
+    margin-top: 5pt;
+    margin-bottom: 5pt;
 }
 
 .newsfeed-list-item .attachment .link{
