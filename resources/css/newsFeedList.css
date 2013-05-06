@@ -136,6 +136,30 @@
     padding-top: 7pt;
 }
 
+.newsfeed-list-item .attachment .video .title{
+    max-width: 100%;
+}
+
+.newsfeed-list-item .attachment .video .videoPhoto{
+	max-width: 100%;
+}
+
+.newsfeed-list-item .attachment .video .videoPlayIcon{
+    position: absolute;
+    z-index: 10;
+    background: url(../img/icons_video_play.png) no-repeat;
+    margin-left: -23px;
+    margin-top: -23px;
+    width: 46px;
+    height: 46px;
+    top: 50%;
+    left: 50%;
+}
+
+.newsfeed-list-item .attachment .video .videoPlayer{
+	max-width: 90%;
+}
+
 .newsfeed-list-item .footer{
     height: 15px;
     padding: 4px;

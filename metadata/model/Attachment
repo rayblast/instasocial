@@ -65,6 +65,20 @@
                 "model": "Audio"
             },
             "designerId": "70f5512f-e85a-41aa-8e34-d785a1d8e8df"
+        },
+        {
+            "type": "Ext.data.association.HasOne",
+            "reference": {
+                "name": "hasOne",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "associationKey": "video",
+                "designer|displayName": "hasOneVideo",
+                "model": "Video"
+            },
+            "designerId": "c0101452-de6f-4cd5-a443-b4b5299970f4"
         }
     ]
 }

@@ -21,6 +21,32 @@ core.renderer = {
                         player += '</audio>';
                         audioDiv.innerHTML += player;
                     });
+                },
+                video: function(id){
+                    if(document.getElementById('videoPlayer_' + id) !== null)
+                        return;
+                    
+                    core.helper.removeElementsByClass('.videoPlayer');
+                    core.helper.setElemetsStyleByClass('.videoPhoto', 'display', 'block');
+                    
+                    var url = 'video.get';
+                    var params = {
+                        videos: id,
+                        width: 320
+                    };
+                    
+                    VK.api(url, params, function(data) {
+                        if(data.response.length < 2)
+                            return;
+                        var videoDiv = document.getElementById('videoPlayerContainer_' + id);
+                        var videoPhoto = document.getElementById('videoPhoto_' + id);
+                        var video_url = data.response[1].player;
+                        var player = '';
+                        player += '<iframe class="videoPlayer" id="videoPlayer_' + id + '" src="' + video_url + '" frameborder="0">';
+                        player += '</iframe>';
+                        videoPhoto.style.display = 'none';
+                        videoDiv.innerHTML += player;
+                    });
                 }
             }
         },
@@ -60,6 +86,9 @@ core.renderer = {
                         break;
                     case 'audio':
                         output += core.renderer.audio(attachment.Audio);
+                        break;
+                    case 'video':
+                        output += core.renderer.video(attachment.Video);
                         break;
                 }
                 output += '</div>';
@@ -126,6 +155,30 @@ core.renderer = {
             output += core.helper.getTimeFromSeconds(audio.duration);
             output += '</div>';
             output += '</div>';
+            return output;
+        },
+        video: function(video){
+            var output = '';
+            var video_id = video.owner_id + '_' + video.vid;
+            var image = '';
+            if(video.image_big !== undefined){
+                image = video.image_big;
+            }else{
+                image = video.image;
+            }
+            output += '<div class="video" id="video_' + video_id + '">';
+            output += '<div class="videoPlayerContainer" id="videoPlayerContainer_' + video_id + '">';
+            output += '<div class="videoPhoto" id="videoPhoto_' + video_id + '" onclick="core.renderer.networks.vk.video(\'' + video_id + '\');">';
+            output += '<div class="videoPlayIcon">';
+            output += '</div>';
+            output += '<img src="' + image + '" style="max-width:90%;"/>';
+            output += '</div>';
+            output += '</div>';
+            output += '<div class="title">';
+            output += '<b>' + video.title + '</b>' +  ' (' + core.helper.getTimeFromSeconds(video.duration) + ')';
+            output += '</div>';
+            output += '</div>';
+            
             return output;
         },
         textToUrl: function(text, url) {

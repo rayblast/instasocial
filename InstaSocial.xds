@@ -350,6 +350,14 @@
                 "app/model/Audio.js"
             ],
             "className": "Audio"
+        },
+        "7110a2fc-a376-4e90-8754-c07cf31ce5dc": {
+            "paths": [
+                "metadata/model/Video",
+                "app/model/override/Video.js",
+                "app/model/Video.js"
+            ],
+            "className": "Video"
         }
     },
     "viewOrderMap": {
@@ -389,7 +397,8 @@
             "14f4f1fb-b73d-4145-beca-d1daf3e5133b",
             "906a197c-0c65-44db-9113-552d15b27850",
             "b97cf6c1-c497-45cd-a831-475d2def093e",
-            "3d4d7205-c028-41fa-9fb4-673226db36b8"
+            "3d4d7205-c028-41fa-9fb4-673226db36b8",
+            "7110a2fc-a376-4e90-8754-c07cf31ce5dc"
         ],
         "resource": [
             "4b24ab5c-d84f-4202-8fae-a791ffde467f",

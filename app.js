@@ -32,7 +32,8 @@ Ext.application({
         'Data',
         'ParentUser',
         'Link',
-        'Audio'
+        'Audio',
+        'Video'
     ],
     stores: [
         'NetworksStore',

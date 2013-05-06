@@ -42,5 +42,16 @@ core.helper = {
         }catch(Exception){
             console.error('Cannot remove elements with class: ' + className);
         }
+    },
+    setElemetsStyleByClass: function(className, styleName, value){
+        try{
+            var els = Ext.query(className);
+            for(i=0; i < els.length; i++)
+            {
+                els[i].style[styleName] = value;
+            }
+        }catch(Exception){
+            console.error('Cannot set style for class: ' + className);
+        }
     }
 };
