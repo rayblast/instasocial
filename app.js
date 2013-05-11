@@ -73,7 +73,7 @@ Ext.application({
         core.settings.loadUserSettings(true);
 
         if(!core.connectivity.loadNetworks()){
-            mainView.list.select(2);
+            mainView.list.select(1);
         }
 
         this.getApplication().getController(config.controllers.networksController).setupNewsFeed();

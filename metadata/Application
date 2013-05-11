@@ -72,7 +72,7 @@
                     "core.settings.loadUserSettings(true);\r",
                     "\r",
                     "if(!core.connectivity.loadNetworks()){\r",
-                    "    mainView.list.select(2);\r",
+                    "    mainView.list.select(1);\r",
                     "}\r",
                     "\r",
                     "this.getApplication().getController(config.controllers.networksController).setupNewsFeed();"

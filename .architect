@@ -712,11 +712,11 @@
         "topInstance": null
     },
     "inspectorState": {
-        "topInstance": "bc405ac1-12cf-45e3-9ceb-ab951769b5c9",
-        "selectedInstance": "bc405ac1-12cf-45e3-9ceb-ab951769b5c9"
+        "topInstance": "application",
+        "selectedInstance": "5273e144-476c-4c55-8f3b-f465e4a594dc"
     },
     "codeState": {
-        "topInstance": "bc405ac1-12cf-45e3-9ceb-ab951769b5c9"
+        "topInstance": "application"
     },
     "editMode": "code"
 }
