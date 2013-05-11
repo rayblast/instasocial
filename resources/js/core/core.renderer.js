@@ -113,7 +113,7 @@ core.renderer = {
             
             output += '<img ' + style + ' src="' + src + '"/>';
             if(photo.text !== undefined)
-                output += '<div class="text">' + photo.text + '</div>';
+                output += '<div class="text">' + core.renderer.urlify(photo.text) + '</div>';
             output += '</div>';
             return output;
         },

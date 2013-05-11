@@ -124,16 +124,6 @@ Ext.define("InstaSocial.view.MainView", {
                 maskOnOpen: true
             }]
         },{
-            title: labels.lblOther,
-            group: labels.lblNewsFeed,
-            /**
-             *  Here's an example of how an item can simply execute a
-             *  function, rather than display a new component.
-             */
-            handler: function() {
-                Ext.Msg.alert(labels.lblOther, '');
-            }
-        },{
             title: labels.lblNetworks,
             group: labels.lblSettings,
             slideButton: {
