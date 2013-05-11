@@ -6,8 +6,6 @@
     },
     "codeClass": null,
     "userConfig": {
-        "activeFb": null,
-        "activeVk": null,
         "models": [
             "NetworkModel",
             "UserSettingModel",
@@ -28,7 +26,8 @@
             "UserSettingsLocalStore",
             "NewsFeedvkStore",
             "NewsFeedfbStore",
-            "DataLocalStore"
+            "DataLocalStore",
+            "NewsFeedanStore"
         ],
         "views": [
             "NetworkListContainer",
@@ -41,28 +40,21 @@
             "NewsFeedNavigationBarHeader",
             "NewsFeedToolbar",
             "NewsFeedCarousel",
-            "PostPanel"
+            "PostPanel",
+            "NewsFeedanList"
         ],
         "controllers": [
             "NetworksController",
             "MainController",
             "NewsFeedController"
         ],
+        "icon": "resources/img/network-an.png",
         "name": "InstaSocial"
     },
+    "configAlternates": {
+        "icon": "string"
+    },
     "designerId": "application",
-    "customConfigs": [
-        {
-            "group": "(Custom Properties)",
-            "name": "activeFb",
-            "type": "string"
-        },
-        {
-            "group": "(Custom Properties)",
-            "name": "activeVk",
-            "type": "string"
-        }
-    ],
     "cn": [
         {
             "type": "fixedfunction",

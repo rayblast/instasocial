@@ -114,34 +114,14 @@ Ext.define('InstaSocial.controller.NetworksController', {
         var newsFeedToggle = Ext.getCmp('newsFeedToggle');
         var activeNetworksNum = core.connectivity.getActiveNetworks().length;
 
-        var newsFeedToggleBtWidth = 100 / activeNetworksNum;
+        if(activeNetworksNum > 0){
+            InstaSocial.app.getController(config.controllers.networksController).setupNewsFeedList('an', config.core.connectivity.state.loggedin);
+        }else{
+            InstaSocial.app.getController(config.controllers.networksController).setupNewsFeedList('an', config.core.connectivity.state.loggedout);
+        }
 
         for(var id in core.connectivity.networks){
-            var newsFeedToggleButton = Ext.getCmp('btNewsFeedToggle' + id);
-
-            if(core.connectivity.networks[id].state == config.core.connectivity.state.loggedin){
-                newsFeedCarousel.add({xtype: 'newsFeed' + id + 'List'});
-
-                newsFeedToggle.remove(newsFeedToggleButton);
-                newsFeedToggleButton = {
-                    xtype: 'button',
-                    action: 'onBtNewsFeedToggleTap',
-                    id: 'btNewsFeedToggle' + id,
-                    style: 'width:' + newsFeedToggleBtWidth + '%;',
-                    html:'<img src="resources/img/network-' + id + '.png" style="max-height:100%; max-width:100%;"/>'
-                };
-                newsFeedToggle.add(newsFeedToggleButton);
-
-            }else{
-                var newsFeedList = newsFeedCarousel.down('newsFeed' + id + 'List');
-                if(newsFeedList !== null){
-                    newsFeedList.hide();
-                    newsFeedCarousel.remove(newsFeedList);
-                }
-                if(newsFeedToggleButton !== null && newsFeedToggleButton !== undefined){
-                    newsFeedToggle.remove(newsFeedToggleButton);
-                }
-            }
+            InstaSocial.app.getController(config.controllers.networksController).setupNewsFeedList(id, core.connectivity.networks[id].state);   
         }
 
         if(newsFeedToggle.items.items.length > 0){
@@ -156,6 +136,38 @@ Ext.define('InstaSocial.controller.NetworksController', {
         }else{
             Ext.getCmp('btNewsFeedRefresh').show();
             Ext.getCmp('btNewsFeedPost').show();
+        }
+    },
+
+    setupNewsFeedList: function(id, state) {
+        var newsFeedCarousel = Ext.getCmp(config.views.newsFeedCarousel);
+        var newsFeedToggle = Ext.getCmp('newsFeedToggle');
+        var newsFeedToggleButton = Ext.getCmp('btNewsFeedToggle' + id);
+        var activeNetworksNum = core.connectivity.getActiveNetworks().length;
+        var newsFeedToggleBtWidth = 100 / (activeNetworksNum + 1);
+
+        if(state == config.core.connectivity.state.loggedin){
+            newsFeedCarousel.add({xtype: 'newsFeed' + id + 'List'});
+
+            newsFeedToggle.remove(newsFeedToggleButton);
+            newsFeedToggleButton = {
+                xtype: 'button',
+                action: 'onBtNewsFeedToggleTap',
+                id: 'btNewsFeedToggle' + id,
+                style: 'width:' + newsFeedToggleBtWidth + '%;',
+                html:'<img src="resources/img/network-' + id + '.png" style="max-height:100%; max-width:100%;"/>'
+            };
+            newsFeedToggle.add(newsFeedToggleButton);
+
+        }else{
+            var newsFeedList = newsFeedCarousel.down('newsFeed' + id + 'List');
+            if(newsFeedList !== null){
+                newsFeedList.hide();
+                newsFeedCarousel.remove(newsFeedList);
+            }
+            if(newsFeedToggleButton !== null && newsFeedToggleButton !== undefined){
+                newsFeedToggle.remove(newsFeedToggleButton);
+            }
         }
     }
 

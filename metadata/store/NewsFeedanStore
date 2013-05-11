@@ -1,0 +1,33 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "clearOnPageLoad": false,
+        "model": "Post",
+        "pageSize": 10,
+        "storeId": "NewsFeedanStore",
+        "designer|userClassName": "NewsFeedanStore",
+        "designer|userAlias": "newsFeedanStore"
+    },
+    "designerId": "f2862d7b-68f6-4c64-8a93-7b19bad44d1f",
+    "cn": [
+        {
+            "type": "Ext.util.Sorter",
+            "reference": {
+                "name": "sorters",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "direction": "DESC",
+                "property": "created_time",
+                "designer|displayName": "CreatedTimeSorter"
+            },
+            "designerId": "1c9cd992-18d6-45f3-9a0d-646462d18c12"
+        }
+    ]
+}

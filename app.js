@@ -41,7 +41,8 @@ Ext.application({
         'UserSettingsLocalStore',
         'NewsFeedvkStore',
         'NewsFeedfbStore',
-        'DataLocalStore'
+        'DataLocalStore',
+        'NewsFeedanStore'
     ],
     views: [
         'NetworkListContainer',
@@ -54,13 +55,15 @@ Ext.application({
         'NewsFeedNavigationBarHeader',
         'NewsFeedToolbar',
         'NewsFeedCarousel',
-        'PostPanel'
+        'PostPanel',
+        'NewsFeedanList'
     ],
     controllers: [
         'NetworksController',
         'MainController',
         'NewsFeedController'
     ],
+    icon: 'resources/img/network-an.png',
     name: 'InstaSocial',
 
     launch: function() {

@@ -1,5 +1,56 @@
 core.newsfeed = {
     networks: {
+        an: {
+            localDataLoaded: false,
+            refreshData: false,
+            getNewsFeed: function(since, until, count, diff){
+                if(count === null || count === undefined){
+                    count = config.core.ui.newsFeedanPageSize;
+                }
+                for(var id in core.connectivity.networks){
+                    if(core.connectivity.networks[id].state == config.core.connectivity.state.loggedin){
+                        var newsFeedStore = Ext.getStore(config.stores['newsFeed' + id + 'Store']);
+                            var post = newsFeedStore.last();
+                        if(diff === true && post !== undefined){
+                            core.newsfeed.networks[id].getNewsFeed(since, post.data.created_time, count);
+                        }else{
+                            core.newsfeed.networks[id].getNewsFeed(since, until, count);
+                        }
+                    }
+                }
+            },
+            addData: function(post, networkId){
+                var newsFeedanStore = Ext.getStore(config.stores.newsFeedanStore);     
+                core.store.helper.addData(newsFeedanStore, post);
+            },
+            setData: function(posts, networkId){
+                var newsFeedanStore = Ext.getStore(config.stores.newsFeedanStore);       
+                core.newsfeed.networks.an.clearData(networkId);        
+                core.store.helper.addData(newsFeedanStore, posts);
+            },
+            clearData: function(networkId){
+                var newsFeedanStore = Ext.getStore(config.stores.newsFeedanStore);
+                if(networkId !== null && networkId !== undefined){
+                    newsFeedanStore.each(function(rec) {
+                        rec.setDirty(true);
+                        if(rec.data.network_id == networkId){
+                            newsFeedanStore.remove(rec);
+                        }
+                    });
+                    newsFeedanStore.sync();
+                }else{
+                    core.store.helper.clearData(newsFeedanStore);
+                }
+            },
+            loadData: function(){
+                for(var id in core.connectivity.networks){
+                    if(core.connectivity.networks[id].state == config.core.connectivity.state.loggedin){
+                        core.newsfeed.networks[id].loadData();
+                    }
+                }
+                core.newsfeed.networks.an.localDataLoaded = true;
+            }
+        },
         fb: {
             localDataLoaded: false,
             refreshData: false,
@@ -38,21 +89,26 @@ core.newsfeed = {
             addData: function(post){
                 var newsFeedfbStore = Ext.getStore(config.stores.newsFeedfbStore);     
                 core.store.helper.addData(newsFeedfbStore, post);
+                core.newsfeed.networks.an.addData(post, 'fb');
             },
             setData: function(posts){
                 var newsFeedfbStore = Ext.getStore(config.stores.newsFeedfbStore);                   
                 core.store.helper.setData(newsFeedfbStore, posts);
+                core.newsfeed.networks.an.setData(posts, 'fb');
             },
             clearData: function(){
                 var newsFeedfbStore = Ext.getStore(config.stores.newsFeedfbStore);   
                 core.store.helper.clearData(newsFeedfbStore);
                 core.store.local.remove(config.stores.newsFeedfbStore);
+                core.newsfeed.networks.an.clearData('fb');
             },
             saveData: function(posts){
                 core.store.local.save(config.stores.newsFeedfbStore, posts);
             },
             loadData: function(){
-                core.newsfeed.networks.fb.setData(core.store.local.load(config.stores.newsFeedfbStore));
+                var data = core.store.local.load(config.stores.newsFeedfbStore);
+                core.newsfeed.networks.fb.setData(data);
+                core.newsfeed.networks.an.setData(data, 'fb');
                 core.newsfeed.networks.fb.localDataLoaded = true;
             }
         },
@@ -95,21 +151,26 @@ core.newsfeed = {
             addData: function(post){
                 var newsFeedvkStore = Ext.getStore(config.stores.newsFeedvkStore);     
                 core.store.helper.addData(newsFeedvkStore, post);
+                core.newsfeed.networks.an.addData(post, 'vk');
             },
             setData: function(posts){
                 var newsFeedvkStore = Ext.getStore(config.stores.newsFeedvkStore);                   
                 core.store.helper.setData(newsFeedvkStore, posts);
+                core.newsfeed.networks.an.setData(posts, 'vk');
             },
             clearData: function(){
                 var newsFeedvkStore = Ext.getStore(config.stores.newsFeedvkStore);   
                 core.store.helper.clearData(newsFeedvkStore);
                 core.store.local.remove(config.stores.newsFeedvkStore);
+                core.newsfeed.networks.an.clearData('vk');
             },
             saveData: function(posts){
                 core.store.local.save(config.stores.newsFeedvkStore, posts);
             },
             loadData: function(){
-                core.newsfeed.networks.vk.setData(core.store.local.load(config.stores.newsFeedvkStore));
+                var data = core.store.local.load(config.stores.newsFeedvkStore);
+                core.newsfeed.networks.vk.setData(data);
+                core.newsfeed.networks.an.setData(data, 'vk');
                 core.newsfeed.networks.vk.localDataLoaded = true;
             }
         }

@@ -23,6 +23,7 @@ var labels = {
 };
 
 labels.networks = {
+    an: 'All',
     fb: 'Facebook',
     vk: 'Vkontakte'
 };

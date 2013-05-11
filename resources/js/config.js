@@ -15,6 +15,7 @@ var config = {
         networksStore: 'NetworksStore',
         userSettingsStore: 'UserSettingsStore',
         userSettingsLocalStore: 'UserSettingsLocalStore',
+        newsFeedanStore: 'NewsFeedanStore',
         newsFeedfbStore: 'NewsFeedfbStore',
         newsFeedvkStore: 'NewsFeedvkStore',
         dataLocalStore: 'DataLocalStore'
@@ -48,6 +49,8 @@ var config = {
             networkVkState: 'networkvkstate'
         },
         ui:{
+            newsFeedanPageSize: 5,
+            newsFeedanUpdateOffset: 500,
             newsFeedfbPageSize: 10,
             newsFeedfbUpdateOffset: 500,
             newsFeedvkPageSize: 10,

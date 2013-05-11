@@ -358,6 +358,22 @@
                 "app/model/Video.js"
             ],
             "className": "Video"
+        },
+        "f0e87a29-4c0d-4a5b-a512-35acaa4a214d": {
+            "paths": [
+                "metadata/view/NewsFeedanList",
+                "app/view/override/NewsFeedanList.js",
+                "app/view/NewsFeedanList.js"
+            ],
+            "className": "NewsFeedanList"
+        },
+        "f2862d7b-68f6-4c64-8a93-7b19bad44d1f": {
+            "paths": [
+                "metadata/store/NewsFeedanStore",
+                "app/store/override/NewsFeedanStore.js",
+                "app/store/NewsFeedanStore.js"
+            ],
+            "className": "NewsFeedanStore"
         }
     },
     "viewOrderMap": {
@@ -365,6 +381,7 @@
             "270affb2-339c-4b88-9db9-9079cc40d3bf",
             "9b26b12d-54ec-4e11-93ea-2e1dccb8a02e",
             "f9e0d041-8d6c-43c6-a230-ed4da1c10fe3",
+            "f0e87a29-4c0d-4a5b-a512-35acaa4a214d",
             "3f2ab6a1-f5e2-423d-ad23-a6346102c33b",
             "c55e1ef1-eab7-4bc7-9ea7-ed7527f3c371",
             "68a8c996-c164-4a3b-8a04-3951851a6f19",
@@ -378,6 +395,7 @@
             "2ce1f58e-f863-49a0-91eb-b6f7709301de",
             "309bff0a-b698-4b17-950d-97777abcb2f8",
             "e650ad08-ea3c-4692-81e6-b9ec854c5989",
+            "f2862d7b-68f6-4c64-8a93-7b19bad44d1f",
             "09b8eec8-4662-4007-8206-5470fccfef4d",
             "9924a71e-a8cf-4054-956e-ce698bc1e77a"
         ],

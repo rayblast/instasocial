@@ -145,6 +145,7 @@ Ext.define('InstaSocial.controller.NewsFeedController', {
 
     setupPostPanel: function() {
         var newsFeedPostToggle = Ext.getCmp('newsFeedPostToggle');
+        var postNetworkToggleIds = [];
 
         for(var id in core.connectivity.networks){
             var btNewsFeedPostToggle = Ext.getCmp('btNewsFeedPostToggle' + id);
@@ -154,14 +155,13 @@ Ext.define('InstaSocial.controller.NewsFeedController', {
                 if(btNewsFeedPostToggle === null || btNewsFeedPostToggle === undefined){
                     btNewsFeedPostToggle = {
                         xtype: 'button',
-                        //action: 'onBtNewsFeedToggleTap',
                         id: 'btNewsFeedPostToggle' + id,
                         style: 'height:20pt; padding-top: 0.1em;',
                         html:'<img src="resources/img/network-' + id + '.png" style="max-height:20pt; max-width:100%;"/>'
                     };
                 }
                 newsFeedPostToggle.add(btNewsFeedPostToggle);
-
+                postNetworkToggleIds.push('btNewsFeedPostToggle' + id);
             }else{
                 if(btNewsFeedPostToggle !== null && btNewsFeedPostToggle !== undefined){
                     newsFeedPostToggle.remove(btNewsFeedPostToggle);
@@ -171,7 +171,11 @@ Ext.define('InstaSocial.controller.NewsFeedController', {
 
         var network_id = this.getActiveNetworkId();
 
-        newsFeedPostToggle.setPressedButtons(['btNewsFeedPostToggle' + network_id]);
+        if(network_id == 'an' && postNetworkToggleIds.length > 0){
+            newsFeedPostToggle.setPressedButtons(postNetworkToggleIds);
+        }else{
+            newsFeedPostToggle.setPressedButtons(['btNewsFeedPostToggle' + network_id]);
+        }
     }
 
 });

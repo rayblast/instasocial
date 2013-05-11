@@ -27,6 +27,19 @@
 	overflow: hidden;
 }
 
+.newsfeed-list-item .header .network_logo{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+	height: 20pt;
+    width: 20pt;
+}
+
+.newsfeed-list-item .header .network_logo_img{
+	max-height: 100%;
+    max-width: 100%;
+}
+
 .newsfeed-list-item .header .icon{
 	float: left;
 	width: 60px;
@@ -149,7 +162,6 @@
     z-index: 10;
     background: url(../img/icons_video_play.png) no-repeat;
     margin-left: -23px;
-    margin-top: -23px;
     width: 46px;
     height: 46px;
     top: 50%;

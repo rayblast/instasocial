@@ -1,0 +1,133 @@
+{
+    "type": "Ext.dataview.List",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "locked": false,
+        "cls": [
+            "newsfeed-list"
+        ],
+        "id": "newsFeedanList",
+        "itemId": "newsFeedanList",
+        "showAnimation": "slide",
+        "designer|userClassName": "NewsFeedanList",
+        "designer|userAlias": "newsFeedanList",
+        "scrollable": [
+            "{\r",
+            "    direction: 'vertical',\r",
+            "    directionLock: true\r",
+            "}\r",
+            ""
+        ],
+        "disableSelection": true,
+        "deferEmptyText": false,
+        "scrollToTopOnRefresh": false,
+        "store": "NewsFeedanStore",
+        "variableHeights": true
+    },
+    "configAlternates": {
+        "locked": "boolean"
+    },
+    "designerId": "f0e87a29-4c0d-4a5b-a512-35acaa4a214d",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "locked",
+            "type": "string"
+        }
+    ],
+    "cn": [
+        {
+            "type": "Ext.XTemplate",
+            "reference": {
+                "name": "itemTpl",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "disableFormats": true,
+                "implHandler": [
+                    "<div class=\"newsfeed-list-item\">\r",
+                    "\t<div class=\"header\">\r",
+                    "        <div class=\"network_logo\">\r",
+                    "            <img class=\"network_logo_img\" src=\"resources/img/network-{network_id}.png\"/>\r",
+                    "    \t</div>\r",
+                    "        <div class=\"icon\">\r",
+                    "            <img src=\"{User.photo}\"/>\r",
+                    "    \t</div>\r",
+                    "        <div class=\"info\">\r",
+                    "        \t<div class=\"name\">\r",
+                    "        \t\t{User.full_name}\r",
+                    "    \t\t</div>\r",
+                    "            {[core.renderer.repost(values.ParentUser, values.parent_created_time)]}\r",
+                    "        </div>\r",
+                    "    </div>\r",
+                    "    <div class=\"body\">\r",
+                    "        <div class=\"text\">\r",
+                    "            {text}\r",
+                    "        </div>\r",
+                    "        {[core.renderer.attachments(values.attachments)]}\r",
+                    "    </div>\r",
+                    "    <div class=\"footer\">\r",
+                    "        <div class=\"date\">\r",
+                    "            {[core.helper.getDateTimeFromUnix(values.created_time)]}\r",
+                    "        </div>\r",
+                    "        <div class=\"comments\">\r",
+                    "            <div class=\"comments_img\">\r",
+                    "            </div>\r",
+                    "            <div class=\"comments_count\">\r",
+                    "                {comments_count}\r",
+                    "            </div>\r",
+                    "        </div>\r",
+                    "        <div class=\"likes\">\r",
+                    "            <div class=\"likes_img\">\r",
+                    "            </div>\r",
+                    "            <div class=\"likes_count\">\r",
+                    "                {likes_count}\r",
+                    "            </div>\r",
+                    "        </div>\r",
+                    "    </div>\r",
+                    "</div>\r",
+                    ""
+                ],
+                "designer|displayName": "itemTpl"
+            },
+            "designerId": "fe9423f2-7352-4f12-b48b-539223ade856"
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "initialize",
+                "implHandler": [
+                    "this.callParent();\r",
+                    "this.setEmptyText(labels.lblNoData);\r",
+                    "this.refresh();\r",
+                    "\r",
+                    "var scroller = this.getScrollable().getScroller();\r",
+                    "scroller.on({\r",
+                    "    scroll: function(scroller, x, y){\r",
+                    "        if (!this.config.locked && y >= scroller.maxPosition.y - config.core.ui.newsFeedanUpdateOffset) {\r",
+                    "            this.config.locked = true;\r",
+                    "            core.newsfeed.networks.an.getNewsFeed(null, null, null, true);\r",
+                    "        }\r",
+                    "    },\r",
+                    "    maxpositionchange: function(scroller, maxPosition, eOpts){\r",
+                    "        this.config.locked = false;\r",
+                    "    },\r",
+                    "    scope: this\r",
+                    "});\r",
+                    ""
+                ]
+            },
+            "designerId": "6ea62008-a6aa-4521-a05d-ab645dbad9a6"
+        }
+    ]
+}
