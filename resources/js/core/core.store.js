@@ -28,7 +28,7 @@ core.store = {
                 return dataLocalStore.findRecord('id', id).data.value;
             }catch(Exception){  
                 console.error('Local data load failed! (' + id + ')');
-                return {};
+                return null;
             }
         },
         remove: function(id){

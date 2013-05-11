@@ -115,7 +115,7 @@
                     "            this.config.locked = true;\r",
                     "            var newsFeedfbStore = Ext.getStore(config.stores.newsFeedfbStore);\r",
                     "            var post = newsFeedfbStore.last();\r",
-                    "            core.newsfeed.networks.fb.getNewsFeed(null, post.data.created_time, null);\r",
+                    "            core.newsfeed.networks.fb.getNewsFeed(null, (post !== undefined) ? post.data.created_time : null, null);\r",
                     "        }\r",
                     "    },\r",
                     "    maxpositionchange: function(scroller, maxPosition, eOpts){\r",

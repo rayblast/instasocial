@@ -90,7 +90,7 @@ Ext.define('InstaSocial.view.NewsFeedvkList', {
                     this.config.locked = true;
                     var newsFeedvkStore = Ext.getStore(config.stores.newsFeedvkStore);
                     var post = newsFeedvkStore.last();
-                    core.newsfeed.networks.vk.getNewsFeed(null, post.data.created_time, null);
+                    core.newsfeed.networks.vk.getNewsFeed(null, (post !== undefined) ? post.data.created_time : null, null);
                 }
             },
             maxpositionchange: function(scroller, maxPosition, eOpts){

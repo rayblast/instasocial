@@ -115,7 +115,7 @@
                     "            this.config.locked = true;\r",
                     "            var newsFeedvkStore = Ext.getStore(config.stores.newsFeedvkStore);\r",
                     "            var post = newsFeedvkStore.last();\r",
-                    "            core.newsfeed.networks.vk.getNewsFeed(null, post.data.created_time, null);\r",
+                    "            core.newsfeed.networks.vk.getNewsFeed(null, (post !== undefined) ? post.data.created_time : null, null);\r",
                     "        }\r",
                     "    },\r",
                     "    maxpositionchange: function(scroller, maxPosition, eOpts){\r",

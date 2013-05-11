@@ -107,8 +107,9 @@ core.newsfeed = {
             },
             loadData: function(){
                 var data = core.store.local.load(config.stores.newsFeedfbStore);
-                core.newsfeed.networks.fb.setData(data);
-                core.newsfeed.networks.an.setData(data, 'fb');
+                if(data !== null){
+                    core.newsfeed.networks.fb.setData(data);
+                }
                 core.newsfeed.networks.fb.localDataLoaded = true;
             }
         },
@@ -169,8 +170,9 @@ core.newsfeed = {
             },
             loadData: function(){
                 var data = core.store.local.load(config.stores.newsFeedvkStore);
-                core.newsfeed.networks.vk.setData(data);
-                core.newsfeed.networks.an.setData(data, 'vk');
+                if(data !== null){
+                    core.newsfeed.networks.vk.setData(data);
+                }
                 core.newsfeed.networks.vk.localDataLoaded = true;
             }
         }
