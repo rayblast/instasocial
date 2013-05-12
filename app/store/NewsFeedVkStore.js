@@ -25,6 +25,18 @@ Ext.define('InstaSocial.store.NewsFeedvkStore', {
         clearOnPageLoad: false,
         model: 'InstaSocial.model.Post',
         pageSize: 10,
-        storeId: 'NewsFeedvkStore'
+        storeId: 'NewsFeedvkStore',
+        listeners: [
+            {
+                fn: 'onStoreAddrecords',
+                event: 'addrecords'
+            }
+        ]
+    },
+
+    onStoreAddrecords: function(store, records, eOpts) {
+        var list = Ext.getCmp('newsFeedvkList');
+        Ext.defer(function(){ list.refresh(); }, 100, list);
     }
+
 });

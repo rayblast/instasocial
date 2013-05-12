@@ -26,6 +26,7 @@
         "deferEmptyText": false,
         "scrollToTopOnRefresh": false,
         "store": "NewsFeedvkStore",
+        "infinite": true,
         "variableHeights": true
     },
     "configAlternates": {

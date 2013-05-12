@@ -18,6 +18,7 @@ var labels = {
     lblTypeYourMessageHere: 'Type your message here...',
     lblVkontakte: 'Vkontakte',
 
+    msgCantPlayMedia: 'Cannot play the media!',
     msgConnTimeout: 'Connection timeout!',
     msgLoading: 'Loading...'
 };

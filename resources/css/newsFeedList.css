@@ -162,6 +162,7 @@
     z-index: 10;
     background: url(../img/icons_video_play.png) no-repeat;
     margin-left: -23px;
+    margin-top: -23px;
     width: 46px;
     height: 46px;
     top: 50%;

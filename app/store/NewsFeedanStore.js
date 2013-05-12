@@ -29,6 +29,18 @@ Ext.define('InstaSocial.store.NewsFeedanStore', {
         sorters: {
             direction: 'DESC',
             property: 'created_time'
-        }
+        },
+        listeners: [
+            {
+                fn: 'onStoreAddrecords',
+                event: 'addrecords'
+            }
+        ]
+    },
+
+    onStoreAddrecords: function(store, records, eOpts) {
+        var list = Ext.getCmp('newsFeedanList');
+        Ext.defer(function(){ list.refresh(); }, 100, list);
     }
+
 });

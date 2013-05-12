@@ -27,6 +27,7 @@ Ext.define('InstaSocial.view.NewsFeedanList', {
         deferEmptyText: false,
         scrollToTopOnRefresh: false,
         store: 'NewsFeedanStore',
+        infinite: true,
         variableHeights: true,
         scrollable: {
             direction: 'vertical',

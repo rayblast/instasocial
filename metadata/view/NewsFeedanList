@@ -26,6 +26,7 @@
         "deferEmptyText": false,
         "scrollToTopOnRefresh": false,
         "store": "NewsFeedanStore",
+        "infinite": true,
         "variableHeights": true
     },
     "configAlternates": {

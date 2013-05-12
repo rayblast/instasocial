@@ -13,5 +13,24 @@
         "designer|userClassName": "NewsFeedfbStore",
         "designer|userAlias": "newsFeedfbStore"
     },
-    "designerId": "09b8eec8-4662-4007-8206-5470fccfef4d"
+    "designerId": "09b8eec8-4662-4007-8206-5470fccfef4d",
+    "cn": [
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onStoreAddrecords",
+                "implHandler": [
+                    "var list = Ext.getCmp('newsFeedfbList');\r",
+                    "Ext.defer(function(){ list.refresh(); }, 100, list);"
+                ],
+                "name": "addrecords"
+            },
+            "designerId": "9e2d2356-4a68-4859-872b-43beeee5be51"
+        }
+    ]
 }

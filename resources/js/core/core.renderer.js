@@ -36,8 +36,10 @@ core.renderer = {
                     };
                     
                     VK.api(url, params, function(data) {
-                        if(data.response.length < 2)
+                        if(data.response.length < 2){
+                            Ext.Msg.alert(labels.lblError,labels.msgCantPlayMedia);
                             return;
+                        }
                         var videoDiv = document.getElementById('videoPlayerContainer_' + id);
                         var videoPhoto = document.getElementById('videoPhoto_' + id);
                         var video_url = data.response[1].player;
@@ -98,7 +100,11 @@ core.renderer = {
         },
         photo: function(photo){
             var output = '';
-            output += '<div class="photo">';
+            
+            var divStyle = ''
+            divStyle += (photo.height !== undefined)?('min-height: 310px;'):'';
+            
+            output += '<div class="photo" style="' + divStyle + '">';
             var src = '';
             if(photo.src_big !== undefined){
                 src = photo.src_big;
@@ -107,8 +113,13 @@ core.renderer = {
                 src = photo.src;
             }
             
+            if(src === undefined || src === null)
+                return output
+            
             var style = '';
-            style = 'style="max-width: 90%"';
+            style = 'style="max-width: 90%;';
+            style += (photo.height !== undefined)?('max-height: 310px;'):'';
+            style += '"';
 
             
             output += '<img ' + style + ' src="' + src + '"/>';
@@ -171,7 +182,7 @@ core.renderer = {
             output += '<div class="videoPhoto" id="videoPhoto_' + video_id + '" onclick="core.renderer.networks.vk.video(\'' + video_id + '\');">';
             output += '<div class="videoPlayIcon">';
             output += '</div>';
-            output += '<img src="' + image + '" style="max-width:90%;"/>';
+            output += '<img src="' + image + '" style="max-width:90%; height:160px;"/>';
             output += '</div>';
             output += '</div>';
             output += '<div class="title">';

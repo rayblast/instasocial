@@ -25,6 +25,18 @@ Ext.define('InstaSocial.store.NewsFeedfbStore', {
         clearOnPageLoad: false,
         model: 'InstaSocial.model.Post',
         pageSize: 10,
-        storeId: 'NewsFeedfbStore'
+        storeId: 'NewsFeedfbStore',
+        listeners: [
+            {
+                fn: 'onStoreAddrecords',
+                event: 'addrecords'
+            }
+        ]
+    },
+
+    onStoreAddrecords: function(store, records, eOpts) {
+        var list = Ext.getCmp('newsFeedfbList');
+        Ext.defer(function(){ list.refresh(); }, 100, list);
     }
+
 });

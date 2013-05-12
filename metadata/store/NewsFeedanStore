@@ -28,6 +28,23 @@
                 "designer|displayName": "CreatedTimeSorter"
             },
             "designerId": "1c9cd992-18d6-45f3-9a0d-646462d18c12"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onStoreAddrecords",
+                "implHandler": [
+                    "var list = Ext.getCmp('newsFeedanList');\r",
+                    "Ext.defer(function(){ list.refresh(); }, 100, list);"
+                ],
+                "name": "addrecords"
+            },
+            "designerId": "a5fdf12c-88d4-43bb-ad20-72945adbcd00"
         }
     ]
 }

@@ -13,5 +13,24 @@
         "designer|userClassName": "NewsFeedvkStore",
         "designer|userAlias": "newsFeedvkStore"
     },
-    "designerId": "9924a71e-a8cf-4054-956e-ce698bc1e77a"
+    "designerId": "9924a71e-a8cf-4054-956e-ce698bc1e77a",
+    "cn": [
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onStoreAddrecords",
+                "implHandler": [
+                    "var list = Ext.getCmp('newsFeedvkList');\r",
+                    "Ext.defer(function(){ list.refresh(); }, 100, list);"
+                ],
+                "name": "addrecords"
+            },
+            "designerId": "b00175f5-58b7-45cc-b177-4dc7245ab066"
+        }
+    ]
 }
