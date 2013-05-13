@@ -116,7 +116,7 @@ Ext.define('InstaSocial.controller.NetworksController', {
 
         newsFeedCarousel.removeAll(false, false);
 
-        if(activeNetworksNum > 0){
+        if(activeNetworksNum > 1){
             InstaSocial.app.getController(config.controllers.networksController).setupNewsFeedList('an', config.core.connectivity.state.loggedin);
         }else{
             InstaSocial.app.getController(config.controllers.networksController).setupNewsFeedList('an', config.core.connectivity.state.loggedout);
@@ -146,7 +146,8 @@ Ext.define('InstaSocial.controller.NetworksController', {
         var newsFeedToggle = Ext.getCmp('newsFeedToggle');
         var newsFeedToggleButton = Ext.getCmp('btNewsFeedToggle' + id);
         var activeNetworksNum = core.connectivity.getActiveNetworks().length;
-        var newsFeedToggleBtWidth = 100 / (activeNetworksNum + 1);
+        var togglesNum = (activeNetworksNum > 1) ? (activeNetworksNum + 1) : activeNetworksNum;
+        var newsFeedToggleBtWidth = 100 / togglesNum;
 
         if(state == config.core.connectivity.state.loggedin){
             newsFeedCarousel.add({xtype: 'newsFeed' + id + 'List'});

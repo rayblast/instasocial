@@ -39,8 +39,10 @@
             "userConfig": {
                 "fn": "onStoreAddrecords",
                 "implHandler": [
-                    "var list = Ext.getCmp('newsFeedanList');\r",
-                    "Ext.defer(function(){ list.refresh(); }, 100, list);"
+                    "try{\r",
+                    "    var list = Ext.getCmp('newsFeedanList');\r",
+                    "    Ext.defer(function(){ list.refresh(); }, 100, list);\r",
+                    "}catch(Exception){}"
                 ],
                 "name": "addrecords"
             },

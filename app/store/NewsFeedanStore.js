@@ -39,8 +39,10 @@ Ext.define('InstaSocial.store.NewsFeedanStore', {
     },
 
     onStoreAddrecords: function(store, records, eOpts) {
-        var list = Ext.getCmp('newsFeedanList');
-        Ext.defer(function(){ list.refresh(); }, 100, list);
+        try{
+            var list = Ext.getCmp('newsFeedanList');
+            Ext.defer(function(){ list.refresh(); }, 100, list);
+        }catch(Exception){}
     }
 
 });
