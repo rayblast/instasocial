@@ -101,10 +101,6 @@ core.renderer = {
         photo: function(photo){
             var output = '';
             
-            var divStyle = ''
-            divStyle += (photo.height !== undefined)?('min-height: 310px;'):'min-height: 100px;';
-            
-            output += '<div class="photo" style="' + divStyle + '">';
             var src = '';
             if(photo.src_big !== undefined){
                 src = photo.src_big;
@@ -113,12 +109,18 @@ core.renderer = {
                 src = photo.src;
             }
             
-            if(src === undefined || src === null)
-                return output
+            if(src === undefined || src === null || src === '')
+                return output;
             
+                
+            var divStyle = '';
+           // divStyle += (photo.height !== undefined)?('min-height: 310px;'):'min-height: 100px;';
+            
+            output += '<div class="photo" style="' + divStyle + '">';
+
             var style = '';
             style = 'style="max-width: 90%;';
-            style += (photo.height !== undefined)?('max-height: 310px;'):'';
+            //style += (photo.height !== undefined)?('max-height: 310px;'):'';
             style += '"';
 
             
