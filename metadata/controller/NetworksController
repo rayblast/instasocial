@@ -152,7 +152,7 @@
                     "    Ext.getCmp('btLogout').hide();\r",
                     "}\r",
                     "\r",
-                    "InstaSocial.app.getController(config.controllers.networksController).setupNewsFeed();"
+                    "InstaSocial.app.getController(config.controllers.networksController).setupActiveNetworks();"
                 ]
             },
             "designerId": "b877b4c5-3643-4f86-9877-5215f357f283"
@@ -302,6 +302,21 @@
                 ]
             },
             "designerId": "8be1e03b-6271-4ffc-aa57-fceae14ae87a"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "setupActiveNetworks",
+                "implHandler": [
+                    "InstaSocial.app.getController(config.controllers.networksController).setupNewsFeed();"
+                ]
+            },
+            "designerId": "2cf5d771-694e-4566-9c27-f5ed3a6acad6"
         }
     ]
 }

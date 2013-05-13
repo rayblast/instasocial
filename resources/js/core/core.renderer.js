@@ -102,7 +102,7 @@ core.renderer = {
             var output = '';
             
             var divStyle = ''
-            divStyle += (photo.height !== undefined)?('min-height: 310px;'):'';
+            divStyle += (photo.height !== undefined)?('min-height: 310px;'):'min-height: 100px;';
             
             output += '<div class="photo" style="' + divStyle + '">';
             var src = '';

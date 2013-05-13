@@ -98,7 +98,7 @@ Ext.define('InstaSocial.controller.NetworksController', {
             Ext.getCmp('btLogout').hide();
         }
 
-        InstaSocial.app.getController(config.controllers.networksController).setupNewsFeed();
+        InstaSocial.app.getController(config.controllers.networksController).setupActiveNetworks();
     },
 
     showPanel: function(args) {
@@ -166,6 +166,10 @@ Ext.define('InstaSocial.controller.NetworksController', {
                 newsFeedToggle.remove(newsFeedToggleButton);
             }
         }
+    },
+
+    setupActiveNetworks: function() {
+        InstaSocial.app.getController(config.controllers.networksController).setupNewsFeed();
     }
 
 });

@@ -146,7 +146,7 @@ core.connectivity = {
     },
     checkNetworksState: function(){
         for(var id in core.connectivity.networks){
-            core.connectivity.networks[id].checkState();
+            core.connectivity.networks[id].checkState(InstaSocial.app.getController(config.controllers.networksController).setupActiveNetworks);
            
         }
     },
