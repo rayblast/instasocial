@@ -128,10 +128,10 @@ Ext.define('InstaSocial.controller.NewsFeedController', {
             id = InstaSocial.app.getController(config.controllers.newsFeedController).getActiveNetworkId();
         }
 
-        core.newsfeed.networks[id].getNewsFeed(null, null, null);
+        core.newsfeed.networks[id].getNewsFeed(null, null, null, false);
 
-        if(core.connectivity.networks.fb.refreshData){
-            Ext.getCmp(config.views.newsFeedfbList).getScrollable().getScroller().scrollTo(0,0,true);
+        if(core.newsfeed.networks[id].refreshData){
+            Ext.getCmp('newsFeed' + id + 'List').getScrollable().getScroller().scrollTo(0,0,true);
         }
 
     },

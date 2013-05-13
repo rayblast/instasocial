@@ -9,9 +9,9 @@ core.newsfeed = {
                 }
                 for(var id in core.connectivity.networks){
                     if(core.connectivity.networks[id].state == config.core.connectivity.state.loggedin){
-                        var newsFeedStore = Ext.getStore(config.stores['newsFeed' + id + 'Store']);
-                            var post = newsFeedStore.last();
                         if(diff === true && post !== undefined){
+                            var newsFeedStore = Ext.getStore(config.stores['newsFeed' + id + 'Store']);
+                            var post = newsFeedStore.last();
                             core.newsfeed.networks[id].getNewsFeed(since, post.data.created_time, count);
                         }else{
                             core.newsfeed.networks[id].getNewsFeed(since, until, count);
@@ -57,6 +57,7 @@ core.newsfeed = {
             getNewsFeed: function(since, until, count){
                 core.ui.display.loading.start();
                 core.newsfeed.networks.fb.refreshData = true;
+                core.newsfeed.networks.an.refreshData = true;
                 var url = '/me/home?fields=actions,created_time,from,id,link,message,name,picture,to,likes,icon';
                 
                 if(since !== null){
@@ -65,6 +66,7 @@ core.newsfeed = {
                 if(until !== null){
                     url += '&until=' + until;
                     core.newsfeed.networks.fb.refreshData = false;
+                    core.newsfeed.networks.an.refreshData = false;
                 }
                 if(count !== null){
                     url += '&limit=' + count;
@@ -119,6 +121,7 @@ core.newsfeed = {
             getNewsFeed: function(since, until, count){
                 core.ui.display.loading.start();
                 core.newsfeed.networks.vk.refreshData = true;
+                core.newsfeed.networks.an.refreshData = true;
                 var url = 'newsfeed.get';
                 var params = {};
                 if(since !== null){
@@ -128,6 +131,7 @@ core.newsfeed = {
                     params.start_time = 1;
                     params.end_time = until - 1;
                     core.newsfeed.networks.vk.refreshData = false;
+                    core.newsfeed.networks.an.refreshData = false;
                 }
                 if(count !== null){
                     params.count = count;

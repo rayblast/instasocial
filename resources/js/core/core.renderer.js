@@ -181,8 +181,8 @@ core.renderer = {
             }
             output += '<div class="video" id="video_' + video_id + '">';
             output += '<div class="videoPlayerContainer" id="videoPlayerContainer_' + video_id + '">';
-            output += '<div class="videoPhoto" id="videoPhoto_' + video_id + '" onclick="core.renderer.networks.vk.video(\'' + video_id + '\');">';
-            output += '<div class="videoPlayIcon">';
+            output += '<div class="videoPhoto" id="videoPhoto_' + video_id + '">';
+            output += '<div class="videoPlayIcon" id="videoPlay_' + video_id + '" onclick="core.renderer.networks.vk.video(\'' + video_id + '\');">';
             output += '</div>';
             output += '<img src="' + image + '" style="max-width:90%; height:160px;"/>';
             output += '</div>';

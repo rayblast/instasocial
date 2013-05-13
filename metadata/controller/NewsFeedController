@@ -231,10 +231,10 @@
                     "    id = InstaSocial.app.getController(config.controllers.newsFeedController).getActiveNetworkId();\r",
                     "}\r",
                     "\r",
-                    "core.newsfeed.networks[id].getNewsFeed(null, null, null);\r",
+                    "core.newsfeed.networks[id].getNewsFeed(null, null, null, false);\r",
                     "\r",
-                    "if(core.connectivity.networks.fb.refreshData){\r",
-                    "    Ext.getCmp(config.views.newsFeedfbList).getScrollable().getScroller().scrollTo(0,0,true);\r",
+                    "if(core.newsfeed.networks[id].refreshData){\r",
+                    "    Ext.getCmp('newsFeed' + id + 'List').getScrollable().getScroller().scrollTo(0,0,true);\r",
                     "}\r",
                     ""
                 ]

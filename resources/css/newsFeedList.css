@@ -154,6 +154,7 @@
 }
 
 .newsfeed-list-item .attachment .video .videoPhoto{
+    position: relative;
 	max-width: 100%;
 }
 
